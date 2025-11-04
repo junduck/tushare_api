@@ -28,6 +28,12 @@ uv run python gen_tools.py
 
 ## 或者直接使用本仓库中已生成的文件 :)
 
+1. api/*.json: API 定义
+
+2. ts/*.ts: Tushare API 的 TypeScript 接口
+
+3. tools/*.json: MCP 兼容定义
+
 ## 转换为 Anthropic/OpenAI 工具调用标准
 
 ```python

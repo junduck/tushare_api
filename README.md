@@ -28,6 +28,12 @@ uv run python gen_tools.py
 
 ## Or just use the already generated files in this repo :)
 
+1. api/*.json: API definition
+
+2. ts/*.ts: TypeScript interfaces for Tushare API
+
+3. tools/*.json: MCP compatible definition
+
 ## Converting to Antrophic/OAI tool calling standard
 
 ```python
