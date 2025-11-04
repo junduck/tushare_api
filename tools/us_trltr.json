@@ -1,0 +1,29 @@
+{
+  "name": "tushare_us_trltr",
+  "description": "国债长期利率平均值。国债实际长期利率平均值限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法。返回字段包括：date(Y), ltr_avg(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定字段"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "api_name": "fina_audit",
+  "title": "财务审计意见",
+  "description": "获取上市公司定期财务审计意见数据权限：用户需要至少500积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "报告期(每个季度最后一天的日期,比如20171231表示年报)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "TS股票代码",
+      "description": ""
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "公告日期",
+      "description": ""
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "报告期",
+      "description": ""
+    },
+    {
+      "name": "audit_result",
+      "type": "str",
+      "required": "审计结果",
+      "description": ""
+    },
+    {
+      "name": "audit_fees",
+      "type": "float",
+      "required": "审计总费用（元）",
+      "description": ""
+    },
+    {
+      "name": "audit_agency",
+      "type": "str",
+      "required": "会计事务所",
+      "description": ""
+    },
+    {
+      "name": "audit_sign",
+      "type": "str",
+      "required": "签字会计师",
+      "description": ""
+    }
+  ]
+}

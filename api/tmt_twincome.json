@@ -1,0 +1,51 @@
+{
+  "api_name": "tmt_twincome",
+  "title": "台湾电子产业月营收",
+  "description": "获取台湾TMT电子产业领域各类产品月度营收数据。",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期"
+    },
+    {
+      "name": "item",
+      "type": "str",
+      "required": "Y",
+      "description": "产品代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "报告期",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "str",
+      "required": "产品代码",
+      "description": ""
+    },
+    {
+      "name": "op_income",
+      "type": "str",
+      "required": "月度收入",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "api_name": "monthly",
+  "title": "月线行情",
+  "description": "获取A股月线数据限量：单次最大4500行，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码 （ts_code,trade_date两个参数任选一）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 （每月最后一个交易日日期，YYYYMMDD格式）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "月收盘价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "月开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "月最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "月最低价"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "上月收盘价"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "月涨跌额"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "月涨跌幅 （未复权，如果是复权请用 通用行情接口 ）"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "月成交量"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "月成交额"
+    }
+  ]
+}

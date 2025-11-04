@@ -1,0 +1,99 @@
+{
+  "api_name": "cyq_perf",
+  "title": "每日筹码及胜率",
+  "description": "获取A股每日筹码平均成本和胜率情况，每天17~18点左右更新，数据从2018年开始来源：Tushare社区限量：单次最大5000条，可以分页或者循环提取积分：120积分可以试用(查看数据)，5000积分每天20000次，10000积分每天200000次，15000积分每天不限总量",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "his_low",
+      "type": "float",
+      "required": "Y",
+      "description": "历史最低价"
+    },
+    {
+      "name": "his_high",
+      "type": "float",
+      "required": "Y",
+      "description": "历史最高价"
+    },
+    {
+      "name": "cost_5pct",
+      "type": "float",
+      "required": "Y",
+      "description": "5分位成本"
+    },
+    {
+      "name": "cost_15pct",
+      "type": "float",
+      "required": "Y",
+      "description": "15分位成本"
+    },
+    {
+      "name": "cost_50pct",
+      "type": "float",
+      "required": "Y",
+      "description": "50分位成本"
+    },
+    {
+      "name": "cost_85pct",
+      "type": "float",
+      "required": "Y",
+      "description": "85分位成本"
+    },
+    {
+      "name": "cost_95pct",
+      "type": "float",
+      "required": "Y",
+      "description": "95分位成本"
+    },
+    {
+      "name": "weight_avg",
+      "type": "float",
+      "required": "Y",
+      "description": "加权平均成本"
+    },
+    {
+      "name": "winner_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "胜率"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "api_name": "kpl_list",
+  "title": "榜单数据（开盘啦）",
+  "description": "获取开盘啦涨停、跌停、炸板等榜单数据限量：单次最大8000条数据，可根据日期循环获取历史数据积分：5000积分每分钟可以请求200次每天总量1万次，8000积分以上每分钟500次每天总量不限制，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "tag",
+      "type": "str",
+      "required": "N",
+      "description": "板单类型（涨停/炸板/跌停/自然涨停/竞价，默认为涨停)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "名称"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易时间"
+    },
+    {
+      "name": "lu_time",
+      "type": "str",
+      "required": "Y",
+      "description": "涨停时间"
+    },
+    {
+      "name": "ld_time",
+      "type": "str",
+      "required": "Y",
+      "description": "跌停时间"
+    },
+    {
+      "name": "open_time",
+      "type": "str",
+      "required": "Y",
+      "description": "开板时间"
+    },
+    {
+      "name": "last_time",
+      "type": "str",
+      "required": "Y",
+      "description": "最后涨停时间"
+    },
+    {
+      "name": "lu_desc",
+      "type": "str",
+      "required": "Y",
+      "description": "涨停原因"
+    },
+    {
+      "name": "tag",
+      "type": "str",
+      "required": "Y",
+      "description": "标签"
+    },
+    {
+      "name": "theme",
+      "type": "str",
+      "required": "Y",
+      "description": "板块"
+    },
+    {
+      "name": "net_change",
+      "type": "float",
+      "required": "Y",
+      "description": "主力净额(元)"
+    },
+    {
+      "name": "bid_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "竞价成交额(元)"
+    },
+    {
+      "name": "status",
+      "type": "str",
+      "required": "Y",
+      "description": "状态（N连板）"
+    },
+    {
+      "name": "bid_change",
+      "type": "float",
+      "required": "Y",
+      "description": "竞价净额"
+    },
+    {
+      "name": "bid_turnover",
+      "type": "float",
+      "required": "Y",
+      "description": "竞价换手%"
+    },
+    {
+      "name": "lu_bid_vol",
+      "type": "float",
+      "required": "Y",
+      "description": "涨停委买额"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅%"
+    },
+    {
+      "name": "bid_pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "竞价涨幅%"
+    },
+    {
+      "name": "rt_pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "实时涨幅%"
+    },
+    {
+      "name": "limit_order",
+      "type": "float",
+      "required": "Y",
+      "description": "封单"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额"
+    },
+    {
+      "name": "turnover_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率%"
+    },
+    {
+      "name": "free_float",
+      "type": "float",
+      "required": "Y",
+      "description": "实际流通"
+    },
+    {
+      "name": "lu_limit_order",
+      "type": "float",
+      "required": "Y",
+      "description": "最大封单"
+    }
+  ]
+}

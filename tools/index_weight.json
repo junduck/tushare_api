@@ -1,0 +1,31 @@
+{
+  "name": "tushare_index_weight",
+  "description": "指数成分和权重。获取各类指数成分和权重，月度数据 ，建议输入参数里开始日期和结束日分别输入当月第一天和最后一天的日期。来源：指数公司网站公开数据积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：index_code(指数代码), con_code(成分代码), trade_date(交易日期), weight(权重)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "index_code": {
+        "type": "string",
+        "description": "指数代码，来源指数基础信息接口"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "index_code"
+    ]
+  }
+}

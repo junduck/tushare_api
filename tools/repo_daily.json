@@ -1,0 +1,29 @@
+{
+  "name": "tushare_repo_daily",
+  "description": "债券回购日行情。债券回购日行情限量：单次最大2000条，可多次提取，总量不限制权限：用户需要累积2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), repo_maturity(Y), pre_close(Y), open(Y), high(Y), low(Y), close(Y), weight(Y), weight_r(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "api_name": "hk_tradecal",
+  "title": "港股交易日历",
+  "description": "获取交易日历限量：单次最大2000权限：用户积累2000积分才可调取",
+  "input_params": [
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "is_open",
+      "type": "str",
+      "required": "N",
+      "description": "是否交易 '0'休市 '1'交易"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "cal_date",
+      "type": "str",
+      "required": "Y",
+      "description": "日历日期"
+    },
+    {
+      "name": "is_open",
+      "type": "int",
+      "required": "Y",
+      "description": "是否交易 '0'休市 '1'交易"
+    },
+    {
+      "name": "pretrade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上一个交易日"
+    }
+  ]
+}

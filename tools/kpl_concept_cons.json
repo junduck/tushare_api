@@ -1,0 +1,23 @@
+{
+  "name": "tushare_kpl_concept_cons",
+  "description": "题材成分（开盘啦）。获取开盘啦概念题材的成分股限量：单次最大3000条，可根据代码和日期循环获取全部数据积分：5000积分可提取数据，具体请参阅积分获取办法。返回字段包括：ts_code(Y), name(Y), con_name(Y), con_code(Y), trade_date(Y), desc(Y), hot_num(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式）",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "题材代码（xxxxxx.KP格式）"
+      },
+      "con_code": {
+        "type": "string",
+        "description": "成分代码（xxxxxx.SH格式）"
+      }
+    },
+    "required": []
+  }
+}

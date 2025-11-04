@@ -1,0 +1,69 @@
+{
+  "api_name": "anns_d",
+  "title": "上市公司公告",
+  "description": "获取全量公告数据，提供pdf下载URL限量：单次最大2000条数，可以跟进日期循环获取全量权限：本接口为单独权限，请参考权限说明",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期（yyyymmdd格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "标题"
+    },
+    {
+      "name": "url",
+      "type": "str",
+      "required": "Y",
+      "description": "URL，原文下载链接"
+    },
+    {
+      "name": "rec_time",
+      "type": "datetime",
+      "required": "N",
+      "description": "发布时间"
+    }
+  ]
+}

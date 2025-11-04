@@ -1,0 +1,24 @@
+{
+  "name": "tushare_major_news",
+  "description": "新闻通讯（长篇）。获取长篇通讯信息，覆盖主要新闻资讯网站，提供超过8年历史新闻。限量：单次最大400行记录，可循环提取保存到本地。积分：本接口需单独开权限（跟积分没关系），具体请参阅权限说明。返回字段包括：title(Y), content(N), pub_time(Y), src(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "src": {
+        "type": "string",
+        "description": "新闻来源（新华网、凤凰财经、同花顺、新浪财经、华尔街见闻、中证网、财新网、第一财经、财联社）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "新闻发布开始时间，e.g. 2018-11-21 00:00:00",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "新闻发布结束时间，e.g. 2018-11-22 00:00:00",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "api_name": "stk_premarket",
+  "title": "每日股本（盘前）",
+  "description": "每日开盘前获取当日股票的股本情况，包括总股本和流通股本，涨跌停价格等。限量：单次最大8000条数据，可循环提取权限：与积分无关，需单独开权限",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "总股本（万股）"
+    },
+    {
+      "name": "float_share",
+      "type": "float",
+      "required": "Y",
+      "description": "流通股本（万股）"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨日收盘价"
+    },
+    {
+      "name": "up_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "今日涨停价"
+    },
+    {
+      "name": "down_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "今日跌停价"
+    }
+  ]
+}

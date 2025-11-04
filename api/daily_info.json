@@ -1,0 +1,286 @@
+{
+  "api_name": "daily_info",
+  "title": "沪深市场每日交易统计",
+  "description": "获取交易所股票交易统计，包括各板块明细限量：单次最大4000，可循环获取，总量不限制权限：用户积600积分可调取， 频次有限制，积分越高每分钟调取频次越高，5000积分以上频次相对较高，积分获取方法请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "板块代码（请参阅下方列表）"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "股票市场（SH上交所 SZ深交所）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定提取字段"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "市场代码"
+    },
+    {
+      "name": "ts_name",
+      "type": "str",
+      "required": "Y",
+      "description": "市场名称"
+    },
+    {
+      "name": "com_count",
+      "type": "int",
+      "required": "Y",
+      "description": "挂牌数"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "总股本（亿股）"
+    },
+    {
+      "name": "float_share",
+      "type": "float",
+      "required": "Y",
+      "description": "流通股本（亿股）"
+    },
+    {
+      "name": "total_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "总市值（亿元）"
+    },
+    {
+      "name": "float_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "流通市值（亿元）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "交易金额（亿元）"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量（亿股）"
+    },
+    {
+      "name": "trans_count",
+      "type": "int",
+      "required": "Y",
+      "description": "成交笔数（万笔）"
+    },
+    {
+      "name": "pe",
+      "type": "float",
+      "required": "Y",
+      "description": "平均市盈率"
+    },
+    {
+      "name": "tr",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率（％），注：深交所暂无此列"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易所（SH上交所 SZ深交所）"
+    }
+  ],
+  "special_ts_code": [
+    {
+      "ts_code": "SZ_MARKET",
+      "ts_name": "深圳市场",
+      "data_avail": "20041231"
+    },
+    {
+      "ts_code": "SZ_MAIN",
+      "ts_name": "深圳主板",
+      "data_avail": "20081231"
+    },
+    {
+      "ts_code": "SZ_A",
+      "ts_name": "深圳A股",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_B",
+      "ts_name": "深圳B股",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_GEM",
+      "ts_name": "创业板",
+      "data_avail": "20091030"
+    },
+    {
+      "ts_code": "SZ_SME",
+      "ts_name": "中小企业板",
+      "data_avail": "20040602"
+    },
+    {
+      "ts_code": "SZ_FUND",
+      "ts_name": "深圳基金市场",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_FUND_ETF",
+      "ts_name": "深圳基金ETF",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_FUND_LOF",
+      "ts_name": "深圳基金LOF",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_FUND_CEF",
+      "ts_name": "深圳封闭基金",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_FUND_SF",
+      "ts_name": "深圳分级基金",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND",
+      "ts_name": "深圳债券",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_CN",
+      "ts_name": "深圳债券现券",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_REP",
+      "ts_name": "深圳债券回购",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_ABS",
+      "ts_name": "深圳债券ABS",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_GOV",
+      "ts_name": "深圳国债",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_ENT",
+      "ts_name": "深圳企业债",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_COR",
+      "ts_name": "深圳公司债",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_BOND_CB",
+      "ts_name": "深圳可转债",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SZ_WR",
+      "ts_name": "深圳权证",
+      "data_avail": "20080103"
+    },
+    {
+      "ts_code": "SH_MARKET",
+      "ts_name": "上海市场",
+      "data_avail": "20190102"
+    },
+    {
+      "ts_code": "SH_A",
+      "ts_name": "上海A股",
+      "data_avail": "19910102"
+    },
+    {
+      "ts_code": "SH_B",
+      "ts_name": "上海B股",
+      "data_avail": "19920221"
+    },
+    {
+      "ts_code": "SH_STAR",
+      "ts_name": "科创板",
+      "data_avail": "20190722"
+    },
+    {
+      "ts_code": "SH_REP",
+      "ts_name": "股票回购",
+      "data_avail": "20190102"
+    },
+    {
+      "ts_code": "SH_FUND",
+      "ts_name": "上海基金市场",
+      "data_avail": "19901219"
+    },
+    {
+      "ts_code": "SH_FUND_ETF",
+      "ts_name": "上海基金ETF",
+      "data_avail": "19901219"
+    },
+    {
+      "ts_code": "SH_FUND_LOF",
+      "ts_name": "上海基金LOF",
+      "data_avail": "19901219"
+    },
+    {
+      "ts_code": "SH_FUND_REP",
+      "ts_name": "上海基金回购",
+      "data_avail": "19901219"
+    },
+    {
+      "ts_code": "SH_FUND_CEF",
+      "ts_name": "上海封闭式基金",
+      "data_avail": "19901219"
+    },
+    {
+      "ts_code": "SH_FUND_METF",
+      "ts_name": "上海交易型货币基金",
+      "data_avail": "19901219"
+    }
+  ]
+}

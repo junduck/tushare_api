@@ -1,0 +1,25 @@
+{
+  "name": "tushare_repurchase",
+  "description": "股票回购。获取上市公司回购股票数据积分：用户需要至少600积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), end_date(Y), proc(Y), exp_date(Y), vol(Y), amount(Y), high_limit(Y), low_limit(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期（任意填参数，如果都不填，单次默认返回2000条）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

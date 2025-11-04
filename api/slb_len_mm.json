@@ -1,0 +1,75 @@
+{
+  "api_name": "slb_len_mm",
+  "title": "做市借券交易汇总(停）",
+  "description": "做市借券交易汇总限量：单次最大可以提取5000行数据，可循环获取所有历史积分：2000积分每分钟请求200次，5000积分500次请求",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期（YYYYMMDD）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "ope_inv",
+      "type": "float",
+      "required": "Y",
+      "description": "期初余量(万股)"
+    },
+    {
+      "name": "lent_qnt",
+      "type": "float",
+      "required": "Y",
+      "description": "融出数量(万股)"
+    },
+    {
+      "name": "cls_inv",
+      "type": "float",
+      "required": "Y",
+      "description": "期末余量(万股)"
+    },
+    {
+      "name": "end_bal",
+      "type": "float",
+      "required": "Y",
+      "description": "期末余额(万元)"
+    }
+  ]
+}

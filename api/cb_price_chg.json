@@ -1,0 +1,57 @@
+{
+  "api_name": "cb_price_chg",
+  "title": "可转债转股价变动",
+  "description": "获取可转债转股价变动限量：单次最大2000，总量不限制权限：本接口需单独开权限（跟积分没关系），具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "转债代码，支持多值输入"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "转债代码"
+    },
+    {
+      "name": "bond_short_name",
+      "type": "str",
+      "required": "Y",
+      "description": "转债简称"
+    },
+    {
+      "name": "publish_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "change_date",
+      "type": "str",
+      "required": "Y",
+      "description": "变动日期"
+    },
+    {
+      "name": "convert_price_initial",
+      "type": "float",
+      "required": "Y",
+      "description": "初始转股价格"
+    },
+    {
+      "name": "convertprice_bef",
+      "type": "float",
+      "required": "Y",
+      "description": "修正前转股价格"
+    },
+    {
+      "name": "convertprice_aft",
+      "type": "float",
+      "required": "Y",
+      "description": "修正后转股价格"
+    }
+  ]
+}

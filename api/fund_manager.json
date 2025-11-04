@@ -1,0 +1,99 @@
+{
+  "api_name": "fund_manager",
+  "title": "基金经理",
+  "description": "获取公募基金经理数据，包括基金经理简历等数据限量：单次最大5000，支持分页提取数据积分：用户有500积分可获取数据，2000积分以上可以提高访问频次",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "基金代码，支持多只基金，逗号分隔"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期，格式：YYYYMMDD"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "基金经理姓名"
+    },
+    {
+      "name": "offset",
+      "type": "intint",
+      "required": "N",
+      "description": "开始行数"
+    },
+    {
+      "name": "limit",
+      "type": "int",
+      "required": "N",
+      "description": "每页行数"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "基金代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "基金经理姓名"
+    },
+    {
+      "name": "gender",
+      "type": "str",
+      "required": "Y",
+      "description": "性别"
+    },
+    {
+      "name": "birth_year",
+      "type": "str",
+      "required": "Y",
+      "description": "出生年份"
+    },
+    {
+      "name": "edu",
+      "type": "str",
+      "required": "Y",
+      "description": "学历"
+    },
+    {
+      "name": "nationality",
+      "type": "str",
+      "required": "Y",
+      "description": "国籍"
+    },
+    {
+      "name": "begin_date",
+      "type": "str",
+      "required": "Y",
+      "description": "任职日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "离任日期"
+    },
+    {
+      "name": "resume",
+      "type": "str",
+      "required": "Y",
+      "description": "简历"
+    }
+  ]
+}

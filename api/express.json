@@ -1,0 +1,231 @@
+{
+  "api_name": "express",
+  "title": "业绩快报",
+  "description": "获取上市公司业绩快报权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法提示：当前接口只能按单只股票获取其历史数据，如果需要获取某一季度全部上市公司数据，请使用express_vip接口（参数一致），需积攒5000积分。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "报告期(每个季度最后一天的日期,比如20171231表示年报，20170630半年报，20170930三季报)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "TS股票代码",
+      "description": ""
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "公告日期",
+      "description": ""
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "报告期",
+      "description": ""
+    },
+    {
+      "name": "revenue",
+      "type": "float",
+      "required": "营业收入(元)",
+      "description": ""
+    },
+    {
+      "name": "operate_profit",
+      "type": "float",
+      "required": "营业利润(元)",
+      "description": ""
+    },
+    {
+      "name": "total_profit",
+      "type": "float",
+      "required": "利润总额(元)",
+      "description": ""
+    },
+    {
+      "name": "n_income",
+      "type": "float",
+      "required": "净利润(元)",
+      "description": ""
+    },
+    {
+      "name": "total_assets",
+      "type": "float",
+      "required": "总资产(元)",
+      "description": ""
+    },
+    {
+      "name": "total_hldr_eqy_exc_min_int",
+      "type": "float",
+      "required": "股东权益合计(不含少数股东权益)(元)",
+      "description": ""
+    },
+    {
+      "name": "diluted_eps",
+      "type": "float",
+      "required": "每股收益(摊薄)(元)",
+      "description": ""
+    },
+    {
+      "name": "diluted_roe",
+      "type": "float",
+      "required": "净资产收益率(摊薄)(%)",
+      "description": ""
+    },
+    {
+      "name": "yoy_net_profit",
+      "type": "float",
+      "required": "去年同期修正后净利润",
+      "description": ""
+    },
+    {
+      "name": "bps",
+      "type": "float",
+      "required": "每股净资产",
+      "description": ""
+    },
+    {
+      "name": "yoy_sales",
+      "type": "float",
+      "required": "同比增长率:营业收入",
+      "description": ""
+    },
+    {
+      "name": "yoy_op",
+      "type": "float",
+      "required": "同比增长率:营业利润",
+      "description": ""
+    },
+    {
+      "name": "yoy_tp",
+      "type": "float",
+      "required": "同比增长率:利润总额",
+      "description": ""
+    },
+    {
+      "name": "yoy_dedu_np",
+      "type": "float",
+      "required": "同比增长率:归属母公司股东的净利润",
+      "description": ""
+    },
+    {
+      "name": "yoy_eps",
+      "type": "float",
+      "required": "同比增长率:基本每股收益",
+      "description": ""
+    },
+    {
+      "name": "yoy_roe",
+      "type": "float",
+      "required": "同比增减:加权平均净资产收益率",
+      "description": ""
+    },
+    {
+      "name": "growth_assets",
+      "type": "float",
+      "required": "比年初增长率:总资产",
+      "description": ""
+    },
+    {
+      "name": "yoy_equity",
+      "type": "float",
+      "required": "比年初增长率:归属母公司的股东权益",
+      "description": ""
+    },
+    {
+      "name": "growth_bps",
+      "type": "float",
+      "required": "比年初增长率:归属于母公司股东的每股净资产",
+      "description": ""
+    },
+    {
+      "name": "or_last_year",
+      "type": "float",
+      "required": "去年同期营业收入",
+      "description": ""
+    },
+    {
+      "name": "op_last_year",
+      "type": "float",
+      "required": "去年同期营业利润",
+      "description": ""
+    },
+    {
+      "name": "tp_last_year",
+      "type": "float",
+      "required": "去年同期利润总额",
+      "description": ""
+    },
+    {
+      "name": "np_last_year",
+      "type": "float",
+      "required": "去年同期净利润",
+      "description": ""
+    },
+    {
+      "name": "eps_last_year",
+      "type": "float",
+      "required": "去年同期每股收益",
+      "description": ""
+    },
+    {
+      "name": "open_net_assets",
+      "type": "float",
+      "required": "期初净资产",
+      "description": ""
+    },
+    {
+      "name": "open_bps",
+      "type": "float",
+      "required": "期初每股净资产",
+      "description": ""
+    },
+    {
+      "name": "perf_summary",
+      "type": "str",
+      "required": "业绩简要说明",
+      "description": ""
+    },
+    {
+      "name": "is_audit",
+      "type": "int",
+      "required": "是否审计： 1是 0否",
+      "description": ""
+    },
+    {
+      "name": "remark",
+      "type": "str",
+      "required": "备注",
+      "description": ""
+    }
+  ]
+}

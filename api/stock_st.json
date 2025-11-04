@@ -1,0 +1,63 @@
+{
+  "api_name": "stock_st",
+  "title": "ST股票列表",
+  "description": "获取ST股票列表，可根据交易日期获取历史上每天的ST列表权限：3000积分起提示：每天上午9:20更新，单次请求最大返回1000行数据，可循环提取,本接口数据从20160101开始,太早历史无法补齐",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始时间"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束时间"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "type",
+      "type": "str",
+      "required": "Y",
+      "description": "类型"
+    },
+    {
+      "name": "type_name",
+      "type": "str",
+      "required": "Y",
+      "description": "类型名称"
+    }
+  ]
+}

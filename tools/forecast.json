@@ -1,0 +1,37 @@
+{
+  "name": "tushare_forecast",
+  "description": "业绩预告。获取业绩预告数据权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法提示：当前接口只能按单只股票获取其历史数据，如果需要获取某一季度全部上市公司数据，请使用forecast_vip接口（参数一致），需积攒5000积分。。返回字段包括：ts_code(TS股票代码), ann_date(公告日期), end_date(报告期), type(业绩预告类型(预增/预减/扭亏/首亏/续亏/续盈/略增/略减)), p_change_min(预告净利润变动幅度下限（%）), p_change_max(预告净利润变动幅度上限（%）), net_profit_min(预告净利润下限（万元）), net_profit_max(预告净利润上限（万元）), last_parent_net(上年同期归属母公司净利润), first_ann_date(首次公告日)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码(二选一)"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期 (二选一)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(每个季度最后一天的日期，比如20171231表示年报，20170630半年报，20170930三季报)"
+      },
+      "type": {
+        "type": "string",
+        "description": "预告类型(预增/预减/扭亏/首亏/续亏/续盈/略增/略减)"
+      }
+    },
+    "required": []
+  }
+}

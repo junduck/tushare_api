@@ -1,0 +1,63 @@
+{
+  "api_name": "pledge_stat",
+  "title": "股权质押统计数据",
+  "description": "获取股票质押统计数据限量：单次最大1000积分：用户需要至少500积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "截止日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "截止日期"
+    },
+    {
+      "name": "pledge_count",
+      "type": "int",
+      "required": "Y",
+      "description": "质押次数"
+    },
+    {
+      "name": "unrest_pledge",
+      "type": "float",
+      "required": "Y",
+      "description": "无限售股质押数量（万）"
+    },
+    {
+      "name": "rest_pledge",
+      "type": "float",
+      "required": "Y",
+      "description": "限售股份质押数量（万）"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "总股本"
+    },
+    {
+      "name": "pledge_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "质押比例"
+    }
+  ]
+}

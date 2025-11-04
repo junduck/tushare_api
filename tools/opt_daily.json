@@ -1,0 +1,33 @@
+{
+  "name": "tushare_opt_daily",
+  "description": "期权日线行情。获取期权日线行情限量：单次最大15000条数据，可跟进日线或者代码循环，总量不限制积分：用户需要至少2000积分才可以调取，但有流量控制，请自行提高积分，积分越多权限越大，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), exchange(Y), pre_settle(Y), pre_close(Y), open(Y), high(Y), low(Y), close(Y), settle(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS合约代码（输入代码或时间至少任意一个参数）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所(SSE/SZSE/CFFEX/DCE/SHFE/CZCE）"
+      }
+    },
+    "required": []
+  }
+}

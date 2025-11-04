@@ -1,0 +1,34 @@
+{
+  "name": "tushare_fina_mainbz",
+  "description": "主营业务构成。获得上市公司主营业务构成，分地区和产品两种方式权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法  ，单次最大提取100行，总量不限制，可循环获取。提示：当前接口只能按单只股票获取其历史数据，如果需要获取某一季度全部上市公司数据，请使用fina_mainbz_vip接口（参数一致），需积攒5000积分。。返回字段包括：ts_code(TS代码), end_date(报告期), bz_item(主营业务来源), bz_sales(主营业务收入(元)), bz_profit(主营业务利润(元)), bz_cost(主营业务成本(元)), curr_type(货币代码), update_flag(是否更新)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(每个季度最后一天的日期,比如20171231表示年报)"
+      },
+      "type": {
+        "type": "string",
+        "description": "类型：P按产品 D按地区 I按行业（请输入大写字母P或者D）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "报告期开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告期结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

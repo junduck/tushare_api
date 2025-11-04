@@ -1,0 +1,81 @@
+{
+  "api_name": "bond_blk_detail",
+  "title": "大宗交易明细",
+  "description": "获取沪深交易所债券大宗交易数据，可以通过数据工具调试和查看数据。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "债券代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "债券代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "债券名称"
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": "Y",
+      "description": "成交价（元）"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交数量（万股/万份/万张/万手）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交金额（万元）"
+    },
+    {
+      "name": "buy_dp",
+      "type": "str",
+      "required": "Y",
+      "description": "买方营业部"
+    },
+    {
+      "name": "sell_dp",
+      "type": "str",
+      "required": "Y",
+      "description": "卖方营业部"
+    }
+  ]
+}

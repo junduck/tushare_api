@@ -1,0 +1,37 @@
+{
+  "name": "tushare_limit_list_d",
+  "description": "涨跌停和炸板数据。获取A股每日涨跌停、炸板数据情况，数据从2020年开始（不提供ST股票的统计）限量：单次最大可以获取2500条数据，可通过日期或者股票循环提取积分：5000积分每分钟可以请求200次每天总量1万次，8000积分以上每分钟500次每天总量不限制，具体请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), industry(Y), name(Y), close(Y), pct_chg(Y), amount(Y), limit_amount(Y), float_mv(Y), total_mv(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "limit_type": {
+        "type": "string",
+        "description": "涨跌停类型（U涨停D跌停Z炸板）"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所（SH上交所SZ深交所BJ北交所）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

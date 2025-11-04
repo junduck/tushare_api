@@ -1,0 +1,105 @@
+{
+  "api_name": "stk_ah_comparison",
+  "title": "AH股比价",
+  "description": "AH股比价数据，可根据交易日期获取历史权限：5000积分起提示：每天盘后17:00更新，单次请求最大返回1000行数据，可循环提取,本接口数据从20250812开始，由于历史不好补充，只能累积",
+  "input_params": [
+    {
+      "name": "hk_code",
+      "type": "str",
+      "required": "N",
+      "description": "港股股票代码（xxxxx.HK)"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "A股票代码(xxxxxx.SH/SZ/BJ)"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "hk_code",
+      "type": "str",
+      "required": "Y",
+      "description": "港股股票代码"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "A股股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "hk_name",
+      "type": "str",
+      "required": "Y",
+      "description": "港股股票名称"
+    },
+    {
+      "name": "hk_pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "港股股票涨跌幅"
+    },
+    {
+      "name": "hk_close",
+      "type": "float",
+      "required": "Y",
+      "description": "港股股票收盘价"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "A股股票名称"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "A股股票收盘价"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "A股股票涨跌幅"
+    },
+    {
+      "name": "ah_comparison",
+      "type": "float",
+      "required": "Y",
+      "description": "比价(A/H)"
+    },
+    {
+      "name": "ah_premium",
+      "type": "float",
+      "required": "Y",
+      "description": "溢价(A/H)%"
+    }
+  ]
+}

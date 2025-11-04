@@ -1,0 +1,75 @@
+{
+  "api_name": "disclosure_date",
+  "title": "财报披露日期表",
+  "description": "获取财报披露计划日期限量：单次最大3000，总量不限制积分：用户需要至少500积分才可以调取，积分越多权限越大，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "财报周期（每个季度最后一天的日期，比如20181231表示2018年年报，20180630表示中报)"
+    },
+    {
+      "name": "pre_date",
+      "type": "str",
+      "required": "N",
+      "description": "计划披露日期"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "最新披露公告日"
+    },
+    {
+      "name": "actual_date",
+      "type": "str",
+      "required": "N",
+      "description": "实际披露日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "最新披露公告日"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "报告期"
+    },
+    {
+      "name": "pre_date",
+      "type": "str",
+      "required": "Y",
+      "description": "预计披露日期"
+    },
+    {
+      "name": "actual_date",
+      "type": "str",
+      "required": "Y",
+      "description": "实际披露日期"
+    },
+    {
+      "name": "modify_date",
+      "type": "str",
+      "required": "N",
+      "description": "披露日期修正记录"
+    }
+  ]
+}

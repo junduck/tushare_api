@@ -1,0 +1,51 @@
+{
+  "api_name": "adj_factor",
+  "title": "复权因子",
+  "description": "本接口由Tushare自行生产，获取股票复权因子，可提取单只股票全部历史复权因子，也可以提取单日全部股票的复权因子。积分要求：2000积分起，5000以上可高频调取",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "股票代码",
+      "description": ""
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "adj_factor",
+      "type": "float",
+      "required": "复权因子",
+      "description": ""
+    }
+  ]
+}

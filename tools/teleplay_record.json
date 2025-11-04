@@ -1,0 +1,33 @@
+{
+  "name": "tushare_teleplay_record",
+  "description": "全国电视剧备案公示数据。获取2009年以来全国拍摄制作电视剧备案公示数据限量：单次最大1000，总量不限制数据权限：用户需要至少积分600才可以调取，积分越多调取频次越高，具体请参阅积分获取办法。返回字段包括：name(Y), classify(Y), types(Y), org(Y), report_date(Y), license_key(Y), episodes(Y), shooting_date(Y), prod_cycle(Y), content(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "report_date": {
+        "type": "string",
+        "description": "备案月份（YYYYMM）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "备案开始月份（YYYYMM）",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "备案结束月份（YYYYMM）",
+        "pattern": "^\\d{8}$"
+      },
+      "org": {
+        "type": "string",
+        "description": "备案机构"
+      },
+      "name": {
+        "type": "string",
+        "description": "电视剧名称"
+      }
+    },
+    "required": []
+  }
+}

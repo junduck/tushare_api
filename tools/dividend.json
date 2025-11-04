@@ -1,0 +1,34 @@
+{
+  "name": "tushare_dividend",
+  "description": "分红送股数据。分红送股数据权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), end_date(Y), ann_date(Y), div_proc(Y), stk_div(Y), stk_bo_rate(Y), stk_co_rate(Y), cash_div(Y), cash_div_tax(Y), record_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日",
+        "pattern": "^\\d{8}$"
+      },
+      "record_date": {
+        "type": "string",
+        "description": "股权登记日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ex_date": {
+        "type": "string",
+        "description": "除权除息日",
+        "pattern": "^\\d{8}$"
+      },
+      "imp_ann_date": {
+        "type": "string",
+        "description": "实施公告日",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

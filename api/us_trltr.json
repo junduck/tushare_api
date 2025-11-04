@@ -1,0 +1,45 @@
+{
+  "api_name": "us_trltr",
+  "title": "国债长期利率平均值",
+  "description": "国债实际长期利率平均值限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定字段"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "ltr_avg",
+      "type": "float",
+      "required": "Y",
+      "description": "实际平均利率LT Real Average (10> Yrs)"
+    }
+  ]
+}

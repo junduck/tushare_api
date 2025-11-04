@@ -1,0 +1,9 @@
+{
+  "name": "tushare_fund_company",
+  "description": "基金管理人。获取公募基金管理人列表积分：用户需要1500积分才可以调取，一次可以提取全部数据。具体请参阅积分获取办法。返回字段包括：name(Y), shortname(Y), short_enname(N), province(Y), city(Y), address(Y), phone(Y), office(Y), website(Y), chairman(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

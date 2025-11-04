@@ -1,0 +1,29 @@
+{
+  "name": "tushare_sz_daily_info",
+  "description": "深圳市场每日交易情况。获取深圳市场每日交易概况限量：单次最大2000，可循环获取，总量不限制权限：用户积2000积分可调取， 频次有限制，积分越高每分钟调取频次越高，5000积分以上频次相对较高，积分获取方法请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), count(Y), amount(Y), vol(Y), total_share(Y), total_mv(Y), float_share(Y), float_mv(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "板块代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

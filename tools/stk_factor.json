@@ -1,0 +1,29 @@
+{
+  "name": "tushare_stk_factor",
+  "description": "股票技术面因子。获取股票每日技术面因子数据，用于跟踪股票当前走势情况，数据由Tushare社区自产，覆盖全历史限量：单次最大10000条，可以循环或者分页提取积分：5000积分每分钟可以请求100次，8000积分以上每分钟500次，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期 （yyyymmdd，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

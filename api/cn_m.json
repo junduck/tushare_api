@@ -1,0 +1,93 @@
+{
+  "api_name": "cn_m",
+  "title": "货币供应量（月）",
+  "description": "获取货币供应量之月度数据限量：单次最大5000，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "m",
+      "type": "str",
+      "required": "N",
+      "description": "月度（202001表示，2020年1月）"
+    },
+    {
+      "name": "start_m",
+      "type": "str",
+      "required": "N",
+      "description": "开始月度"
+    },
+    {
+      "name": "end_m",
+      "type": "str",
+      "required": "N",
+      "description": "结束月度"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定输出字段（e.g. fields='month,m0,m1,m2'）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "month",
+      "type": "str",
+      "required": "Y",
+      "description": "月份YYYYMM"
+    },
+    {
+      "name": "m0",
+      "type": "float",
+      "required": "Y",
+      "description": "M0（亿元）"
+    },
+    {
+      "name": "m0_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "M0同比（%）"
+    },
+    {
+      "name": "m0_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "M0环比（%）"
+    },
+    {
+      "name": "m1",
+      "type": "float",
+      "required": "Y",
+      "description": "M1（亿元）"
+    },
+    {
+      "name": "m1_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "M1同比（%）"
+    },
+    {
+      "name": "m1_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "M1环比（%）"
+    },
+    {
+      "name": "m2",
+      "type": "float",
+      "required": "Y",
+      "description": "M2（亿元）"
+    },
+    {
+      "name": "m2_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "M2同比（%）"
+    },
+    {
+      "name": "m2_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "M2环比（%）"
+    }
+  ]
+}

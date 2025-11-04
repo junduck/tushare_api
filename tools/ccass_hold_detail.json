@@ -1,0 +1,33 @@
+{
+  "name": "tushare_ccass_hold_detail",
+  "description": "中央结算系统持股明细。获取中央结算系统机构席位持股明细，数据覆盖全历史，根据交易所披露时间，当日数据在下一交易日早上9点前完成限量：单次最大返回6000条数据，可以循环或分页提取积分：用户积8000积分可调取，每分钟可以请求300次。返回字段包括：trade_date(Y), ts_code(Y), name(Y), col_participant_id(Y), col_participant_name(Y), col_shareholding(Y), col_shareholding_percent(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码 (e.g. 605009.SH)"
+      },
+      "hk_code": {
+        "type": "string",
+        "description": "港交所代码 （e.g. 95009）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

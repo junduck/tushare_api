@@ -1,0 +1,34 @@
+{
+  "name": "tushare_share_float",
+  "description": "限售股解禁。获取限售股解禁限量：单次最大6000条，总量不限制积分：120分可调取，每分钟内限制次数，超过5000积分频次相对较高，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), float_date(Y), float_share(Y), float_ratio(Y), holder_name(Y), share_type(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期（日期格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "float_date": {
+        "type": "string",
+        "description": "解禁日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "解禁开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "解禁结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

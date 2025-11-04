@@ -1,0 +1,93 @@
+{
+  "api_name": "fund_nav",
+  "title": "基金净值",
+  "description": "获取公募基金净值数据积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS基金代码 （二选一）"
+    },
+    {
+      "name": "nav_date",
+      "type": "str",
+      "required": "N",
+      "description": "净值日期 （二选一）"
+    },
+    {
+      "name": "market",
+      "type": "str",
+      "required": "N",
+      "description": "E场内 O场外"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "净值开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "净值结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "nav_date",
+      "type": "str",
+      "required": "Y",
+      "description": "净值日期"
+    },
+    {
+      "name": "unit_nav",
+      "type": "float",
+      "required": "Y",
+      "description": "单位净值"
+    },
+    {
+      "name": "accum_nav",
+      "type": "float",
+      "required": "Y",
+      "description": "累计净值"
+    },
+    {
+      "name": "accum_div",
+      "type": "float",
+      "required": "Y",
+      "description": "累计分红"
+    },
+    {
+      "name": "net_asset",
+      "type": "float",
+      "required": "Y",
+      "description": "资产净值"
+    },
+    {
+      "name": "total_netasset",
+      "type": "float",
+      "required": "Y",
+      "description": "合计资产净值"
+    },
+    {
+      "name": "adj_nav",
+      "type": "float",
+      "required": "Y",
+      "description": "复权单位净值"
+    }
+  ]
+}

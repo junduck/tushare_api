@@ -1,0 +1,35 @@
+{
+  "name": "tushare_etf_basic",
+  "description": "ETF基本信息。获取国内ETF基础信息，包括了QDII。数据来源与沪深交易所公开披露信息。限量：单次请求最大放回5000条数据（当前ETF总数未超过2000）权限：用户积8000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), csname(Y), extname(Y), cname(Y), index_code(Y), index_name(Y), setup_date(Y), list_date(Y), list_status(Y), exchange(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "ETF代码（带.SZ/.SH后缀的6位数字，如：159526.SZ）"
+      },
+      "index_code": {
+        "type": "string",
+        "description": "跟踪指数代码"
+      },
+      "list_date": {
+        "type": "string",
+        "description": "上市日期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "list_status": {
+        "type": "string",
+        "description": "上市状态（L上市 D退市 P待上市）"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所（SH上交所 SZ深交所）"
+      },
+      "mgr": {
+        "type": "string",
+        "description": "管理人（简称，e.g.华夏基金)"
+      }
+    },
+    "required": []
+  }
+}

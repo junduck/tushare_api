@@ -1,0 +1,31 @@
+{
+  "name": "tushare_stk_mins",
+  "description": "ETF分钟行情。获取ETF分钟数据，支持1min/5min/15min/30min/60min行情，提供Python SDK和 http Restful API两种方式限量：单次最大8000行数据，可以通过股票代码和时间循环获取，本接口可以提供超过10年ETF历史分钟数据权限：正式权限请参阅 权限说明。返回字段包括：ts_code(Y), trade_time(Y), open(Y), close(Y), high(Y), low(Y), vol(Y), amount(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "ETF代码，e.g. 159001.SZ"
+      },
+      "freq": {
+        "type": "string",
+        "description": "分钟频度（1min/5min/15min/30min/60min）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期 格式：2025-06-01 09:00:00",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束时间 格式：2025-06-20 19:00:00",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code",
+      "freq"
+    ]
+  }
+}

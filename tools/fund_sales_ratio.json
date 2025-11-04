@@ -1,0 +1,14 @@
+{
+  "name": "tushare_fund_sales_ratio",
+  "description": "各渠道公募基金销售保有规模占比。获取各渠道公募基金销售保有规模占比数据，年度更新限量：单次最大100行数据，数据从2015年开始公布，当前数据量很小。返回字段包括：year(Y), bank(Y), sec_comp(Y), fund_comp(Y), indep_comp(Y), rests(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "year": {
+        "type": "string",
+        "description": "年度"
+      }
+    },
+    "required": []
+  }
+}

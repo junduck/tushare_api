@@ -1,0 +1,29 @@
+{
+  "name": "tushare_ths_daily",
+  "description": "同花顺概念和行业指数行情。获取同花顺板块指数行情。注：数据版权归属同花顺，如做商业用途，请主动联系同花顺，如需帮助请联系微信：waditu_a限量：单次最大3000行数据（需6000积分），可根据指数代码、日期参数循环提取。。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), avg_price(Y), change(Y), pct_change(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

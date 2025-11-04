@@ -1,0 +1,23 @@
+{
+  "name": "tushare_tdx_index",
+  "description": "通达信板块信息。获取通达信板块基础信息，包括概念板块、行业、风格、地域等限量：单次最大1000条数据，可根据日期参数循环提取权限：用户积累6000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), name(Y), idx_type(Y), idx_count(Y), total_share(Y), float_share(Y), total_mv(Y), float_mv(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "板块代码：xxxxxx.TDX"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "idx_type": {
+        "type": "string",
+        "description": "板块类型：概念板块、行业板块、风格板块、地区板块"
+      }
+    },
+    "required": []
+  }
+}

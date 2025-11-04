@@ -1,0 +1,29 @@
+{
+  "name": "tushare_us_tltr",
+  "description": "国债长期利率。国债长期利率限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法。返回字段包括：date(Y), ltc(Y), cmt(Y), e_factor(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定字段"
+      }
+    },
+    "required": []
+  }
+}

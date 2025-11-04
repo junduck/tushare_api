@@ -1,0 +1,33 @@
+{
+  "name": "tushare_suspend_d",
+  "description": "每日停复牌信息。按日期方式获取股票每日停复牌信息。返回字段包括：ts_code(Y), trade_date(Y), suspend_timing(Y), suspend_type(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码(可输入多值)"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "停复牌查询开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "停复牌查询结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "suspend_type": {
+        "type": "string",
+        "description": "停复牌类型：S-停牌,R-复牌"
+      }
+    },
+    "required": []
+  }
+}

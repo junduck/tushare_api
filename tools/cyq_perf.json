@@ -1,0 +1,29 @@
+{
+  "name": "tushare_cyq_perf",
+  "description": "每日筹码及胜率。获取A股每日筹码平均成本和胜率情况，每天17~18点左右更新，数据从2018年开始来源：Tushare社区限量：单次最大5000条，可以分页或者循环提取积分：120积分可以试用(查看数据)，5000积分每天20000次，10000积分每天200000次，15000积分每天不限总量。返回字段包括：ts_code(Y), trade_date(Y), his_low(Y), his_high(Y), cost_5pct(Y), cost_15pct(Y), cost_50pct(Y), cost_85pct(Y), cost_95pct(Y), weight_avg(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

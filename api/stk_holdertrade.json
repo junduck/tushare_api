@@ -1,0 +1,123 @@
+{
+  "api_name": "stk_holdertrade",
+  "title": "股东增减持",
+  "description": "获取上市公司增减持数据，了解重要股东近期及历史上的股份增减变化限量：单次最大提取3000行记录，总量不限制积分：用户需要至少2000积分才可以调取。基础积分有流量控制，积分越多权限越大，5000积分以上无明显限制，请自行提高积分，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    },
+    {
+      "name": "trade_type",
+      "type": "str",
+      "required": "N",
+      "description": "交易类型IN增持DE减持"
+    },
+    {
+      "name": "holder_type",
+      "type": "str",
+      "required": "N",
+      "description": "股东类型C公司P个人G高管"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "holder_name",
+      "type": "str",
+      "required": "Y",
+      "description": "股东名称"
+    },
+    {
+      "name": "holder_type",
+      "type": "str",
+      "required": "Y",
+      "description": "股东类型G高管P个人C公司"
+    },
+    {
+      "name": "in_de",
+      "type": "str",
+      "required": "Y",
+      "description": "类型IN增持DE减持"
+    },
+    {
+      "name": "change_vol",
+      "type": "float",
+      "required": "Y",
+      "description": "变动数量"
+    },
+    {
+      "name": "change_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "占流通比例（%）"
+    },
+    {
+      "name": "after_share",
+      "type": "float",
+      "required": "Y",
+      "description": "变动后持股"
+    },
+    {
+      "name": "after_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "变动后占流通比例（%）"
+    },
+    {
+      "name": "avg_price",
+      "type": "float",
+      "required": "Y",
+      "description": "平均价格"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "持股总数"
+    },
+    {
+      "name": "begin_date",
+      "type": "str",
+      "required": "N",
+      "description": "增减持开始日期"
+    },
+    {
+      "name": "close_date",
+      "type": "str",
+      "required": "N",
+      "description": "增减持结束日期"
+    }
+  ]
+}

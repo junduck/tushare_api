@@ -1,0 +1,387 @@
+{
+  "api_name": "cn_pmi",
+  "title": "采购经理指数（PMI）",
+  "description": "采购经理人指数限量：单次最大2000，一次可以提取全部数据权限：用户积累2000积分可以使用，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "m",
+      "type": "str",
+      "required": "N",
+      "description": "月度（202401表示，2024年1月）"
+    },
+    {
+      "name": "start_m",
+      "type": "str",
+      "required": "N",
+      "description": "开始月度"
+    },
+    {
+      "name": "end_m",
+      "type": "str",
+      "required": "N",
+      "description": "结束月度（e.g. fields='month,pmi010000,pmi010400'）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "month",
+      "type": "str",
+      "required": "N",
+      "description": "月份YYYYMM"
+    },
+    {
+      "name": "pmi010000",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI"
+    },
+    {
+      "name": "pmi010100",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010200",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010300",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010400",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/生产指数"
+    },
+    {
+      "name": "pmi010401",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/生产指数:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010402",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/生产指数:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010403",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/生产指数:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010500",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/新订单指数"
+    },
+    {
+      "name": "pmi010501",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/新订单指数:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010502",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/新订单指数:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010503",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/新订单指数:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010600",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/供应商配送时间指数"
+    },
+    {
+      "name": "pmi010601",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/供应商配送时间指数:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010602",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/供应商配送时间指数:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010603",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/供应商配送时间指数:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010700",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/原材料库存指数"
+    },
+    {
+      "name": "pmi010701",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/原材料库存指数:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010702",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/原材料库存指数:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010703",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/原材料库存指数:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010800",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/从业人员指数"
+    },
+    {
+      "name": "pmi010801",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/从业人员指数:企业规模/大型企业"
+    },
+    {
+      "name": "pmi010802",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/从业人员指数:企业规模/中型企业"
+    },
+    {
+      "name": "pmi010803",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:构成指数/从业人员指数:企业规模/小型企业"
+    },
+    {
+      "name": "pmi010900",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/新出口订单"
+    },
+    {
+      "name": "pmi011000",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/进口"
+    },
+    {
+      "name": "pmi011100",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/采购量"
+    },
+    {
+      "name": "pmi011200",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/主要原材料购进价格"
+    },
+    {
+      "name": "pmi011300",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/出厂价格"
+    },
+    {
+      "name": "pmi011400",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/产成品库存"
+    },
+    {
+      "name": "pmi011500",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/在手订单"
+    },
+    {
+      "name": "pmi011600",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:其他/生产经营活动预期"
+    },
+    {
+      "name": "pmi011700",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:分行业/装备制造业"
+    },
+    {
+      "name": "pmi011800",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:分行业/高技术制造业"
+    },
+    {
+      "name": "pmi011900",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:分行业/基础原材料制造业"
+    },
+    {
+      "name": "pmi012000",
+      "type": "float",
+      "required": "N",
+      "description": "制造业PMI:分行业/消费品制造业"
+    },
+    {
+      "name": "pmi020100",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:商务活动"
+    },
+    {
+      "name": "pmi020101",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:商务活动:分行业/建筑业"
+    },
+    {
+      "name": "pmi020102",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:商务活动:分行业/服务业业"
+    },
+    {
+      "name": "pmi020200",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:新订单指数"
+    },
+    {
+      "name": "pmi020201",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:新订单指数:分行业/建筑业"
+    },
+    {
+      "name": "pmi020202",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:新订单指数:分行业/服务业"
+    },
+    {
+      "name": "pmi020300",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:投入品价格指数"
+    },
+    {
+      "name": "pmi020301",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:投入品价格指数:分行业/建筑业"
+    },
+    {
+      "name": "pmi020302",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:投入品价格指数:分行业/服务业"
+    },
+    {
+      "name": "pmi020400",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:销售价格指数"
+    },
+    {
+      "name": "pmi020401",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:销售价格指数:分行业/建筑业"
+    },
+    {
+      "name": "pmi020402",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:销售价格指数:分行业/服务业"
+    },
+    {
+      "name": "pmi020500",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:从业人员指数"
+    },
+    {
+      "name": "pmi020501",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:从业人员指数:分行业/建筑业"
+    },
+    {
+      "name": "pmi020502",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:从业人员指数:分行业/服务业"
+    },
+    {
+      "name": "pmi020600",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:业务活动预期指数"
+    },
+    {
+      "name": "pmi020601",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:业务活动预期指数:分行业/建筑业"
+    },
+    {
+      "name": "pmi020602",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:业务活动预期指数:分行业/服务业"
+    },
+    {
+      "name": "pmi020700",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:新出口订单"
+    },
+    {
+      "name": "pmi020800",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:在手订单"
+    },
+    {
+      "name": "pmi020900",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:存货"
+    },
+    {
+      "name": "pmi021000",
+      "type": "float",
+      "required": "N",
+      "description": "非制造业PMI:供应商配送时间"
+    },
+    {
+      "name": "pmi030000",
+      "type": "float",
+      "required": "N",
+      "description": "中国综合PMI:产出指数"
+    }
+  ]
+}

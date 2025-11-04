@@ -1,0 +1,99 @@
+{
+  "api_name": "fut_holding",
+  "title": "每日持仓排名",
+  "description": "获取每日成交持仓排名数据限量：单次最大2000，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 （trade_date/symbol至少输入一个参数）"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "N",
+      "description": "合约或产品代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "Y",
+      "description": "合约代码或类型"
+    },
+    {
+      "name": "broker",
+      "type": "str",
+      "required": "Y",
+      "description": "期货公司会员简称"
+    },
+    {
+      "name": "vol",
+      "type": "int",
+      "required": "Y",
+      "description": "成交量"
+    },
+    {
+      "name": "vol_chg",
+      "type": "int",
+      "required": "Y",
+      "description": "成交量变化"
+    },
+    {
+      "name": "long_hld",
+      "type": "int",
+      "required": "Y",
+      "description": "持买仓量"
+    },
+    {
+      "name": "long_chg",
+      "type": "int",
+      "required": "Y",
+      "description": "持买仓量变化"
+    },
+    {
+      "name": "short_hld",
+      "type": "int",
+      "required": "Y",
+      "description": "持卖仓量"
+    },
+    {
+      "name": "short_chg",
+      "type": "int",
+      "required": "Y",
+      "description": "持卖仓量变化"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所"
+    }
+  ]
+}

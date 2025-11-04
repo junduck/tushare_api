@@ -1,0 +1,165 @@
+{
+  "api_name": "bak_basic",
+  "title": "股票历史列表",
+  "description": "获取备用基础列表，数据从2016年开始限量：单次最大7000条，可以根据日期参数循环获取历史，正式权限需要5000积分。",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "industry",
+      "type": "str",
+      "required": "Y",
+      "description": "行业"
+    },
+    {
+      "name": "area",
+      "type": "str",
+      "required": "Y",
+      "description": "地域"
+    },
+    {
+      "name": "pe",
+      "type": "float",
+      "required": "Y",
+      "description": "市盈率（动）"
+    },
+    {
+      "name": "float_share",
+      "type": "float",
+      "required": "Y",
+      "description": "流通股本（亿）"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "总股本（亿）"
+    },
+    {
+      "name": "total_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "总资产（亿）"
+    },
+    {
+      "name": "liquid_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "流动资产（亿）"
+    },
+    {
+      "name": "fixed_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "固定资产（亿）"
+    },
+    {
+      "name": "reserved",
+      "type": "float",
+      "required": "Y",
+      "description": "公积金"
+    },
+    {
+      "name": "reserved_pershare",
+      "type": "float",
+      "required": "Y",
+      "description": "每股公积金"
+    },
+    {
+      "name": "eps",
+      "type": "float",
+      "required": "Y",
+      "description": "每股收益"
+    },
+    {
+      "name": "bvps",
+      "type": "float",
+      "required": "Y",
+      "description": "每股净资产"
+    },
+    {
+      "name": "pb",
+      "type": "float",
+      "required": "Y",
+      "description": "市净率"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上市日期"
+    },
+    {
+      "name": "undp",
+      "type": "float",
+      "required": "Y",
+      "description": "未分配利润"
+    },
+    {
+      "name": "per_undp",
+      "type": "float",
+      "required": "Y",
+      "description": "每股未分配利润"
+    },
+    {
+      "name": "rev_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "收入同比（%）"
+    },
+    {
+      "name": "profit_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "利润同比（%）"
+    },
+    {
+      "name": "gpr",
+      "type": "float",
+      "required": "Y",
+      "description": "毛利率（%）"
+    },
+    {
+      "name": "npr",
+      "type": "float",
+      "required": "Y",
+      "description": "净利润率（%）"
+    },
+    {
+      "name": "holder_num",
+      "type": "int",
+      "required": "Y",
+      "description": "股东人数"
+    }
+  ]
+}

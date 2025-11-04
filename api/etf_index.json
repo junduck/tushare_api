@@ -1,0 +1,75 @@
+{
+  "api_name": "etf_index",
+  "title": "ETF基准指数",
+  "description": "获取ETF基准指数列表信息限量：单次请求最大返回5000行数据（当前未超过2000个）权限：用户积累8000积分可调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码"
+    },
+    {
+      "name": "pub_date",
+      "type": "str",
+      "required": "N",
+      "description": "发布日期（格式：YYYYMMDD）"
+    },
+    {
+      "name": "base_date",
+      "type": "str",
+      "required": "N",
+      "description": "指数基期（格式：YYYYMMDD）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "指数代码"
+    },
+    {
+      "name": "indx_name",
+      "type": "str",
+      "required": "Y",
+      "description": "指数全称"
+    },
+    {
+      "name": "indx_csname",
+      "type": "str",
+      "required": "Y",
+      "description": "指数简称"
+    },
+    {
+      "name": "pub_party_name",
+      "type": "str",
+      "required": "Y",
+      "description": "指数发布机构"
+    },
+    {
+      "name": "pub_date",
+      "type": "str",
+      "required": "Y",
+      "description": "指数发布日期"
+    },
+    {
+      "name": "base_date",
+      "type": "str",
+      "required": "Y",
+      "description": "指数基日"
+    },
+    {
+      "name": "bp",
+      "type": "float",
+      "required": "Y",
+      "description": "指数基点(点)"
+    },
+    {
+      "name": "adj_circle",
+      "type": "str",
+      "required": "Y",
+      "description": "指数成份证券调整周期"
+    }
+  ]
+}

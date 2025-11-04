@@ -1,0 +1,22 @@
+{
+  "name": "tushare_cn_ppi",
+  "description": "工业生产者出厂价格指数（PPI）。获取PPI工业生产者出厂价格指数数据限量：单次最大5000，一次可以提取全部数据权限：用户600积分可以使用，具体请参阅积分获取办法。返回字段包括：month(Y), ppi_yoy(Y), ppi_mp_yoy(Y), ppi_mp_qm_yoy(Y), ppi_mp_rm_yoy(Y), ppi_mp_p_yoy(Y), ppi_cg_yoy(Y), ppi_cg_f_yoy(Y), ppi_cg_c_yoy(Y), ppi_cg_adu_yoy(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "m": {
+        "type": "string",
+        "description": "月份（YYYYMM，下同），支持多个月份同时输入，逗号分隔"
+      },
+      "start_m": {
+        "type": "string",
+        "description": "开始月份"
+      },
+      "end_m": {
+        "type": "string",
+        "description": "结束月份"
+      }
+    },
+    "required": []
+  }
+}

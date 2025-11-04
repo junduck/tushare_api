@@ -1,0 +1,45 @@
+{
+  "api_name": "cb_rate",
+  "title": "可转债票面利率",
+  "description": "获取可转债票面利率限量：单次最大2000，总量不限制权限：用户需要至少5000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "转债代码，支持多值输入"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "转债代码"
+    },
+    {
+      "name": "rate_freq",
+      "type": "int",
+      "required": "N",
+      "description": "付息频率(次/年)"
+    },
+    {
+      "name": "rate_start_date",
+      "type": "str",
+      "required": "N",
+      "description": "付息开始日期"
+    },
+    {
+      "name": "rate_end_date",
+      "type": "str",
+      "required": "N",
+      "description": "付息结束日期"
+    },
+    {
+      "name": "coupon_rate",
+      "type": "float",
+      "required": "N",
+      "description": "票面利率(%)"
+    }
+  ]
+}

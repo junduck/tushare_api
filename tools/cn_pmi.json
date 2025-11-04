@@ -1,0 +1,22 @@
+{
+  "name": "tushare_cn_pmi",
+  "description": "采购经理指数（PMI）。采购经理人指数限量：单次最大2000，一次可以提取全部数据权限：用户积累2000积分可以使用，具体请参阅积分获取办法。返回字段包括：month(N), pmi010000(N), pmi010100(N), pmi010200(N), pmi010300(N), pmi010400(N), pmi010401(N), pmi010402(N), pmi010403(N), pmi010500(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "m": {
+        "type": "string",
+        "description": "月度（202401表示，2024年1月）"
+      },
+      "start_m": {
+        "type": "string",
+        "description": "开始月度"
+      },
+      "end_m": {
+        "type": "string",
+        "description": "结束月度（e.g. fields='month,pmi010000,pmi010400'）"
+      }
+    },
+    "required": []
+  }
+}

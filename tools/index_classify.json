@@ -1,0 +1,26 @@
+{
+  "name": "tushare_index_classify",
+  "description": "申万行业分类。获取申万行业分类，可以获取申万2014年版本（28个一级分类，104个二级分类，227个三级分类）和2021年本版（31个一级分类，134个二级分类，346个三级分类）列表信息权限：用户需2000积分可以调取，具体请参阅积分获取办法。返回字段包括：index_code(Y), industry_name(Y), parent_code(Y), level(Y), industry_code(Y), is_pub(Y), src(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "index_code": {
+        "type": "string",
+        "description": "指数代码"
+      },
+      "level": {
+        "type": "string",
+        "description": "行业分级（L1/L2/L3）"
+      },
+      "parent_code": {
+        "type": "string",
+        "description": "父级代码（一级为0）"
+      },
+      "src": {
+        "type": "string",
+        "description": "指数来源（SW2014：申万2014年版本，SW2021：申万2021年版本）"
+      }
+    },
+    "required": []
+  }
+}

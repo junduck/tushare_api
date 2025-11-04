@@ -1,0 +1,29 @@
+{
+  "name": "tushare_ci_daily",
+  "description": "中信行业指数日行情。获取中信行业指数日线行情限量：单次最大4000条，可循环提取积分：5000积分可调取，可通过指数代码和日期参数循环获取所有数据。返回字段包括：ts_code(Y), trade_date(Y), open(Y), low(Y), high(Y), close(Y), pre_close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "行业代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

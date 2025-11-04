@@ -1,0 +1,34 @@
+{
+  "name": "tushare_disclosure_date",
+  "description": "财报披露日期表。获取财报披露计划日期限量：单次最大3000，总量不限制积分：用户需要至少500积分才可以调取，积分越多权限越大，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), end_date(Y), pre_date(Y), actual_date(Y), modify_date(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "财报周期（每个季度最后一天的日期，比如20181231表示2018年年报，20180630表示中报)",
+        "pattern": "^\\d{8}$"
+      },
+      "pre_date": {
+        "type": "string",
+        "description": "计划披露日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "最新披露公告日",
+        "pattern": "^\\d{8}$"
+      },
+      "actual_date": {
+        "type": "string",
+        "description": "实际披露日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "tushare_idx_factor_pro",
+  "description": "指数技术面因子(专业版)。获取指数每日技术面因子数据，用于跟踪指数当前走势情况，数据由Tushare社区自产，覆盖全历史；输出参数_bfq表示不复权描述中说明了因子的默认传参，如需要特殊参数或者更多因子可以联系管理员评估，指数包括大盘指数 申万行业指数 中信指数限量：单次最大8000积分：5000积分每分钟可以请求30次，8000积分以上每分钟500次。返回字段包括：ts_code(Y), trade_date(Y), open(Y), high(Y), low(Y), close(Y), pre_close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码(大盘指数 申万指数 中信指数)"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

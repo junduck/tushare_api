@@ -1,0 +1,34 @@
+{
+  "name": "tushare_stock_basic",
+  "description": "股票列表。获取基础信息数据，包括股票代码、名称、上市日期、退市日期等权限：2000积分起。此接口是基础信息，调取一次就可以拉取完，建议保存倒本地存储后使用。返回字段包括：ts_code(Y), symbol(Y), name(Y), area(Y), industry(Y), fullname(N), enname(N), cnspell(Y), market(Y), exchange(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "name": {
+        "type": "string",
+        "description": "名称"
+      },
+      "market": {
+        "type": "string",
+        "description": "市场类别 （主板/创业板/科创板/CDR/北交所）"
+      },
+      "list_status": {
+        "type": "string",
+        "description": "上市状态 L上市 D退市 P暂停上市，默认是L"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所 SSE上交所 SZSE深交所 BSE北交所"
+      },
+      "is_hs": {
+        "type": "string",
+        "description": "是否沪深港通标的，N否 H沪股通 S深股通"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "tushare_top_inst",
+  "description": "龙虎榜机构交易单。龙虎榜机构成交明细限量：单次请求最大返回10000行数据，可根据参数循环获取全部历史积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), exalter(Y), side(Y), buy(Y), buy_rate(Y), sell(Y), sell_rate(Y), net_buy(Y), reason(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      }
+    },
+    "required": [
+      "trade_date"
+    ]
+  }
+}

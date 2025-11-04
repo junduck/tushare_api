@@ -1,0 +1,69 @@
+{
+  "api_name": "gz_index",
+  "title": "广州民间借贷利率",
+  "description": "广州民间借贷利率限量：不限量，一次可取全部指标全部历史数据积分：用户需要积攒2000积分可调取，具体请参阅积分获取办法数据来源：广州民间金融街",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "d10_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（十天） （单位：%，下同）"
+    },
+    {
+      "name": "m1_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（一月期）"
+    },
+    {
+      "name": "m3_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（三月期）"
+    },
+    {
+      "name": "m6_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（六月期）"
+    },
+    {
+      "name": "m12_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（一年期）"
+    },
+    {
+      "name": "long_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "小额贷市场平均利率（长期）"
+    }
+  ]
+}

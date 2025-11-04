@@ -1,0 +1,29 @@
+{
+  "name": "tushare_cb_call",
+  "description": "可转债赎回信息。获取可转债到期赎回、强制赎回等信息。数据来源于公开披露渠道，供个人和机构研究使用，请不要用于数据商业目的。限量：单次最大2000条数据，可以根据日期循环提取，本接口需5000积分。。返回字段包括：ts_code(Y), call_type(Y), is_call(Y), ann_date(Y), call_date(Y), call_price(Y), call_price_tax(Y), call_vol(Y), call_amount(Y), payment_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "转债代码，支持多值输入"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "api_name": "us_tbr",
+  "title": "短期国债利率",
+  "description": "获取美国短期国债利率数据限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD格式)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定输出字段(e.g. fields='w4_bd,w52_ce')"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "w4_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "4周银行折现收益率"
+    },
+    {
+      "name": "w4_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "4周票面利率"
+    },
+    {
+      "name": "w8_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "8周银行折现收益率"
+    },
+    {
+      "name": "w8_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "8周票面利率"
+    },
+    {
+      "name": "w13_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "13周银行折现收益率"
+    },
+    {
+      "name": "w13_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "13周票面利率"
+    },
+    {
+      "name": "w17_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "17周银行折现收益率（数据从20221019开始）"
+    },
+    {
+      "name": "w17_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "17周票面利率（数据从20221019开始）"
+    },
+    {
+      "name": "w26_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "26周银行折现收益率"
+    },
+    {
+      "name": "w26_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "26周票面利率"
+    },
+    {
+      "name": "w52_bd",
+      "type": "float",
+      "required": "Y",
+      "description": "52周银行折现收益率"
+    },
+    {
+      "name": "w52_ce",
+      "type": "float",
+      "required": "Y",
+      "description": "52周票面利率"
+    }
+  ]
+}

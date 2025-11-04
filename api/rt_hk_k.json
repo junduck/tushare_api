@@ -1,0 +1,63 @@
+{
+  "api_name": "rt_hk_k",
+  "title": "港股实时日线",
+  "description": "获取港股实时日k线行情，支持按股票代码及股票代码通配符一次性提取全部股票实时日k线行情限量：单次最大可提取5000条数据积分：本接口是单独开权限的数据，单独申请权限请参考权限列表",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "支持通配符方式，e.g. 00001.HK、02*.HK"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量（股）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额(元)"
+    }
+  ]
+}

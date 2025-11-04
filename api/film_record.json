@@ -1,0 +1,81 @@
+{
+  "api_name": "film_record",
+  "title": "全国电影剧本备案数据",
+  "description": "获取全国电影剧本备案的公示数据限量：单次最大500，总量不限制数据权限：用户需要至少120积分才可以调取，积分越多调取频次越高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公布日期 （至少输入一个参数，格式：YYYYMMDD，日期不连续，定期公布）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "rec_no",
+      "type": "str",
+      "required": "Y",
+      "description": "备案号"
+    },
+    {
+      "name": "film_name",
+      "type": "str",
+      "required": "Y",
+      "description": "影片名称"
+    },
+    {
+      "name": "rec_org",
+      "type": "str",
+      "required": "Y",
+      "description": "备案单位"
+    },
+    {
+      "name": "script_writer",
+      "type": "str",
+      "required": "Y",
+      "description": "编剧"
+    },
+    {
+      "name": "rec_result",
+      "type": "str",
+      "required": "Y",
+      "description": "备案结果"
+    },
+    {
+      "name": "rec_area",
+      "type": "str",
+      "required": "Y",
+      "description": "备案地（备案时间）"
+    },
+    {
+      "name": "classified",
+      "type": "str",
+      "required": "Y",
+      "description": "影片分类"
+    },
+    {
+      "name": "date_range",
+      "type": "str",
+      "required": "Y",
+      "description": "备案日期区间"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "备案结果发布时间"
+    }
+  ]
+}

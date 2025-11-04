@@ -1,0 +1,111 @@
+{
+  "api_name": "top_list",
+  "title": "龙虎榜每日统计单",
+  "description": "龙虎榜每日交易明细数据历史： 2005年至今限量：单次请求返回最大10000行数据，可通过参数循环获取全部历史积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "名称"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "turnover_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "总成交额"
+    },
+    {
+      "name": "l_sell",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜卖出额"
+    },
+    {
+      "name": "l_buy",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜买入额"
+    },
+    {
+      "name": "l_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜成交额"
+    },
+    {
+      "name": "net_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜净买入额"
+    },
+    {
+      "name": "net_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜净买额占比"
+    },
+    {
+      "name": "amount_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "龙虎榜成交额占比"
+    },
+    {
+      "name": "float_values",
+      "type": "float",
+      "required": "Y",
+      "description": "当日流通市值"
+    },
+    {
+      "name": "reason",
+      "type": "str",
+      "required": "Y",
+      "description": "上榜理由"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "api_name": "report_rc",
+  "title": "券商盈利预测数据",
+  "description": "获取券商（卖方）每天研报的盈利预测数据，数据从2010年开始，每晚19~22点更新当日数据限量：单次最大3000条，可分页和循环提取所有数据权限：本接口120积分可以试用，每天10次请求，正式权限需8000积分，每天可请求100000次，10000积分以上无总量限制。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "report_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "report_date",
+      "type": "str",
+      "required": "Y",
+      "description": "研报日期"
+    },
+    {
+      "name": "report_title",
+      "type": "str",
+      "required": "Y",
+      "description": "报告标题"
+    },
+    {
+      "name": "report_type",
+      "type": "str",
+      "required": "Y",
+      "description": "报告类型"
+    },
+    {
+      "name": "classify",
+      "type": "str",
+      "required": "Y",
+      "description": "报告分类"
+    },
+    {
+      "name": "org_name",
+      "type": "str",
+      "required": "Y",
+      "description": "机构名称"
+    },
+    {
+      "name": "author_name",
+      "type": "str",
+      "required": "Y",
+      "description": "作者"
+    },
+    {
+      "name": "quarter",
+      "type": "str",
+      "required": "Y",
+      "description": "预测报告期"
+    },
+    {
+      "name": "op_rt",
+      "type": "float",
+      "required": "Y",
+      "description": "预测营业收入（万元）"
+    },
+    {
+      "name": "op_pr",
+      "type": "float",
+      "required": "Y",
+      "description": "预测营业利润（万元）"
+    },
+    {
+      "name": "tp",
+      "type": "float",
+      "required": "Y",
+      "description": "预测利润总额（万元）"
+    },
+    {
+      "name": "np",
+      "type": "float",
+      "required": "Y",
+      "description": "预测净利润（万元）"
+    },
+    {
+      "name": "eps",
+      "type": "float",
+      "required": "Y",
+      "description": "预测每股收益（元）"
+    },
+    {
+      "name": "pe",
+      "type": "float",
+      "required": "Y",
+      "description": "预测市盈率"
+    },
+    {
+      "name": "rd",
+      "type": "float",
+      "required": "Y",
+      "description": "预测股息率"
+    },
+    {
+      "name": "roe",
+      "type": "float",
+      "required": "Y",
+      "description": "预测净资产收益率"
+    },
+    {
+      "name": "ev_ebitda",
+      "type": "float",
+      "required": "Y",
+      "description": "预测EV/EBITDA"
+    },
+    {
+      "name": "rating",
+      "type": "str",
+      "required": "Y",
+      "description": "卖方评级"
+    },
+    {
+      "name": "max_price",
+      "type": "float",
+      "required": "Y",
+      "description": "预测最高目标价"
+    },
+    {
+      "name": "min_price",
+      "type": "float",
+      "required": "Y",
+      "description": "预测最低目标价"
+    },
+    {
+      "name": "imp_dg",
+      "type": "str",
+      "required": "N",
+      "description": "机构关注度"
+    },
+    {
+      "name": "create_time",
+      "type": "datetime",
+      "required": "N",
+      "description": "TS数据更新时间"
+    }
+  ]
+}

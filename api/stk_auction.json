@@ -1,0 +1,87 @@
+{
+  "api_name": "stk_auction",
+  "title": "开盘竞价成交（当日）",
+  "description": "获取当日个股和ETF的集合竞价成交情况，每天9点25~29分之间可以获取当日的集合竞价成交数据限量：单次最大返回8000行数据，可根据日期或代码循环获取历史积分：本接口是单独开权限的数据，已经开通了股票分钟权限的用户可自动获得本接口权限，单独申请权限请参考权限列表。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "数据日期"
+    },
+    {
+      "name": "vol",
+      "type": "int",
+      "required": "Y",
+      "description": "成交量（股）"
+    },
+    {
+      "name": "price",
+      "type": "int",
+      "required": "Y",
+      "description": "成交均价（元）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交金额（元）"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价（元）"
+    },
+    {
+      "name": "turnover_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率（%）"
+    },
+    {
+      "name": "volume_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "量比"
+    },
+    {
+      "name": "float_share",
+      "type": "float",
+      "required": "Y",
+      "description": "流通股本（万股）"
+    }
+  ]
+}

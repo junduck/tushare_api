@@ -1,0 +1,51 @@
+{
+  "api_name": "news",
+  "title": "新闻快讯（短讯）",
+  "description": "获取主流新闻网站的快讯新闻数据,提供超过6年以上历史新闻。限量：单次最大1500条新闻，可根据时间参数循环提取历史积分：本接口需单独开权限（跟积分没关系），具体请参阅权限说明",
+  "input_params": [
+    {
+      "name": "start_date",
+      "type": "datetime",
+      "required": "Y",
+      "description": "开始日期(格式：2018-11-20 09:00:00）"
+    },
+    {
+      "name": "end_date",
+      "type": "datetime",
+      "required": "Y",
+      "description": "结束日期"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "required": "Y",
+      "description": "新闻来源 见下表"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "datetime",
+      "type": "str",
+      "required": "Y",
+      "description": "新闻时间"
+    },
+    {
+      "name": "content",
+      "type": "str",
+      "required": "Y",
+      "description": "内容"
+    },
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "标题"
+    },
+    {
+      "name": "channels",
+      "type": "str",
+      "required": "N",
+      "description": "分类"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "api_name": "ths_index",
+  "title": "同花顺行业概念板块",
+  "description": "获取同花顺板块指数。注：数据版权归属同花顺，如做商业用途，请主动联系同花顺，如需帮助请联系微信：waditu_a权限：本接口需有6000积分，单次最大返回5000行数据，一次可提取全部数据，请勿循环提取。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "市场类型A-a股 HK-港股 US-美股"
+    },
+    {
+      "name": "type",
+      "type": "str",
+      "required": "N",
+      "description": "指数类型 N-概念指数 I-行业指数 R-地域指数 S-同花顺特色指数 ST-同花顺风格指数 TH-同花顺主题指数 BB-同花顺宽基指数"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "名称"
+    },
+    {
+      "name": "count",
+      "type": "int",
+      "required": "Y",
+      "description": "成分个数"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易所"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上市日期"
+    },
+    {
+      "name": "type",
+      "type": "str",
+      "required": "Y",
+      "description": "N概念指数S特色指数"
+    }
+  ]
+}

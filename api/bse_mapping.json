@@ -1,0 +1,45 @@
+{
+  "api_name": "bse_mapping",
+  "title": "北交所新旧代码对照",
+  "description": "获取北交所股票代码变更后新旧代码映射表数据限量：单次最大1000条（本接口总数据量300以内）积分：120积分即可调取",
+  "input_params": [
+    {
+      "name": "o_code",
+      "type": "str",
+      "required": "N",
+      "description": "旧代码"
+    },
+    {
+      "name": "n_code",
+      "type": "str",
+      "required": "N",
+      "description": "新代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "o_code",
+      "type": "str",
+      "required": "Y",
+      "description": "原代码"
+    },
+    {
+      "name": "n_code",
+      "type": "str",
+      "required": "Y",
+      "description": "新代码"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上市日期"
+    }
+  ]
+}

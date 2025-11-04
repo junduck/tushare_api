@@ -1,0 +1,116 @@
+{
+  "api_name": "fund_company",
+  "title": "基金管理人",
+  "description": "获取公募基金管理人列表积分：用户需要1500积分才可以调取，一次可以提取全部数据。具体请参阅积分获取办法",
+  "input_params": [],
+  "output_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "基金公司名称"
+    },
+    {
+      "name": "shortname",
+      "type": "str",
+      "required": "Y",
+      "description": "简称"
+    },
+    {
+      "name": "short_enname",
+      "type": "str",
+      "required": "N",
+      "description": "英文缩写"
+    },
+    {
+      "name": "province",
+      "type": "str",
+      "required": "Y",
+      "description": "省份"
+    },
+    {
+      "name": "city",
+      "type": "str",
+      "required": "Y",
+      "description": "城市"
+    },
+    {
+      "name": "address",
+      "type": "str",
+      "required": "Y",
+      "description": "注册地址"
+    },
+    {
+      "name": "phone",
+      "type": "str",
+      "required": "Y",
+      "description": "电话"
+    },
+    {
+      "name": "office",
+      "type": "str",
+      "required": "Y",
+      "description": "办公地址"
+    },
+    {
+      "name": "website",
+      "type": "str",
+      "required": "Y",
+      "description": "公司网址"
+    },
+    {
+      "name": "chairman",
+      "type": "str",
+      "required": "Y",
+      "description": "法人代表"
+    },
+    {
+      "name": "manager",
+      "type": "str",
+      "required": "Y",
+      "description": "总经理"
+    },
+    {
+      "name": "reg_capital",
+      "type": "float",
+      "required": "Y",
+      "description": "注册资本"
+    },
+    {
+      "name": "setup_date",
+      "type": "str",
+      "required": "Y",
+      "description": "成立日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公司终止日期"
+    },
+    {
+      "name": "employees",
+      "type": "float",
+      "required": "Y",
+      "description": "员工总数"
+    },
+    {
+      "name": "main_business",
+      "type": "str",
+      "required": "Y",
+      "description": "主要产品及业务"
+    },
+    {
+      "name": "org_code",
+      "type": "str",
+      "required": "Y",
+      "description": "组织机构代码"
+    },
+    {
+      "name": "credit_code",
+      "type": "str",
+      "required": "Y",
+      "description": "统一社会信用代码"
+    }
+  ]
+}

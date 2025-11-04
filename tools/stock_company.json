@@ -1,0 +1,18 @@
+{
+  "name": "tushare_stock_company",
+  "description": "上市公司基本信息。获取上市公司基础信息，单次提取4500条，可以根据交易所分批提取积分：用户需要至少120积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), com_name(Y), com_id(Y), exchange(Y), chairman(Y), manager(Y), secretary(Y), reg_capital(Y), setup_date(Y), province(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所代码 ，SSE上交所 SZSE深交所 BSE北交所"
+      }
+    },
+    "required": []
+  }
+}

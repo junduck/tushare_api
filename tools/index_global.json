@@ -1,0 +1,9 @@
+{
+  "name": "tushare_index_global",
+  "description": "国际主要指数。获取国际主要指数日线行情限量：单次最大提取4000行情数据，可循环获取，总量不限制积分：用户积6000积分可调取，积分越高频次越高，请自行提高积分，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), open(Y), close(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_chg(Y), swing(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}

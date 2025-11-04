@@ -1,0 +1,33 @@
+{
+  "name": "tushare_hm_detail",
+  "description": "游资交易每日明细。获取每日游资交易明细，数据开始于2022年8。游资分类名录，请点击游资名录限量：单次最多提取2000条记录，可循环调取，总量不限制积分：用户积10000积分可调取使用，积分获取办法请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), ts_name(Y), buy_amount(Y), sell_amount(Y), net_amount(Y), hm_name(Y), hm_orgs(Y), tag(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD)",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "hm_name": {
+        "type": "string",
+        "description": "游资名称"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期(YYYYMMDD)",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期(YYYYMMDD)",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

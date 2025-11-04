@@ -1,0 +1,29 @@
+{
+  "name": "tushare_hk_daily",
+  "description": "港股日线行情。获取港股每日增量和历史行情，每日18点左右更新当日数据限量：单次最大提取5000行记录，可多次提取，总量不限制积分：本接口单独开权限，具体请参阅权限说明。返回字段包括：ts_code(Y), trade_date(Y), open(Y), high(Y), low(Y), close(Y), pre_close(Y), change(Y), pct_chg(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

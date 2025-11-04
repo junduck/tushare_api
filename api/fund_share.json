@@ -1,0 +1,57 @@
+{
+  "api_name": "fund_share",
+  "title": "基金规模",
+  "description": "获取基金规模数据，包含上海和深圳ETF基金限量：单次最大提取2000行数据积分：用户需要至少2000积分可以调取，5000积分以上频次较高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS基金代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "market",
+      "type": "str",
+      "required": "N",
+      "description": "市场代码（SH上交所 ，SZ深交所）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "基金代码，支持多只基金同时提取，用逗号分隔"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易（变动）日期，格式YYYYMMDD"
+    },
+    {
+      "name": "fd_share",
+      "type": "float",
+      "required": "Y",
+      "description": "基金份额（万）"
+    }
+  ]
+}

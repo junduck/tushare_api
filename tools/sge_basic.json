@@ -1,0 +1,14 @@
+{
+  "name": "tushare_sge_basic",
+  "description": "上海黄金基础信息。获取上海黄金交易所现货合约基础信息限量：单次最大100条，当前现货合约数不足20个，可以一次提取全部，不需要循环提取积分：用户积5000积分可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ts_name(Y), trade_type(Y), t_unit(Y), p_unit(Y), min_change(Y), price_limit(Y), min_vol(Y), max_vol(Y), trade_mode(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "合约代码 （支持多个，逗号分隔，不输入为获取全部）"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tushare_ci_index_member",
+  "description": "中信行业成分。按三级分类提取中信行业成分，可提供某个分类的所有成分，也可按股票代码提取所属分类，参数灵活限量：单次最大5000行，总量不限制权限：用户需5000积分可调取，积分获取方法请参阅积分获取办法。返回字段包括：l1_code(Y), l1_name(Y), l2_code(Y), l2_name(Y), l3_code(Y), l3_name(Y), ts_code(Y), name(Y), in_date(Y), out_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "l1_code": {
+        "type": "string",
+        "description": "一级行业代码"
+      },
+      "l2_code": {
+        "type": "string",
+        "description": "二级行业代码"
+      },
+      "l3_code": {
+        "type": "string",
+        "description": "三级行业代码"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "is_new": {
+        "type": "string",
+        "description": "是否最新（默认为“Y是”）"
+      }
+    },
+    "required": []
+  }
+}

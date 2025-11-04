@@ -1,0 +1,87 @@
+{
+  "api_name": "cn_gdp",
+  "title": "国内生产总值（GDP）",
+  "description": "获取国民经济之GDP数据限量：单次最大10000，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "q",
+      "type": "str",
+      "required": "N",
+      "description": "季度（2019Q1表示，2019年第一季度）"
+    },
+    {
+      "name": "start_q",
+      "type": "str",
+      "required": "N",
+      "description": "开始季度"
+    },
+    {
+      "name": "end_q",
+      "type": "str",
+      "required": "N",
+      "description": "结束季度"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定输出字段（e.g. fields='quarter,gdp,gdp_yoy'）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "quarter",
+      "type": "str",
+      "required": "Y",
+      "description": "季度"
+    },
+    {
+      "name": "gdp",
+      "type": "float",
+      "required": "Y",
+      "description": "GDP累计值（亿元）"
+    },
+    {
+      "name": "gdp_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "当季同比增速（%）"
+    },
+    {
+      "name": "pi",
+      "type": "float",
+      "required": "Y",
+      "description": "第一产业累计值（亿元）"
+    },
+    {
+      "name": "pi_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "第一产业同比增速（%）"
+    },
+    {
+      "name": "si",
+      "type": "float",
+      "required": "Y",
+      "description": "第二产业累计值（亿元）"
+    },
+    {
+      "name": "si_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "第二产业同比增速（%）"
+    },
+    {
+      "name": "ti",
+      "type": "float",
+      "required": "Y",
+      "description": "第三产业累计值（亿元）"
+    },
+    {
+      "name": "ti_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "第三产业同比增速（%）"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "api_name": "bo_cinema",
+  "title": "影院日度票房",
+  "description": "获取每日各影院的票房数据数据历史： 数据从2018年9月开始，更多历史数据正在补充数据权限：用户需要至少500积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期(格式:YYYYMMDD)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "c_name",
+      "type": "str",
+      "required": "Y",
+      "description": "影院名称"
+    },
+    {
+      "name": "aud_count",
+      "type": "int",
+      "required": "Y",
+      "description": "观众人数"
+    },
+    {
+      "name": "att_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "上座率"
+    },
+    {
+      "name": "day_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "当日票房"
+    },
+    {
+      "name": "day_showcount",
+      "type": "float",
+      "required": "Y",
+      "description": "当日场次"
+    },
+    {
+      "name": "avg_price",
+      "type": "float",
+      "required": "Y",
+      "description": "场均票价（元）"
+    },
+    {
+      "name": "p_pc",
+      "type": "float",
+      "required": "Y",
+      "description": "场均人次"
+    },
+    {
+      "name": "rank",
+      "type": "int",
+      "required": "Y",
+      "description": "排名"
+    }
+  ]
+}

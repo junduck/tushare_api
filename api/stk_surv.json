@@ -1,0 +1,93 @@
+{
+  "api_name": "stk_surv",
+  "title": "机构调研数据",
+  "description": "获取上市公司机构调研记录数据限量：单次最大获取100条数据，可循环或分页提取积分：用户积5000积分可使用",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "调研日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "调研开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "调研结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "surv_date",
+      "type": "str",
+      "required": "Y",
+      "description": "调研日期"
+    },
+    {
+      "name": "fund_visitors",
+      "type": "str",
+      "required": "Y",
+      "description": "机构参与人员"
+    },
+    {
+      "name": "rece_place",
+      "type": "str",
+      "required": "Y",
+      "description": "接待地点"
+    },
+    {
+      "name": "rece_mode",
+      "type": "str",
+      "required": "Y",
+      "description": "接待方式"
+    },
+    {
+      "name": "rece_org",
+      "type": "str",
+      "required": "Y",
+      "description": "接待的公司"
+    },
+    {
+      "name": "org_type",
+      "type": "str",
+      "required": "Y",
+      "description": "接待公司类型"
+    },
+    {
+      "name": "comp_rece",
+      "type": "str",
+      "required": "Y",
+      "description": "上市公司接待人员"
+    },
+    {
+      "name": "content",
+      "type": "None",
+      "required": "N",
+      "description": "调研内容"
+    }
+  ]
+}

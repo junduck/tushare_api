@@ -1,0 +1,24 @@
+{
+  "name": "tushare_namechange",
+  "description": "股票曾用名。历史名称变更记录。返回字段包括：ts_code(Y), name(Y), start_date(Y), end_date(Y), ann_date(Y), change_reason(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

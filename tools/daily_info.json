@@ -1,0 +1,37 @@
+{
+  "name": "tushare_daily_info",
+  "description": "沪深市场每日交易统计。获取交易所股票交易统计，包括各板块明细限量：单次最大4000，可循环获取，总量不限制权限：用户积600积分可调取， 频次有限制，积分越高每分钟调取频次越高，5000积分以上频次相对较高，积分获取方法请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), ts_name(Y), com_count(Y), total_share(Y), float_share(Y), total_mv(Y), float_mv(Y), amount(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "板块代码（请参阅下方列表）"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "股票市场（SH上交所 SZ深交所）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定提取字段"
+      }
+    },
+    "required": []
+  }
+}

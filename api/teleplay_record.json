@@ -1,0 +1,117 @@
+{
+  "api_name": "teleplay_record",
+  "title": "全国电视剧备案公示数据",
+  "description": "获取2009年以来全国拍摄制作电视剧备案公示数据限量：单次最大1000，总量不限制数据权限：用户需要至少积分600才可以调取，积分越多调取频次越高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "report_date",
+      "type": "str",
+      "required": "N",
+      "description": "备案月份（YYYYMM）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "备案开始月份（YYYYMM）"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "备案结束月份（YYYYMM）"
+    },
+    {
+      "name": "org",
+      "type": "str",
+      "required": "N",
+      "description": "备案机构"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "电视剧名称"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "电视剧名称"
+    },
+    {
+      "name": "classify",
+      "type": "str",
+      "required": "Y",
+      "description": "题材"
+    },
+    {
+      "name": "types",
+      "type": "str",
+      "required": "Y",
+      "description": "体裁"
+    },
+    {
+      "name": "org",
+      "type": "str",
+      "required": "Y",
+      "description": "报备机构"
+    },
+    {
+      "name": "report_date",
+      "type": "str",
+      "required": "Y",
+      "description": "报备时间"
+    },
+    {
+      "name": "license_key",
+      "type": "str",
+      "required": "Y",
+      "description": "许可证号"
+    },
+    {
+      "name": "episodes",
+      "type": "str",
+      "required": "Y",
+      "description": "集数"
+    },
+    {
+      "name": "shooting_date",
+      "type": "str",
+      "required": "Y",
+      "description": "拍摄时间"
+    },
+    {
+      "name": "prod_cycle",
+      "type": "str",
+      "required": "Y",
+      "description": "制作周期"
+    },
+    {
+      "name": "content",
+      "type": "str",
+      "required": "Y",
+      "description": "内容提要"
+    },
+    {
+      "name": "pro_opi",
+      "type": "str",
+      "required": "Y",
+      "description": "省级管理部门备案意见"
+    },
+    {
+      "name": "dept_opi",
+      "type": "str",
+      "required": "Y",
+      "description": "相关部门意见"
+    },
+    {
+      "name": "remarks",
+      "type": "str",
+      "required": "Y",
+      "description": "备注"
+    }
+  ]
+}

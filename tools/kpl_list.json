@@ -1,0 +1,33 @@
+{
+  "name": "tushare_kpl_list",
+  "description": "榜单数据（开盘啦）。获取开盘啦涨停、跌停、炸板等榜单数据限量：单次最大8000条数据，可根据日期循环获取历史数据积分：5000积分每分钟可以请求200次每天总量1万次，8000积分以上每分钟500次每天总量不限制，具体请参阅积分获取办法。返回字段包括：ts_code(Y), name(Y), trade_date(Y), lu_time(Y), ld_time(Y), open_time(Y), last_time(Y), lu_desc(Y), tag(Y), theme(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "tag": {
+        "type": "string",
+        "description": "板单类型（涨停/炸板/跌停/自然涨停/竞价，默认为涨停)"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

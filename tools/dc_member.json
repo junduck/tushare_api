@@ -1,0 +1,23 @@
+{
+  "name": "tushare_dc_member",
+  "description": "东方财富概念成分。获取东方财富板块每日成分数据，可以根据概念板块代码和交易日期，获取历史成分限量：单次最大获取5000条数据，可以通过日期和代码循环获取权限：用户积累6000积分可调取，具体请参阅积分获取办法注意：本接口只限个人学习和研究使用，如需商业用途，请自行联系东方财富解决数据采购问题。。返回字段包括：trade_date(Y), ts_code(Y), con_code(Y), name(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "板块指数代码"
+      },
+      "con_code": {
+        "type": "string",
+        "description": "成分股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

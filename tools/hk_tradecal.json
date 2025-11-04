@@ -1,0 +1,24 @@
+{
+  "name": "tushare_hk_tradecal",
+  "description": "港股交易日历。获取交易日历限量：单次最大2000权限：用户积累2000积分才可调取。返回字段包括：cal_date(Y), is_open(Y), pretrade_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "is_open": {
+        "type": "string",
+        "description": "是否交易 '0'休市 '1'交易"
+      }
+    },
+    "required": []
+  }
+}

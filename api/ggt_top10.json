@@ -1,0 +1,141 @@
+{
+  "api_name": "ggt_top10",
+  "title": "港股通十大成交股",
+  "description": "获取港股通每日成交数据，其中包括沪市、深市详细数据，每天18~20点之间完成当日更新",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码（二选一）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（二选一）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "market_type",
+      "type": "str",
+      "required": "N",
+      "description": "市场类型 2：港股通（沪） 4：港股通（深）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "股票代码",
+      "description": ""
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "股票名称",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "收盘价",
+      "description": ""
+    },
+    {
+      "name": "p_change",
+      "type": "float",
+      "required": "涨跌幅",
+      "description": ""
+    },
+    {
+      "name": "rank",
+      "type": "str",
+      "required": "资金排名",
+      "description": ""
+    },
+    {
+      "name": "market_type",
+      "type": "str",
+      "required": "市场类型 2：港股通（沪） 4：港股通（深）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "累计成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "net_amount",
+      "type": "float",
+      "required": "净买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sh_amount",
+      "type": "float",
+      "required": "沪市成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sh_net_amount",
+      "type": "float",
+      "required": "沪市净买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sh_buy",
+      "type": "float",
+      "required": "沪市买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sh_sell",
+      "type": "float",
+      "required": "沪市卖出金额",
+      "description": ""
+    },
+    {
+      "name": "sz_amount",
+      "type": "float",
+      "required": "深市成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sz_net_amount",
+      "type": "float",
+      "required": "深市净买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sz_buy",
+      "type": "float",
+      "required": "深市买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sz_sell",
+      "type": "float",
+      "required": "深市卖出金额（元）",
+      "description": ""
+    }
+  ]
+}

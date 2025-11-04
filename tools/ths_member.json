@@ -1,0 +1,18 @@
+{
+  "name": "tushare_ths_member",
+  "description": "同花顺行业概念成分。获取同花顺概念板块成分列表注：数据版权归属同花顺，如做商业用途，请主动联系同花顺。限量：用户积累5000积分可调取，每分钟可调取200次，可按概念板块代码循环提取所有成分。返回字段包括：ts_code(Y), con_code(Y), con_name(Y), weight(N), in_date(N), out_date(N), is_new(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "板块指数代码"
+      },
+      "con_code": {
+        "type": "string",
+        "description": "股票代码"
+      }
+    },
+    "required": []
+  }
+}

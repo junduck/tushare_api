@@ -1,0 +1,51 @@
+{
+  "api_name": "sf_month",
+  "title": "社融增量（月度）",
+  "description": "获取月度社会融资数据限量：单次最大2000条数据，可循环提取积分：需2000积分",
+  "input_params": [
+    {
+      "name": "m",
+      "type": "str",
+      "required": "N",
+      "description": "月份（YYYYMM，下同），支持多个月份同时输入，逗号分隔"
+    },
+    {
+      "name": "start_m",
+      "type": "str",
+      "required": "N",
+      "description": "开始月份"
+    },
+    {
+      "name": "end_m",
+      "type": "str",
+      "required": "N",
+      "description": "结束月份"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "month",
+      "type": "str",
+      "required": "Y",
+      "description": "月度"
+    },
+    {
+      "name": "inc_month",
+      "type": "float",
+      "required": "Y",
+      "description": "社融增量当月值（亿元）"
+    },
+    {
+      "name": "inc_cumval",
+      "type": "float",
+      "required": "Y",
+      "description": "社融增量累计值（亿元）"
+    },
+    {
+      "name": "stk_endval",
+      "type": "float",
+      "required": "Y",
+      "description": "社融存量期末值（万亿元）"
+    }
+  ]
+}

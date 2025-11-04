@@ -1,0 +1,111 @@
+{
+  "api_name": "fut_settle",
+  "title": "每日结算参数",
+  "description": "获取每日结算参数数据，包括交易和交割费率等限量：单次最大返回1600行数据，可根据日期循环，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 （trade_date/ts_code至少需要输入一个参数）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "合约代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "合约代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "settle",
+      "type": "float",
+      "required": "Y",
+      "description": "结算价"
+    },
+    {
+      "name": "trading_fee_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "交易手续费率"
+    },
+    {
+      "name": "trading_fee",
+      "type": "float",
+      "required": "Y",
+      "description": "交易手续费"
+    },
+    {
+      "name": "delivery_fee",
+      "type": "float",
+      "required": "Y",
+      "description": "交割手续费"
+    },
+    {
+      "name": "b_hedging_margin_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "买套保交易保证金率"
+    },
+    {
+      "name": "s_hedging_margin_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "卖套保交易保证金率"
+    },
+    {
+      "name": "long_margin_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "买投机交易保证金率"
+    },
+    {
+      "name": "short_margin_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "卖投机交易保证金率"
+    },
+    {
+      "name": "offset_today_fee",
+      "type": "float",
+      "required": "N",
+      "description": "平今仓手续率"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所"
+    }
+  ]
+}

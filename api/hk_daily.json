@@ -1,0 +1,99 @@
+{
+  "api_name": "hk_daily",
+  "title": "港股日线行情",
+  "description": "获取港股每日增量和历史行情，每日18点左右更新当日数据限量：单次最大提取5000行记录，可多次提取，总量不限制积分：本接口单独开权限，具体请参阅权限说明",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌额"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅(%)"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量(股)"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额(元)"
+    }
+  ]
+}

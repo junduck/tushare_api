@@ -1,0 +1,117 @@
+{
+  "api_name": "us_tycr",
+  "title": "国债收益率曲线利率",
+  "description": "获取美国每日国债收益率曲线利率限量：单次最大可获取2000条数据权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期 （YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定输出字段（e.g. fields='m1,y1'）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "m1",
+      "type": "float",
+      "required": "Y",
+      "description": "1月期"
+    },
+    {
+      "name": "m2",
+      "type": "float",
+      "required": "Y",
+      "description": "2月期"
+    },
+    {
+      "name": "m3",
+      "type": "float",
+      "required": "Y",
+      "description": "3月期"
+    },
+    {
+      "name": "m4",
+      "type": "float",
+      "required": "Y",
+      "description": "4月期（数据从20221019开始）"
+    },
+    {
+      "name": "m6",
+      "type": "float",
+      "required": "Y",
+      "description": "6月期"
+    },
+    {
+      "name": "y1",
+      "type": "float",
+      "required": "Y",
+      "description": "1年期"
+    },
+    {
+      "name": "y2",
+      "type": "float",
+      "required": "Y",
+      "description": "2年期"
+    },
+    {
+      "name": "y3",
+      "type": "float",
+      "required": "Y",
+      "description": "3年期"
+    },
+    {
+      "name": "y5",
+      "type": "float",
+      "required": "Y",
+      "description": "5年期"
+    },
+    {
+      "name": "y7",
+      "type": "float",
+      "required": "Y",
+      "description": "7年期"
+    },
+    {
+      "name": "y10",
+      "type": "float",
+      "required": "Y",
+      "description": "10年期"
+    },
+    {
+      "name": "y20",
+      "type": "float",
+      "required": "Y",
+      "description": "20年期"
+    },
+    {
+      "name": "y30",
+      "type": "float",
+      "required": "Y",
+      "description": "30年期"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "api_name": "ths_daily",
+  "title": "同花顺概念和行业指数行情",
+  "description": "获取同花顺板块指数行情。注：数据版权归属同花顺，如做商业用途，请主动联系同花顺，如需帮助请联系微信：waditu_a限量：单次最大3000行数据（需6000积分），可根据指数代码、日期参数循环提取。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS指数代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘点位"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘点位"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高点位"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低点位"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨日收盘点"
+    },
+    {
+      "name": "avg_price",
+      "type": "float",
+      "required": "Y",
+      "description": "平均价"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌点位"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量"
+    },
+    {
+      "name": "turnover_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率"
+    },
+    {
+      "name": "total_mv",
+      "type": "float",
+      "required": "N",
+      "description": "总市值"
+    },
+    {
+      "name": "float_mv",
+      "type": "float",
+      "required": "N",
+      "description": "流通市值"
+    }
+  ]
+}

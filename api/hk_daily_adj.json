@@ -1,0 +1,141 @@
+{
+  "api_name": "hk_daily_adj",
+  "title": "港股复权行情",
+  "description": "获取港股复权行情，提供股票股本、市值和成交及换手多个数据指标限量：单次最大可以提取6000条数据，可循环获取全部，支持分页提取要求：120积分可以试用查看数据，开通正式权限请参考权限说明文档",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码（e.g. 00001.HK）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期（YYYYMMDD）"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期（YYYYMMDD）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌额"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "vol",
+      "type": "None",
+      "required": "Y",
+      "description": "成交量"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额"
+    },
+    {
+      "name": "vwap",
+      "type": "float",
+      "required": "Y",
+      "description": "平均价"
+    },
+    {
+      "name": "adj_factor",
+      "type": "float",
+      "required": "Y",
+      "description": "复权因子"
+    },
+    {
+      "name": "turnover_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率(基于总股本)"
+    },
+    {
+      "name": "free_share",
+      "type": "None",
+      "required": "Y",
+      "description": "流通股本"
+    },
+    {
+      "name": "total_share",
+      "type": "None",
+      "required": "Y",
+      "description": "总股本"
+    },
+    {
+      "name": "free_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "流通市值"
+    },
+    {
+      "name": "total_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "总市值"
+    }
+  ]
+}

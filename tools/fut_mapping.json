@@ -1,0 +1,29 @@
+{
+  "name": "tushare_fut_mapping",
+  "description": "期货主力与连续合约。获取期货主力（或连续）合约与月合约映射数据限量：单次最大2000条，总量不限制积分：用户需要至少2000积分才可以调取，未来可能调整积分，请尽可能多积累积分。具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), mapping_ts_code(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "合约代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

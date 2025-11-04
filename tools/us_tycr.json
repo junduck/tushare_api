@@ -1,0 +1,29 @@
+{
+  "name": "tushare_us_tycr",
+  "description": "国债收益率曲线利率。获取美国每日国债收益率曲线利率限量：单次最大可获取2000条数据权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法。返回字段包括：date(Y), m1(Y), m2(Y), m3(Y), m4(Y), m6(Y), y1(Y), y2(Y), y3(Y), y5(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期 （YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定输出字段（e.g. fields='m1,y1'）"
+      }
+    },
+    "required": []
+  }
+}

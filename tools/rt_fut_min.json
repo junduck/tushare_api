@@ -1,0 +1,26 @@
+{
+  "name": "tushare_rt_fut_min",
+  "description": "实时分钟行情。获取全市场期货合约实时分钟数据，支持1min/5min/15min/30min/60min行情，提供Python SDK、 http Restful API和websocket三种方式，如果需要主力合约分钟，请先通过主力mapping接口获取对应的合约代码后提取分钟。限量：每分钟可以请求500次，支持多个合约同时提取权限：需单独开权限，正式权限请参阅 权限说明  。。返回字段包括：code(Y), freq(Y), time(Y), open(Y), close(Y), high(Y), low(Y), vol(Y), amount(Y), oi(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码，e.g.CU2310.SHF，仅支持一次一个合约的回放"
+      },
+      "freq": {
+        "type": "string",
+        "description": "分钟频度（1MIN/5MIN/15MIN/30MIN/60MIN）"
+      },
+      "date_str": {
+        "type": "string",
+        "description": "回放日期（格式：YYYY-MM-DD，默认为交易当日，支持回溯一天）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code",
+      "freq"
+    ]
+  }
+}

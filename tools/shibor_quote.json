@@ -1,0 +1,29 @@
+{
+  "name": "tushare_shibor_quote",
+  "description": "Shibor报价数据。Shibor报价数据限量：单次最大4000行数据，总量不限制，可通过设置开始和结束日期分段获取积分：用户积累120积分可以调取，具体请参阅积分获取办法。返回字段包括：date(Y), bank(Y), on_b(Y), on_a(Y), p1w_b(Y), p1w_a(Y), p2w_b(Y), p2w_a(Y), p1m_b(Y), p1m_a(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期 (日期输入格式：YYYYMMDD，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "bank": {
+        "type": "string",
+        "description": "银行名称 （中文名称，例如 农业银行）"
+      }
+    },
+    "required": []
+  }
+}

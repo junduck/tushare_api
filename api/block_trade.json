@@ -1,0 +1,75 @@
+{
+  "api_name": "block_trade",
+  "title": "大宗交易",
+  "description": "大宗交易限量：单次最大1000条，总量不限制积分：300积分可调取，每分钟内限制次数，超过5000积分频次相对较高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码（股票代码和日期至少输入一个参数）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日历"
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": "Y",
+      "description": "成交价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量（万股）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交金额"
+    },
+    {
+      "name": "buyer",
+      "type": "str",
+      "required": "Y",
+      "description": "买方营业部"
+    },
+    {
+      "name": "seller",
+      "type": "str",
+      "required": "Y",
+      "description": "卖方营业部"
+    }
+  ]
+}

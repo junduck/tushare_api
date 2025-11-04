@@ -1,0 +1,99 @@
+{
+  "api_name": "pledge_detail",
+  "title": "股权质押明细数据",
+  "description": "获取股票质押明细数据限量：单次最大1000积分：用户需要至少500积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "holder_name",
+      "type": "str",
+      "required": "Y",
+      "description": "股东名称"
+    },
+    {
+      "name": "pledge_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "质押数量（万股）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "Y",
+      "description": "质押开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "质押结束日期"
+    },
+    {
+      "name": "is_release",
+      "type": "str",
+      "required": "Y",
+      "description": "是否已解押"
+    },
+    {
+      "name": "release_date",
+      "type": "str",
+      "required": "Y",
+      "description": "解押日期"
+    },
+    {
+      "name": "pledgor",
+      "type": "str",
+      "required": "Y",
+      "description": "质押方"
+    },
+    {
+      "name": "holding_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "持股总数（万股）"
+    },
+    {
+      "name": "pledged_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "质押总数（万股）"
+    },
+    {
+      "name": "p_total_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "本次质押占总股本比例"
+    },
+    {
+      "name": "h_total_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "持股总数占总股本比例"
+    },
+    {
+      "name": "is_buyback",
+      "type": "str",
+      "required": "Y",
+      "description": "是否回购"
+    }
+  ]
+}

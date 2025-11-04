@@ -1,0 +1,26 @@
+{
+  "name": "tushare_opt_basic",
+  "description": "期权合约信息。获取期权合约信息积分：用户需要至少5000积分可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), exchange(Y), name(Y), per_unit(Y), opt_code(Y), opt_type(Y), call_put(Y), exercise_type(Y), exercise_price(Y), s_month(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS期权代码"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所代码 （包括上交所SSE等交易所）"
+      },
+      "opt_code": {
+        "type": "string",
+        "description": "标准合约代码，OP+期货合约TS_CODE，如棕榈油2207合约，输入OPP2207.DCE"
+      },
+      "call_put": {
+        "type": "string",
+        "description": "期权类型"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "api_name": "daily",
+  "title": "历史日线",
+  "description": "获取股票行情数据，或通过通用行情接口获取数据，包含了前后复权数据",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码（支持多个股票同时提取，逗号分隔）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期(YYYYMMDD)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "股票代码",
+      "description": ""
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "开盘价",
+      "description": ""
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "最高价",
+      "description": ""
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "最低价",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "收盘价",
+      "description": ""
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "昨收价【除权价，前复权】",
+      "description": ""
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "涨跌额",
+      "description": ""
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "涨跌幅 【基于除权后的昨收计算的涨跌幅：（今收-除权昨收）/除权昨收 】",
+      "description": ""
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "成交量 （手）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "成交额 （千元）",
+      "description": ""
+    }
+  ]
+}

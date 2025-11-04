@@ -1,0 +1,105 @@
+{
+  "api_name": "ci_index_member",
+  "title": "中信行业成分",
+  "description": "按三级分类提取中信行业成分，可提供某个分类的所有成分，也可按股票代码提取所属分类，参数灵活限量：单次最大5000行，总量不限制权限：用户需5000积分可调取，积分获取方法请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "l1_code",
+      "type": "str",
+      "required": "N",
+      "description": "一级行业代码"
+    },
+    {
+      "name": "l2_code",
+      "type": "str",
+      "required": "N",
+      "description": "二级行业代码"
+    },
+    {
+      "name": "l3_code",
+      "type": "str",
+      "required": "N",
+      "description": "三级行业代码"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "is_new",
+      "type": "str",
+      "required": "N",
+      "description": "是否最新（默认为“Y是”）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "l1_code",
+      "type": "str",
+      "required": "Y",
+      "description": "一级行业代码"
+    },
+    {
+      "name": "l1_name",
+      "type": "str",
+      "required": "Y",
+      "description": "一级行业名称"
+    },
+    {
+      "name": "l2_code",
+      "type": "str",
+      "required": "Y",
+      "description": "二级行业代码"
+    },
+    {
+      "name": "l2_name",
+      "type": "str",
+      "required": "Y",
+      "description": "二级行业名称"
+    },
+    {
+      "name": "l3_code",
+      "type": "str",
+      "required": "Y",
+      "description": "三级行业代码"
+    },
+    {
+      "name": "l3_name",
+      "type": "str",
+      "required": "Y",
+      "description": "三级行业名称"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "成分股票代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "成分股票名称"
+    },
+    {
+      "name": "in_date",
+      "type": "str",
+      "required": "Y",
+      "description": "纳入日期"
+    },
+    {
+      "name": "out_date",
+      "type": "str",
+      "required": "Y",
+      "description": "剔除日期"
+    },
+    {
+      "name": "is_new",
+      "type": "str",
+      "required": "Y",
+      "description": "是否最新Y是N否"
+    }
+  ]
+}

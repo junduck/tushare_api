@@ -1,0 +1,87 @@
+{
+  "api_name": "margin",
+  "title": "融资融券交易汇总",
+  "description": "获取融资融券每日交易汇总数据限量：单次请求最大返回4000行数据，可根据日期循环权限：2000积分可获得本接口权限，积分越高权限越大，具体参考权限说明",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "exchange_id",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码（SSE上交所SZSE深交所BSE北交所）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "exchange_id",
+      "type": "str",
+      "required": "交易所代码（SSE上交所SZSE深交所BSE北交所）",
+      "description": ""
+    },
+    {
+      "name": "rzye",
+      "type": "float",
+      "required": "融资余额(元)",
+      "description": ""
+    },
+    {
+      "name": "rzmre",
+      "type": "float",
+      "required": "融资买入额(元)",
+      "description": ""
+    },
+    {
+      "name": "rzche",
+      "type": "float",
+      "required": "融资偿还额(元)",
+      "description": ""
+    },
+    {
+      "name": "rqye",
+      "type": "float",
+      "required": "融券余额(元)",
+      "description": ""
+    },
+    {
+      "name": "rqmcl",
+      "type": "float",
+      "required": "融券卖出量(股,份,手)",
+      "description": ""
+    },
+    {
+      "name": "rzrqye",
+      "type": "float",
+      "required": "融资融券余额(元)",
+      "description": ""
+    },
+    {
+      "name": "rqyl",
+      "type": "float",
+      "required": "融券余量(股,份,手)",
+      "description": ""
+    }
+  ]
+}

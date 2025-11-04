@@ -1,0 +1,75 @@
+{
+  "api_name": "index_classify",
+  "title": "申万行业分类",
+  "description": "获取申万行业分类，可以获取申万2014年版本（28个一级分类，104个二级分类，227个三级分类）和2021年本版（31个一级分类，134个二级分类，346个三级分类）列表信息权限：用户需2000积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "index_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码"
+    },
+    {
+      "name": "level",
+      "type": "str",
+      "required": "N",
+      "description": "行业分级（L1/L2/L3）"
+    },
+    {
+      "name": "parent_code",
+      "type": "str",
+      "required": "N",
+      "description": "父级代码（一级为0）"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "required": "N",
+      "description": "指数来源（SW2014：申万2014年版本，SW2021：申万2021年版本）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "index_code",
+      "type": "str",
+      "required": "Y",
+      "description": "指数代码"
+    },
+    {
+      "name": "industry_name",
+      "type": "str",
+      "required": "Y",
+      "description": "行业名称"
+    },
+    {
+      "name": "parent_code",
+      "type": "str",
+      "required": "Y",
+      "description": "父级代码"
+    },
+    {
+      "name": "level",
+      "type": "str",
+      "required": "Y",
+      "description": "行业名称"
+    },
+    {
+      "name": "industry_code",
+      "type": "str",
+      "required": "Y",
+      "description": "行业代码"
+    },
+    {
+      "name": "is_pub",
+      "type": "str",
+      "required": "Y",
+      "description": "是否发布了指数"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "required": "N",
+      "description": "行业分类（SW申万）"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "api_name": "repo_daily",
+  "title": "债券回购日行情",
+  "description": "债券回购日行情限量：单次最大2000条，可多次提取，总量不限制权限：用户需要累积2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "repo_maturity",
+      "type": "str",
+      "required": "Y",
+      "description": "期限品种"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "前收盘(%)"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价(%)"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价(%)"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价(%)"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价(%)"
+    },
+    {
+      "name": "weight",
+      "type": "float",
+      "required": "Y",
+      "description": "加权价(%)"
+    },
+    {
+      "name": "weight_r",
+      "type": "float",
+      "required": "Y",
+      "description": "加权价(利率债)(%)"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交金额(万元)"
+    },
+    {
+      "name": "num",
+      "type": "int",
+      "required": "Y",
+      "description": "成交笔数(笔)"
+    }
+  ]
+}

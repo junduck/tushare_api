@@ -1,0 +1,29 @@
+{
+  "name": "tushare_stk_auction",
+  "description": "开盘竞价成交（当日）。获取当日个股和ETF的集合竞价成交情况，每天9点25~29分之间可以获取当日的集合竞价成交数据限量：单次最大返回8000行数据，可根据日期或代码循环获取历史积分：本接口是单独开权限的数据，已经开通了股票分钟权限的用户可自动获得本接口权限，单独申请权限请参考权限列表。。返回字段包括：ts_code(Y), trade_date(Y), vol(Y), price(Y), amount(Y), pre_close(Y), turnover_rate(Y), volume_ratio(Y), float_share(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

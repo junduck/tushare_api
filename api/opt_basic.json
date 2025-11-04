@@ -1,0 +1,141 @@
+{
+  "api_name": "opt_basic",
+  "title": "期权合约信息",
+  "description": "获取期权合约信息积分：用户需要至少5000积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS期权代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码 （包括上交所SSE等交易所）"
+    },
+    {
+      "name": "opt_code",
+      "type": "str",
+      "required": "N",
+      "description": "标准合约代码，OP+期货合约TS_CODE，如棕榈油2207合约，输入OPP2207.DCE"
+    },
+    {
+      "name": "call_put",
+      "type": "str",
+      "required": "N",
+      "description": "期权类型"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易市场"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "合约名称"
+    },
+    {
+      "name": "per_unit",
+      "type": "str",
+      "required": "Y",
+      "description": "合约单位"
+    },
+    {
+      "name": "opt_code",
+      "type": "str",
+      "required": "Y",
+      "description": "标的合约代码"
+    },
+    {
+      "name": "opt_type",
+      "type": "str",
+      "required": "Y",
+      "description": "合约类型"
+    },
+    {
+      "name": "call_put",
+      "type": "str",
+      "required": "Y",
+      "description": "期权类型"
+    },
+    {
+      "name": "exercise_type",
+      "type": "str",
+      "required": "Y",
+      "description": "行权方式"
+    },
+    {
+      "name": "exercise_price",
+      "type": "float",
+      "required": "Y",
+      "description": "行权价格"
+    },
+    {
+      "name": "s_month",
+      "type": "str",
+      "required": "Y",
+      "description": "结算月"
+    },
+    {
+      "name": "maturity_date",
+      "type": "str",
+      "required": "Y",
+      "description": "到期日"
+    },
+    {
+      "name": "list_price",
+      "type": "float",
+      "required": "Y",
+      "description": "挂牌基准价"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "Y",
+      "description": "开始交易日期"
+    },
+    {
+      "name": "delist_date",
+      "type": "str",
+      "required": "Y",
+      "description": "最后交易日期"
+    },
+    {
+      "name": "last_edate",
+      "type": "str",
+      "required": "Y",
+      "description": "最后行权日期"
+    },
+    {
+      "name": "last_ddate",
+      "type": "str",
+      "required": "Y",
+      "description": "最后交割日期"
+    },
+    {
+      "name": "quote_unit",
+      "type": "str",
+      "required": "Y",
+      "description": "报价单位"
+    },
+    {
+      "name": "min_price_chg",
+      "type": "str",
+      "required": "Y",
+      "description": "最小价格波幅"
+    }
+  ]
+}

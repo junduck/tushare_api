@@ -1,0 +1,25 @@
+{
+  "name": "tushare_gz_index",
+  "description": "广州民间借贷利率。广州民间借贷利率限量：不限量，一次可取全部指标全部历史数据积分：用户需要积攒2000积分可调取，具体请参阅积分获取办法数据来源：广州民间金融街。返回字段包括：date(Y), d10_rate(Y), m1_rate(Y), m3_rate(Y), m6_rate(Y), m12_rate(Y), long_rate(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "api_name": "fund_adj",
+  "title": "ETF复权因子",
+  "description": "获取基金复权因子，用于计算基金复权行情限量：单次最大提取2000行记录，可循环提取，数据总量不限制积分：用户积600积分可调取，超过5000积分以上频次相对较高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS基金代码（支持多只基金输入）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：yyyymmdd，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "offset",
+      "type": "str",
+      "required": "N",
+      "description": "开始行数"
+    },
+    {
+      "name": "limit",
+      "type": "str",
+      "required": "N",
+      "description": "最大行数"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "ts基金代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "adj_factor",
+      "type": "float",
+      "required": "Y",
+      "description": "复权因子"
+    }
+  ]
+}

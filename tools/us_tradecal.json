@@ -1,0 +1,24 @@
+{
+  "name": "tushare_us_tradecal",
+  "description": "美股交易日历。获取美股交易日历信息限量：单次最大6000，可根据日期阶段获取。返回字段包括：cal_date(Y), is_open(Y), pretrade_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "is_open": {
+        "type": "string",
+        "description": "是否交易"
+      }
+    },
+    "required": []
+  }
+}

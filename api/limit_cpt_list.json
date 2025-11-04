@@ -1,0 +1,87 @@
+{
+  "api_name": "limit_cpt_list",
+  "title": "涨停最强板块统计",
+  "description": "获取每天涨停股票最多最强的概念板块，可以分析强势板块的轮动，判断资金动向限量：单次最大2000行数据，可根据股票代码或者日期循环提取全部积分：8000积分以上每分钟500次，每天总量不限制，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD，下同）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "板块代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "板块代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "板块名称"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "days",
+      "type": "int",
+      "required": "Y",
+      "description": "上榜天数"
+    },
+    {
+      "name": "up_stat",
+      "type": "str",
+      "required": "Y",
+      "description": "连板高度"
+    },
+    {
+      "name": "cons_nums",
+      "type": "int",
+      "required": "Y",
+      "description": "连板家数"
+    },
+    {
+      "name": "up_nums",
+      "type": "str",
+      "required": "Y",
+      "description": "涨停家数"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅%"
+    },
+    {
+      "name": "rank",
+      "type": "str",
+      "required": "Y",
+      "description": "板块热点排名"
+    }
+  ]
+}

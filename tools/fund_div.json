@@ -1,0 +1,29 @@
+{
+  "name": "tushare_fund_div",
+  "description": "基金分红。获取公募基金分红数据积分：用户需要至少400积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), imp_anndate(Y), base_date(Y), div_proc(Y), record_date(Y), ex_date(Y), pay_date(Y), earpay_date(Y), net_ex_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ann_date": {
+        "type": "string",
+        "description": "公告日（以下参数四选一）",
+        "pattern": "^\\d{8}$"
+      },
+      "ex_date": {
+        "type": "string",
+        "description": "除息日",
+        "pattern": "^\\d{8}$"
+      },
+      "pay_date": {
+        "type": "string",
+        "description": "派息日",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "基金代码"
+      }
+    },
+    "required": []
+  }
+}

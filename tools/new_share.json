@@ -1,0 +1,20 @@
+{
+  "name": "tushare_new_share",
+  "description": "IPO新股上市。获取新股上市列表数据限量：单次最大2000条，总量不限制积分：用户需要至少120积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), sub_code(Y), name(Y), ipo_date(Y), issue_date(Y), amount(Y), market_amount(Y), price(Y), pe(Y), limit_amount(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "上网发行开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "上网发行结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

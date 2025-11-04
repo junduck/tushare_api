@@ -1,0 +1,243 @@
+{
+  "api_name": "stk_factor",
+  "title": "股票技术面因子",
+  "description": "获取股票每日技术面因子数据，用于跟踪股票当前走势情况，数据由Tushare社区自产，覆盖全历史限量：单次最大10000条，可以循环或者分页提取积分：5000积分每分钟可以请求100次，8000积分以上每分钟500次，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 （yyyymmdd，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌额"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量 （手）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额 （千元）"
+    },
+    {
+      "name": "adj_factor",
+      "type": "float",
+      "required": "Y",
+      "description": "复权因子"
+    },
+    {
+      "name": "open_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价后复权"
+    },
+    {
+      "name": "open_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价前复权"
+    },
+    {
+      "name": "close_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价后复权"
+    },
+    {
+      "name": "close_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价前复权"
+    },
+    {
+      "name": "high_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价后复权"
+    },
+    {
+      "name": "high_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价前复权"
+    },
+    {
+      "name": "low_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价后复权"
+    },
+    {
+      "name": "low_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价前复权"
+    },
+    {
+      "name": "pre_close_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价后复权"
+    },
+    {
+      "name": "pre_close_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价前复权"
+    },
+    {
+      "name": "macd_dif",
+      "type": "float",
+      "required": "Y",
+      "description": "MCAD_DIF (基于前复权价格计算，下同)"
+    },
+    {
+      "name": "macd_dea",
+      "type": "float",
+      "required": "Y",
+      "description": "MCAD_DEA"
+    },
+    {
+      "name": "macd",
+      "type": "float",
+      "required": "Y",
+      "description": "MCAD"
+    },
+    {
+      "name": "kdj_k",
+      "type": "float",
+      "required": "Y",
+      "description": "KDJ_K"
+    },
+    {
+      "name": "kdj_d",
+      "type": "float",
+      "required": "Y",
+      "description": "KDJ_D"
+    },
+    {
+      "name": "kdj_j",
+      "type": "float",
+      "required": "Y",
+      "description": "KDJ_J"
+    },
+    {
+      "name": "rsi_6",
+      "type": "float",
+      "required": "Y",
+      "description": "RSI_6"
+    },
+    {
+      "name": "rsi_12",
+      "type": "float",
+      "required": "Y",
+      "description": "RSI_12"
+    },
+    {
+      "name": "rsi_24",
+      "type": "float",
+      "required": "Y",
+      "description": "RSI_24"
+    },
+    {
+      "name": "boll_upper",
+      "type": "float",
+      "required": "Y",
+      "description": "BOLL_UPPER"
+    },
+    {
+      "name": "boll_mid",
+      "type": "float",
+      "required": "Y",
+      "description": "BOLL_MID"
+    },
+    {
+      "name": "boll_lower",
+      "type": "float",
+      "required": "Y",
+      "description": "BOLL_LOWER"
+    },
+    {
+      "name": "cci",
+      "type": "float",
+      "required": "Y",
+      "description": "CCI"
+    }
+  ]
+}

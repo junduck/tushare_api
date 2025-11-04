@@ -1,0 +1,29 @@
+{
+  "name": "tushare_index_daily",
+  "description": "南华期货指数行情。获取南华指数每日行情，指数行情也可以通过通用行情接口获取数据．权限：用户需要累积2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(TS指数代码), trade_date(交易日), close(收盘点位), open(开盘点位), high(最高点位), low(最低点位), pre_close(昨日收盘点), change(涨跌点), pct_chg(涨跌幅), vol(成交量（手）)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码（南华期货指数以 .NH 结尾，具体请参考本文最下方）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期 （日期格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

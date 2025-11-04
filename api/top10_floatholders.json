@@ -1,0 +1,93 @@
+{
+  "api_name": "top10_floatholders",
+  "title": "前十大流通股东",
+  "description": "获取上市公司前十大流通股东数据积分：需2000积分以上才可以调取本接口，5000积分以上频次会更高",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "报告期（YYYYMMDD格式，一般为每个季度最后一天）"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "TS股票代码",
+      "description": ""
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "公告日期",
+      "description": ""
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "报告期",
+      "description": ""
+    },
+    {
+      "name": "holder_name",
+      "type": "str",
+      "required": "股东名称",
+      "description": ""
+    },
+    {
+      "name": "hold_amount",
+      "type": "float",
+      "required": "持有数量（股）",
+      "description": ""
+    },
+    {
+      "name": "hold_ratio",
+      "type": "float",
+      "required": "占总股本比例(%)",
+      "description": ""
+    },
+    {
+      "name": "hold_float_ratio",
+      "type": "float",
+      "required": "占流通股本比例(%)",
+      "description": ""
+    },
+    {
+      "name": "hold_change",
+      "type": "float",
+      "required": "持股变动",
+      "description": ""
+    },
+    {
+      "name": "holder_type",
+      "type": "str",
+      "required": "股东类型",
+      "description": ""
+    }
+  ]
+}

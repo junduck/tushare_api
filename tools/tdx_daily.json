@@ -1,0 +1,29 @@
+{
+  "name": "tushare_tdx_daily",
+  "description": "通达信板块行情。获取通达信各板块行情，包括成交和估值等数据限量：单次提取最大3000条数据，可根据板块代码和日期参数循环提取权限：用户积累6000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "板块代码：xxxxxx.TDX"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期，格式YYYYMMDD,下同",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

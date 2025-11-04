@@ -1,0 +1,26 @@
+{
+  "name": "tushare_us_basic",
+  "description": "美股基础信息。获取美股列表信息限量：单次最大6000，可分页提取积分：120积分可以试用，5000积分有正式权限。返回字段包括：ts_code(Y), name(Y), enname(N), classify(Y), list_date(Y), delist_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "classify": {
+        "type": "string",
+        "description": "股票分类"
+      },
+      "offset": {
+        "type": "string",
+        "description": "开始行数"
+      },
+      "limit": {
+        "type": "string",
+        "description": "每页最大行数"
+      }
+    },
+    "required": []
+  }
+}

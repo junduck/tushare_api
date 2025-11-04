@@ -1,0 +1,39 @@
+{
+  "name": "tushare_fut_weekly_monthly",
+  "description": "期货周/月线行情(每日更新)。期货周/月线行情(每日更新)限量：单次最大6000。返回字段包括：ts_code(Y), trade_date(Y), end_date(Y), freq(Y), open(Y), high(Y), low(Y), close(Y), pre_close(Y), settle(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "freq": {
+        "type": "string",
+        "description": "频率week周，month月"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所"
+      }
+    },
+    "required": [
+      "freq"
+    ]
+  }
+}

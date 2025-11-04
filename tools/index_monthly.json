@@ -1,0 +1,29 @@
+{
+  "name": "tushare_index_monthly",
+  "description": "指数月线行情。获取指数月线行情,每月更新一次限量：单次最大1000行记录,可多次获取,总量不限制积分：用户需要至少600积分才可以调取，积分越多频次越高，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_chg(Y), vol(成交量（手）)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

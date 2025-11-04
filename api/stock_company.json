@@ -1,0 +1,129 @@
+{
+  "api_name": "stock_company",
+  "title": "上市公司基本信息",
+  "description": "获取上市公司基础信息，单次提取4500条，可以根据交易所分批提取积分：用户需要至少120积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码 ，SSE上交所 SZSE深交所 BSE北交所"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "com_name",
+      "type": "str",
+      "required": "Y",
+      "description": "公司全称"
+    },
+    {
+      "name": "com_id",
+      "type": "str",
+      "required": "Y",
+      "description": "统一社会信用代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易所代码"
+    },
+    {
+      "name": "chairman",
+      "type": "str",
+      "required": "Y",
+      "description": "法人代表"
+    },
+    {
+      "name": "manager",
+      "type": "str",
+      "required": "Y",
+      "description": "总经理"
+    },
+    {
+      "name": "secretary",
+      "type": "str",
+      "required": "Y",
+      "description": "董秘"
+    },
+    {
+      "name": "reg_capital",
+      "type": "float",
+      "required": "Y",
+      "description": "注册资本(万元)"
+    },
+    {
+      "name": "setup_date",
+      "type": "str",
+      "required": "Y",
+      "description": "注册日期"
+    },
+    {
+      "name": "province",
+      "type": "str",
+      "required": "Y",
+      "description": "所在省份"
+    },
+    {
+      "name": "city",
+      "type": "str",
+      "required": "Y",
+      "description": "所在城市"
+    },
+    {
+      "name": "introduction",
+      "type": "str",
+      "required": "N",
+      "description": "公司介绍"
+    },
+    {
+      "name": "website",
+      "type": "str",
+      "required": "Y",
+      "description": "公司主页"
+    },
+    {
+      "name": "email",
+      "type": "str",
+      "required": "Y",
+      "description": "电子邮件"
+    },
+    {
+      "name": "office",
+      "type": "str",
+      "required": "N",
+      "description": "办公室"
+    },
+    {
+      "name": "employees",
+      "type": "int",
+      "required": "Y",
+      "description": "员工人数"
+    },
+    {
+      "name": "main_business",
+      "type": "str",
+      "required": "N",
+      "description": "主要业务及产品"
+    },
+    {
+      "name": "business_scope",
+      "type": "str",
+      "required": "N",
+      "description": "经营范围"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "api_name": "fut_daily",
+  "title": "日线行情",
+  "description": "期货日线行情数据限量：单次最大2000条，总量不限制积分：用户需要至少2000积分才可以调取，未来可能调整积分，请尽量多的积累积分。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "合约代码"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS合约代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收盘价"
+    },
+    {
+      "name": "pre_settle",
+      "type": "float",
+      "required": "Y",
+      "description": "昨结算价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "settle",
+      "type": "float",
+      "required": "Y",
+      "description": "结算价"
+    },
+    {
+      "name": "change1",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌1 收盘价-昨结算价"
+    },
+    {
+      "name": "change2",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌2 结算价-昨结算价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量(手)"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交金额(万元)"
+    },
+    {
+      "name": "oi",
+      "type": "float",
+      "required": "Y",
+      "description": "持仓量(手)"
+    },
+    {
+      "name": "oi_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "持仓量变化"
+    },
+    {
+      "name": "delv_settle",
+      "type": "float",
+      "required": "N",
+      "description": "交割结算价"
+    }
+  ]
+}

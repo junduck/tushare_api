@@ -1,0 +1,29 @@
+{
+  "name": "tushare_stk_surv",
+  "description": "机构调研数据。获取上市公司机构调研记录数据限量：单次最大获取100条数据，可循环或分页提取积分：用户积5000积分可使用。返回字段包括：ts_code(Y), name(Y), surv_date(Y), fund_visitors(Y), rece_place(Y), rece_mode(Y), rece_org(Y), org_type(Y), comp_rece(Y), content(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "调研日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "调研开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "调研结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

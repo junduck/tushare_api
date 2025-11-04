@@ -1,0 +1,26 @@
+{
+  "name": "tushare_cn_m",
+  "description": "货币供应量（月）。获取货币供应量之月度数据限量：单次最大5000，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法。返回字段包括：month(Y), m0(Y), m0_yoy(Y), m0_mom(Y), m1(Y), m1_yoy(Y), m1_mom(Y), m2(Y), m2_yoy(Y), m2_mom(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "m": {
+        "type": "string",
+        "description": "月度（202001表示，2020年1月）"
+      },
+      "start_m": {
+        "type": "string",
+        "description": "开始月度"
+      },
+      "end_m": {
+        "type": "string",
+        "description": "结束月度"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定输出字段（e.g. fields='month,m0,m1,m2'）"
+      }
+    },
+    "required": []
+  }
+}

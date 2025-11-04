@@ -1,0 +1,33 @@
+{
+  "name": "tushare_fut_daily",
+  "description": "日线行情。期货日线行情数据限量：单次最大2000条，总量不限制积分：用户需要至少2000积分才可以调取，未来可能调整积分，请尽量多的积累积分。具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), pre_close(Y), pre_settle(Y), open(Y), high(Y), low(Y), close(Y), settle(Y), change1(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "合约代码"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

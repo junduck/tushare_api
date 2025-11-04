@@ -1,0 +1,93 @@
+{
+  "api_name": "eco_cal",
+  "title": "全球财经事件",
+  "description": "获取全球财经日历、包括经济事件数据更新限量：单次最大获取100行数据积分：2000积分可调取",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期（YYYYMMDD格式）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "currency",
+      "type": "str",
+      "required": "N",
+      "description": "货币代码"
+    },
+    {
+      "name": "country",
+      "type": "str",
+      "required": "N",
+      "description": "国家（比如：中国、美国）"
+    },
+    {
+      "name": "event",
+      "type": "str",
+      "required": "N",
+      "description": "事件 （支持模糊匹配： *非农*）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "time",
+      "type": "str",
+      "required": "Y",
+      "description": "时间"
+    },
+    {
+      "name": "currency",
+      "type": "str",
+      "required": "Y",
+      "description": "货币代码"
+    },
+    {
+      "name": "country",
+      "type": "str",
+      "required": "Y",
+      "description": "国家"
+    },
+    {
+      "name": "event",
+      "type": "str",
+      "required": "Y",
+      "description": "经济事件"
+    },
+    {
+      "name": "value",
+      "type": "str",
+      "required": "Y",
+      "description": "今值"
+    },
+    {
+      "name": "pre_value",
+      "type": "str",
+      "required": "Y",
+      "description": "前值"
+    },
+    {
+      "name": "fore_value",
+      "type": "str",
+      "required": "Y",
+      "description": "预测值"
+    }
+  ]
+}

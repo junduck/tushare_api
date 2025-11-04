@@ -1,0 +1,33 @@
+{
+  "name": "tushare_fut_holding",
+  "description": "每日持仓排名。获取每日成交持仓排名数据限量：单次最大2000，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：trade_date(Y), symbol(Y), broker(Y), vol(Y), vol_chg(Y), long_hld(Y), long_chg(Y), short_hld(Y), short_chg(Y), exchange(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期 （trade_date/symbol至少输入一个参数）",
+        "pattern": "^\\d{8}$"
+      },
+      "symbol": {
+        "type": "string",
+        "description": "合约或产品代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所代码"
+      }
+    },
+    "required": []
+  }
+}

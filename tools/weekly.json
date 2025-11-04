@@ -1,0 +1,29 @@
+{
+  "name": "tushare_weekly",
+  "description": "周线行情。获取A股周线行情，本接口每周最后一个交易日更新，如需要使用每天更新的周线数据，请使用日度更新的周线行情接口。限量：单次最大6000行，可使用交易日期循环提取，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_chg(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码 （ts_code,trade_date两个参数任选一）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期 （每周最后一个交易日期，YYYYMMDD格式）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

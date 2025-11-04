@@ -1,0 +1,129 @@
+{
+  "api_name": "fut_basic",
+  "title": "合约信息",
+  "description": "获取期货合约列表数据限量：单次最大10000积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易所代码 CFFEX-中金所 DCE-大商所 CZCE-郑商所 SHFE-上期所 INE-上海国际能源交易中心 GFEX-广州期货交易所"
+    },
+    {
+      "name": "fut_type",
+      "type": "str",
+      "required": "N",
+      "description": "合约类型 (1 普通合约 2主力与连续合约 默认取全部)"
+    },
+    {
+      "name": "fut_code",
+      "type": "str",
+      "required": "N",
+      "description": "标准合约代码，如白银AG、AP鲜苹果等"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "N",
+      "description": "上市开始日期(格式YYYYMMDD，从某日开始以来所有合约）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "合约代码"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "Y",
+      "description": "交易标识"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易市场"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "中文简称"
+    },
+    {
+      "name": "fut_code",
+      "type": "str",
+      "required": "Y",
+      "description": "合约产品代码"
+    },
+    {
+      "name": "multiplier",
+      "type": "float",
+      "required": "Y",
+      "description": "合约乘数(只适用于国债期货、指数期货)"
+    },
+    {
+      "name": "trade_unit",
+      "type": "str",
+      "required": "Y",
+      "description": "交易计量单位"
+    },
+    {
+      "name": "per_unit",
+      "type": "float",
+      "required": "Y",
+      "description": "交易单位(每手)"
+    },
+    {
+      "name": "quote_unit",
+      "type": "str",
+      "required": "Y",
+      "description": "报价单位"
+    },
+    {
+      "name": "quote_unit_desc",
+      "type": "str",
+      "required": "Y",
+      "description": "最小报价单位说明"
+    },
+    {
+      "name": "d_mode_desc",
+      "type": "str",
+      "required": "Y",
+      "description": "交割方式说明"
+    },
+    {
+      "name": "list_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上市日期"
+    },
+    {
+      "name": "delist_date",
+      "type": "str",
+      "required": "Y",
+      "description": "最后交易日期"
+    },
+    {
+      "name": "d_month",
+      "type": "str",
+      "required": "Y",
+      "description": "交割月份"
+    },
+    {
+      "name": "last_ddate",
+      "type": "str",
+      "required": "Y",
+      "description": "最后交割日"
+    },
+    {
+      "name": "trade_time_desc",
+      "type": "str",
+      "required": "N",
+      "description": "交易时间说明"
+    }
+  ]
+}

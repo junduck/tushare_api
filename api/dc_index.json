@@ -1,0 +1,105 @@
+{
+  "api_name": "dc_index",
+  "title": "东方财富概念板块",
+  "description": "获取东方财富每个交易日的概念板块数据，支持按日期查询限量：单次最大可获取5000条数据，历史数据可根据日期循环获取权限：用户积累6000积分可调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码（支持多个代码同时输入，用逗号分隔）"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "板块名称（例如：人形机器人）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "概念代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "概念名称"
+    },
+    {
+      "name": "leading",
+      "type": "str",
+      "required": "Y",
+      "description": "领涨股票名称"
+    },
+    {
+      "name": "leading_code",
+      "type": "str",
+      "required": "Y",
+      "description": "领涨股票代码"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "leading_pct",
+      "type": "float",
+      "required": "Y",
+      "description": "领涨股票涨跌幅"
+    },
+    {
+      "name": "total_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "总市值（万元）"
+    },
+    {
+      "name": "turnover_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "换手率"
+    },
+    {
+      "name": "up_num",
+      "type": "int",
+      "required": "Y",
+      "description": "上涨家数"
+    },
+    {
+      "name": "down_num",
+      "type": "int",
+      "required": "Y",
+      "description": "下降家数"
+    }
+  ]
+}

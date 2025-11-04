@@ -1,0 +1,18 @@
+{
+  "name": "tushare_hk_basic",
+  "description": "港股基础信息。获取港股列表信息数量：单次可提取全部在交易的港股列表数据积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), name(Y), fullname(Y), enname(Y), cn_spell(Y), market(Y), list_status(Y), list_date(Y), delist_date(Y), trade_unit(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "list_status": {
+        "type": "string",
+        "description": "上市状态 L上市 D退市 P暂停上市 ，默认L"
+      }
+    },
+    "required": []
+  }
+}

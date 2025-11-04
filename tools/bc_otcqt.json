@@ -1,0 +1,33 @@
+{
+  "name": "tushare_bc_otcqt",
+  "description": "柜台流通式债券报价。柜台流通式债券报价限量：单次最大2000条，可多次提取，总量不限制积分：用户需要至少500积分可以试用调取，2000积分以上频次相对较高，积分越多权限越大，具体请参阅积分获取办法。返回字段包括：trade_date(N), qt_time(N), bank(N), ts_code(N), name(N), maturity(N), remain_maturity(N), bond_type(N), coupon_rate(N), buy_price(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "bank": {
+        "type": "string",
+        "description": "报价机构"
+      }
+    },
+    "required": []
+  }
+}

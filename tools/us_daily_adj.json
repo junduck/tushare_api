@@ -1,0 +1,41 @@
+{
+  "name": "tushare_us_daily_adj",
+  "description": "美股复权行情。获取美股复权行情，支持美股全市场股票，提供股本、市值、复权因子和成交信息等多个数据指标限量：单次最大可以提取8000条数据，可循环获取全部，支持分页提取要求：120积分可以试用查看数据，开通正式权限请参考权限说明文档。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码（e.g. AAPL）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所（NAS/NYS/OTC)"
+      },
+      "offset": {
+        "type": "number",
+        "description": "开始行数"
+      },
+      "limit": {
+        "type": "number",
+        "description": "每页行数行数"
+      }
+    },
+    "required": []
+  }
+}

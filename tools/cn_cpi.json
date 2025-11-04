@@ -1,0 +1,22 @@
+{
+  "name": "tushare_cn_cpi",
+  "description": "居民消费价格指数（CPI）。获取CPI居民消费价格数据，包括全国、城市和农村的数据限量：单次最大5000行，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法。返回字段包括：month(Y), nt_val(Y), nt_yoy(Y), nt_mom(Y), nt_accu(Y), town_val(Y), town_yoy(Y), town_mom(Y), town_accu(Y), cnt_val(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "m": {
+        "type": "string",
+        "description": "月份（YYYYMM，下同），支持多个月份同时输入，逗号分隔"
+      },
+      "start_m": {
+        "type": "string",
+        "description": "开始月份"
+      },
+      "end_m": {
+        "type": "string",
+        "description": "结束月份"
+      }
+    },
+    "required": []
+  }
+}

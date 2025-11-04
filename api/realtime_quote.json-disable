@@ -1,0 +1,219 @@
+{
+  "api_name": "realtime_quote",
+  "title": "实时Tick（爬虫）",
+  "description": "本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，请将tushare升级到1.3.3版本以上。权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。",
+  "input_params": [
+    {
+      "name": "sina",
+      "type": "新浪财经",
+      "required": "支持多个多个股票同时输入，举例：ts_code='600000.SH,000001.SZ'），一次最多不能超过50个股票",
+      "description": ""
+    },
+    {
+      "name": "dc",
+      "type": "东方财富",
+      "required": "只支持单个股票提取",
+      "description": ""
+    }
+  ],
+  "output_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "股票名称",
+      "description": ""
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "股票代码",
+      "description": ""
+    },
+    {
+      "name": "date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "time",
+      "type": "str",
+      "required": "交易时间",
+      "description": ""
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "开盘价",
+      "description": ""
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "昨收价",
+      "description": ""
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": "现价",
+      "description": ""
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "今日最高价",
+      "description": ""
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "今日最低价",
+      "description": ""
+    },
+    {
+      "name": "bid",
+      "type": "float",
+      "required": "竞买价，即“买一”报价（元）",
+      "description": ""
+    },
+    {
+      "name": "ask",
+      "type": "float",
+      "required": "竞卖价，即“卖一”报价（元）",
+      "description": ""
+    },
+    {
+      "name": "volume",
+      "type": "int",
+      "required": "成交量（src=sina时是股，src=dc时是手）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "成交金额（元 CNY）",
+      "description": ""
+    },
+    {
+      "name": "b1_v",
+      "type": "float",
+      "required": "委买一（量，单位：手，下同）",
+      "description": ""
+    },
+    {
+      "name": "b1_p",
+      "type": "float",
+      "required": "委买一（价，单位：元，下同）",
+      "description": ""
+    },
+    {
+      "name": "b2_v",
+      "type": "float",
+      "required": "委买二（量）",
+      "description": ""
+    },
+    {
+      "name": "b2_p",
+      "type": "float",
+      "required": "委买二（价）",
+      "description": ""
+    },
+    {
+      "name": "b3_v",
+      "type": "float",
+      "required": "委买三（量）",
+      "description": ""
+    },
+    {
+      "name": "b3_p",
+      "type": "float",
+      "required": "委买三（价）",
+      "description": ""
+    },
+    {
+      "name": "b4_v",
+      "type": "float",
+      "required": "委买四（量）",
+      "description": ""
+    },
+    {
+      "name": "b4_p",
+      "type": "float",
+      "required": "委买四（价）",
+      "description": ""
+    },
+    {
+      "name": "b5_v",
+      "type": "float",
+      "required": "委买五（量）",
+      "description": ""
+    },
+    {
+      "name": "b5_p",
+      "type": "float",
+      "required": "委买五（价）",
+      "description": ""
+    },
+    {
+      "name": "a1_v",
+      "type": "float",
+      "required": "委卖一（量，单位：手，下同）",
+      "description": ""
+    },
+    {
+      "name": "a1_p",
+      "type": "float",
+      "required": "委卖一（价，单位：元，下同）",
+      "description": ""
+    },
+    {
+      "name": "a2_v",
+      "type": "float",
+      "required": "委卖二（量）",
+      "description": ""
+    },
+    {
+      "name": "a2_p",
+      "type": "float",
+      "required": "委卖二（价）",
+      "description": ""
+    },
+    {
+      "name": "a3_v",
+      "type": "float",
+      "required": "委卖三（量）",
+      "description": ""
+    },
+    {
+      "name": "a3_p",
+      "type": "float",
+      "required": "委卖三（价）",
+      "description": ""
+    },
+    {
+      "name": "a4_v",
+      "type": "float",
+      "required": "委卖四（量）",
+      "description": ""
+    },
+    {
+      "name": "a4_p",
+      "type": "float",
+      "required": "委卖四（价）",
+      "description": ""
+    },
+    {
+      "name": "a5_v",
+      "type": "float",
+      "required": "委卖五（量）",
+      "description": ""
+    },
+    {
+      "name": "a5_p",
+      "type": "float",
+      "required": "委卖五（价）",
+      "description": ""
+    }
+  ]
+}

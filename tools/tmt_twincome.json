@@ -1,0 +1,31 @@
+{
+  "name": "tushare_tmt_twincome",
+  "description": "台湾电子产业月营收。获取台湾TMT电子产业领域各类产品月度营收数据。。返回字段包括：date(报告期), item(产品代码), op_income(月度收入)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "报告期",
+        "pattern": "^\\d{8}$"
+      },
+      "item": {
+        "type": "string",
+        "description": "产品代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "报告期开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告期结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "item"
+    ]
+  }
+}

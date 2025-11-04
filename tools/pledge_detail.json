@@ -1,0 +1,16 @@
+{
+  "name": "tushare_pledge_detail",
+  "description": "股权质押明细数据。获取股票质押明细数据限量：单次最大1000积分：用户需要至少500积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), holder_name(Y), pledge_amount(Y), start_date(Y), end_date(Y), is_release(Y), release_date(Y), pledgor(Y), holding_amount(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

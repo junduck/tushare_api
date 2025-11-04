@@ -1,0 +1,69 @@
+{
+  "api_name": "us_trycr",
+  "title": "国债实际收益率曲线利率",
+  "description": "国债实际收益率曲线利率限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期 （YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "fields",
+      "type": "str",
+      "required": "N",
+      "description": "指定输出字段"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "y5",
+      "type": "float",
+      "required": "Y",
+      "description": "5年期"
+    },
+    {
+      "name": "y7",
+      "type": "float",
+      "required": "Y",
+      "description": "7年期"
+    },
+    {
+      "name": "y10",
+      "type": "float",
+      "required": "Y",
+      "description": "10年期"
+    },
+    {
+      "name": "y20",
+      "type": "float",
+      "required": "Y",
+      "description": "20年期"
+    },
+    {
+      "name": "y30",
+      "type": "float",
+      "required": "Y",
+      "description": "30年期"
+    }
+  ]
+}

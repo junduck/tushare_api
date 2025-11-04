@@ -1,0 +1,37 @@
+{
+  "name": "tushare_stk_holdertrade",
+  "description": "股东增减持。获取上市公司增减持数据，了解重要股东近期及历史上的股份增减变化限量：单次最大提取3000行记录，总量不限制积分：用户需要至少2000积分才可以调取。基础积分有流量控制，积分越多权限越大，5000积分以上无明显限制，请自行提高积分，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), holder_name(Y), holder_type(Y), in_de(Y), change_vol(Y), change_ratio(Y), after_share(Y), after_ratio(Y), avg_price(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "trade_type": {
+        "type": "string",
+        "description": "交易类型IN增持DE减持"
+      },
+      "holder_type": {
+        "type": "string",
+        "description": "股东类型C公司P个人G高管"
+      }
+    },
+    "required": []
+  }
+}

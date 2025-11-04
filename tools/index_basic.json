@@ -1,0 +1,30 @@
+{
+  "name": "tushare_index_basic",
+  "description": "指数基本信息。获取指数基础信息。。返回字段包括：ts_code(TS代码), name(简称), fullname(指数全称), market(市场), publisher(发布方), index_type(指数风格), category(指数类别), base_date(基期), base_point(基点), list_date(发布日期)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码"
+      },
+      "name": {
+        "type": "string",
+        "description": "指数简称"
+      },
+      "market": {
+        "type": "string",
+        "description": "交易所或服务商(默认SSE)"
+      },
+      "publisher": {
+        "type": "string",
+        "description": "发布商"
+      },
+      "category": {
+        "type": "string",
+        "description": "指数类别"
+      }
+    },
+    "required": []
+  }
+}

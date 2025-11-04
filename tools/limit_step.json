@@ -1,0 +1,33 @@
+{
+  "name": "tushare_limit_step",
+  "description": "涨停股票连板天梯。获取每天连板个数晋级的股票，可以分析出每天连续涨停进阶个数，判断强势热度限量：单次最大2000行数据，可根据股票代码或者日期循环提取全部积分：8000积分以上每分钟500次，每天总量不限制，具体请参阅积分获取办法。返回字段包括：ts_code(Y), name(Y), trade_date(Y), nums(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "nums": {
+        "type": "string",
+        "description": "连板次数，支持多个输入，例如nums='2,3'"
+      }
+    },
+    "required": []
+  }
+}

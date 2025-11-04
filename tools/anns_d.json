@@ -1,0 +1,29 @@
+{
+  "name": "tushare_anns_d",
+  "description": "上市公司公告。获取全量公告数据，提供pdf下载URL限量：单次最大2000条数，可以跟进日期循环获取全量权限：本接口为单独权限，请参考权限说明。返回字段包括：ann_date(Y), ts_code(Y), name(Y), title(Y), url(Y), rec_time(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期（yyyymmdd格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

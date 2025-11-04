@@ -1,0 +1,51 @@
+{
+  "api_name": "fund_sales_ratio",
+  "title": "各渠道公募基金销售保有规模占比",
+  "description": "获取各渠道公募基金销售保有规模占比数据，年度更新限量：单次最大100行数据，数据从2015年开始公布，当前数据量很小",
+  "input_params": [
+    {
+      "name": "year",
+      "type": "str",
+      "required": "N",
+      "description": "年度"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "year",
+      "type": "int",
+      "required": "Y",
+      "description": "年度"
+    },
+    {
+      "name": "bank",
+      "type": "float",
+      "required": "Y",
+      "description": "商业银行（%）"
+    },
+    {
+      "name": "sec_comp",
+      "type": "float",
+      "required": "Y",
+      "description": "证券公司（%）"
+    },
+    {
+      "name": "fund_comp",
+      "type": "float",
+      "required": "Y",
+      "description": "基金公司直销（%）"
+    },
+    {
+      "name": "indep_comp",
+      "type": "float",
+      "required": "Y",
+      "description": "独立基金销售机构（%）"
+    },
+    {
+      "name": "rests",
+      "type": "float",
+      "required": "Y",
+      "description": "其他（%）"
+    }
+  ]
+}

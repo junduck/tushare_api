@@ -1,0 +1,34 @@
+{
+  "name": "tushare_hk_balancesheet",
+  "description": "港股资产负债表。获取港股上市公司资产负债表权限：需单独开权限或有15000积分，具体权限信息请参考权限列表提示：当前接口按单只股票获取其历史数据，单次请求最大返回10000行数据，可循环提取。返回字段包括：ts_code(Y), name(Y), end_date(Y), ind_name(Y), ind_value(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(格式：YYYYMMDD）"
+      },
+      "ind_name": {
+        "type": "string",
+        "description": "指标名（如：应收帐款）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "报告期开始日期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告结束始日期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

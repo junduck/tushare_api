@@ -1,0 +1,35 @@
+{
+  "name": "tushare_top10_holders",
+  "description": "前十大股东。获取上市公司前十大股东数据，包括持有数量和比例等信息积分：需2000积分以上才可以调取本接口，5000积分以上频次会更高。返回字段包括：ts_code(TS股票代码), ann_date(公告日期), end_date(报告期), holder_name(股东名称), hold_amount(持有数量（股）), hold_ratio(占总股本比例(%)), hold_float_ratio(占流通股本比例(%)), hold_change(持股变动), holder_type(股东类型)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期（YYYYMMDD格式，一般为每个季度最后一天）"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "报告期开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告期结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

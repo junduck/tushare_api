@@ -1,0 +1,141 @@
+{
+  "api_name": "shibor_quote",
+  "title": "Shibor报价数据",
+  "description": "Shibor报价数据限量：单次最大4000行数据，总量不限制，可通过设置开始和结束日期分段获取积分：用户积累120积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期 (日期输入格式：YYYYMMDD，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "bank",
+      "type": "str",
+      "required": "N",
+      "description": "银行名称 （中文名称，例如 农业银行）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "bank",
+      "type": "str",
+      "required": "Y",
+      "description": "报价银行"
+    },
+    {
+      "name": "on_b",
+      "type": "float",
+      "required": "Y",
+      "description": "隔夜_Bid"
+    },
+    {
+      "name": "on_a",
+      "type": "float",
+      "required": "Y",
+      "description": "隔夜_Ask"
+    },
+    {
+      "name": "p1w_b",
+      "type": "float",
+      "required": "Y",
+      "description": "1周_Bid"
+    },
+    {
+      "name": "p1w_a",
+      "type": "float",
+      "required": "Y",
+      "description": "1周_Ask"
+    },
+    {
+      "name": "p2w_b",
+      "type": "float",
+      "required": "Y",
+      "description": "2周_Bid"
+    },
+    {
+      "name": "p2w_a",
+      "type": "float",
+      "required": "Y",
+      "description": "2周_Ask"
+    },
+    {
+      "name": "p1m_b",
+      "type": "float",
+      "required": "Y",
+      "description": "1月_Bid"
+    },
+    {
+      "name": "p1m_a",
+      "type": "float",
+      "required": "Y",
+      "description": "1月_Ask"
+    },
+    {
+      "name": "p3m_b",
+      "type": "float",
+      "required": "Y",
+      "description": "3月_Bid"
+    },
+    {
+      "name": "p3m_a",
+      "type": "float",
+      "required": "Y",
+      "description": "3月_Ask"
+    },
+    {
+      "name": "p6m_b",
+      "type": "float",
+      "required": "Y",
+      "description": "6月_Bid"
+    },
+    {
+      "name": "p6m_a",
+      "type": "float",
+      "required": "Y",
+      "description": "6月_Ask"
+    },
+    {
+      "name": "p9m_b",
+      "type": "float",
+      "required": "Y",
+      "description": "9月_Bid"
+    },
+    {
+      "name": "p9m_a",
+      "type": "float",
+      "required": "Y",
+      "description": "9月_Ask"
+    },
+    {
+      "name": "p1y_b",
+      "type": "float",
+      "required": "Y",
+      "description": "1年_Bid"
+    },
+    {
+      "name": "p1y_a",
+      "type": "float",
+      "required": "Y",
+      "description": "1年_Ask"
+    }
+  ]
+}

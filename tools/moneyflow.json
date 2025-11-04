@@ -1,0 +1,29 @@
+{
+  "name": "tushare_moneyflow",
+  "description": "个股资金流向。获取沪深A股票资金流向数据，分析大单小单成交情况，用于判别资金动向，数据开始于2010年。限量：单次最大提取6000行记录，总量不限制积分：用户需要至少2000积分才可以调取，基础积分有流量控制，积分越多权限越大，请自行提高积分，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), buy_sm_vol(Y), buy_sm_amount(Y), sell_sm_vol(Y), sell_sm_amount(Y), buy_md_vol(Y), buy_md_amount(Y), sell_md_vol(Y), sell_md_amount(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码 （股票和时间参数至少输入一个）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

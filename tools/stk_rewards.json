@@ -1,0 +1,21 @@
+{
+  "name": "tushare_stk_rewards",
+  "description": "管理层薪酬和持股。获取上市公司管理层薪酬和持股积分：用户需要2000积分才可以调取，5000积分以上频次相对较高，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), end_date(Y), name(Y), title(Y), reward(Y), hold_vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码，支持单个或多个代码输入"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

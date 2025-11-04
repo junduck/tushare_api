@@ -1,0 +1,99 @@
+{
+  "api_name": "bc_bestotcqt",
+  "title": "柜台流通式债券最优报价",
+  "description": "柜台流通式债券最优报价限量：单次最大2000，可多次提取，总量不限制积分：用户需要至少500积分可以试用调取，2000积分以上频次相对较高，积分越多权限越大，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "报价日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "报价日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "债券编码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "债券简称"
+    },
+    {
+      "name": "remain_maturity",
+      "type": "str",
+      "required": "N",
+      "description": "剩余期限"
+    },
+    {
+      "name": "bond_type",
+      "type": "str",
+      "required": "N",
+      "description": "债券类型"
+    },
+    {
+      "name": "best_buy_bank",
+      "type": "str",
+      "required": "N",
+      "description": "最优报买价方"
+    },
+    {
+      "name": "best_buy_yield",
+      "type": "float",
+      "required": "N",
+      "description": "投资者最优买入价到期收益率（%）"
+    },
+    {
+      "name": "best_buy_price",
+      "type": "float",
+      "required": "N",
+      "description": "投资者最优买入全价"
+    },
+    {
+      "name": "best_sell_bank",
+      "type": "str",
+      "required": "N",
+      "description": "最优卖报价方"
+    },
+    {
+      "name": "best_sell_yield",
+      "type": "float",
+      "required": "N",
+      "description": "投资者最优卖出价到期收益率（%）"
+    },
+    {
+      "name": "best_sell_price",
+      "type": "float",
+      "required": "N",
+      "description": "投资者最优卖出全价"
+    }
+  ]
+}

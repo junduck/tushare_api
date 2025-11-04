@@ -1,0 +1,63 @@
+{
+  "api_name": "stk_limit",
+  "title": "每日涨跌停价格",
+  "description": "获取全市场（包含A/B股和基金）每日涨跌停价格，包括涨停价格，跌停价格等，每个交易日8点40左右更新当日股票涨跌停价格。限量：单次最多提取5800条记录，可循环调取，总量不限制积分：用户积2000积分可调取，单位分钟有流控，积分越高流量越大，请自行提高积分，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "N",
+      "description": "昨日收盘价"
+    },
+    {
+      "name": "up_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "涨停价"
+    },
+    {
+      "name": "down_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "跌停价"
+    }
+  ]
+}

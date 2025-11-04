@@ -1,0 +1,105 @@
+{
+  "api_name": "cn_cpi",
+  "title": "居民消费价格指数（CPI）",
+  "description": "获取CPI居民消费价格数据，包括全国、城市和农村的数据限量：单次最大5000行，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "m",
+      "type": "str",
+      "required": "N",
+      "description": "月份（YYYYMM，下同），支持多个月份同时输入，逗号分隔"
+    },
+    {
+      "name": "start_m",
+      "type": "str",
+      "required": "N",
+      "description": "开始月份"
+    },
+    {
+      "name": "end_m",
+      "type": "str",
+      "required": "N",
+      "description": "结束月份"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "month",
+      "type": "str",
+      "required": "Y",
+      "description": "月份YYYYMM"
+    },
+    {
+      "name": "nt_val",
+      "type": "float",
+      "required": "Y",
+      "description": "全国当月值"
+    },
+    {
+      "name": "nt_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "全国同比（%）"
+    },
+    {
+      "name": "nt_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "全国环比（%）"
+    },
+    {
+      "name": "nt_accu",
+      "type": "float",
+      "required": "Y",
+      "description": "全国累计值"
+    },
+    {
+      "name": "town_val",
+      "type": "float",
+      "required": "Y",
+      "description": "城市当月值"
+    },
+    {
+      "name": "town_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "城市同比（%）"
+    },
+    {
+      "name": "town_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "城市环比（%）"
+    },
+    {
+      "name": "town_accu",
+      "type": "float",
+      "required": "Y",
+      "description": "城市累计值"
+    },
+    {
+      "name": "cnt_val",
+      "type": "float",
+      "required": "Y",
+      "description": "农村当月值"
+    },
+    {
+      "name": "cnt_yoy",
+      "type": "float",
+      "required": "Y",
+      "description": "农村同比（%）"
+    },
+    {
+      "name": "cnt_mom",
+      "type": "float",
+      "required": "Y",
+      "description": "农村环比（%）"
+    },
+    {
+      "name": "cnt_accu",
+      "type": "float",
+      "required": "Y",
+      "description": "农村累计值"
+    }
+  ]
+}

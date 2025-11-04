@@ -1,0 +1,93 @@
+{
+  "api_name": "rt_k",
+  "title": "实时日线",
+  "description": "获取实时日k线行情，支持按股票代码及股票代码通配符一次性提取全部股票实时日k线行情限量：单次最大可提取6000条数据，等同于一次提取全市场积分：本接口是单独开权限的数据，单独申请权限请参考权限列表",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "支持通配符方式，e.g. 6*.SH、301*.SZ、600000.SH"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "name",
+      "type": "None",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "昨收价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价（最新价）"
+    },
+    {
+      "name": "vol",
+      "type": "int",
+      "required": "Y",
+      "description": "成交量（股）"
+    },
+    {
+      "name": "amount",
+      "type": "int",
+      "required": "Y",
+      "description": "成交金额（元）"
+    },
+    {
+      "name": "num",
+      "type": "int",
+      "required": "Y",
+      "description": "开盘以来成交笔数"
+    },
+    {
+      "name": "ask_volume1",
+      "type": "int",
+      "required": "N",
+      "description": "委托卖盘（股）"
+    },
+    {
+      "name": "bid_volume1",
+      "type": "int",
+      "required": "N",
+      "description": "委托买盘（股）"
+    },
+    {
+      "name": "trade_time",
+      "type": "str",
+      "required": "N",
+      "description": "交易时间"
+    }
+  ]
+}

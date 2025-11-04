@@ -1,0 +1,105 @@
+{
+  "api_name": "moneyflow_ind_ths",
+  "title": "行业资金流向（THS）",
+  "description": "获取同花顺行业资金流向，每日盘后更新限量：单次最大可调取5000条数据，可以根据日期和代码循环提取全部数据积分：5000积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "板块代码"
+    },
+    {
+      "name": "industry",
+      "type": "str",
+      "required": "Y",
+      "description": "板块名称"
+    },
+    {
+      "name": "lead_stock",
+      "type": "str",
+      "required": "Y",
+      "description": "领涨股票名称"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘指数"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "指数涨跌幅"
+    },
+    {
+      "name": "company_num",
+      "type": "int",
+      "required": "Y",
+      "description": "公司数量"
+    },
+    {
+      "name": "pct_change_stock",
+      "type": "float",
+      "required": "Y",
+      "description": "领涨股涨跌幅"
+    },
+    {
+      "name": "close_price",
+      "type": "float",
+      "required": "Y",
+      "description": "领涨股最新价"
+    },
+    {
+      "name": "net_buy_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "流入资金(亿元)"
+    },
+    {
+      "name": "net_sell_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "流出资金(亿元)"
+    },
+    {
+      "name": "net_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "净额(亿元)"
+    }
+  ]
+}

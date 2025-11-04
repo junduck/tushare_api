@@ -1,0 +1,19 @@
+{
+  "name": "tushare_bak_basic",
+  "description": "股票历史列表。获取备用基础列表，数据从2016年开始限量：单次最大7000条，可以根据日期参数循环获取历史，正式权限需要5000积分。。返回字段包括：trade_date(Y), ts_code(Y), name(Y), industry(Y), area(Y), pe(Y), float_share(Y), total_share(Y), total_assets(Y), liquid_assets(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "api_name": "bc_otcqt",
+  "title": "柜台流通式债券报价",
+  "description": "柜台流通式债券报价限量：单次最大2000条，可多次提取，总量不限制积分：用户需要至少500积分可以试用调取，2000积分以上频次相对较高，积分越多权限越大，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    },
+    {
+      "name": "bank",
+      "type": "str",
+      "required": "N",
+      "description": "报价机构"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "报价日期"
+    },
+    {
+      "name": "qt_time",
+      "type": "str",
+      "required": "N",
+      "description": "报价时间"
+    },
+    {
+      "name": "bank",
+      "type": "str",
+      "required": "N",
+      "description": "报价机构"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "债券编码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "债券简称"
+    },
+    {
+      "name": "maturity",
+      "type": "str",
+      "required": "N",
+      "description": "期限"
+    },
+    {
+      "name": "remain_maturity",
+      "type": "str",
+      "required": "N",
+      "description": "剩余期限"
+    },
+    {
+      "name": "bond_type",
+      "type": "str",
+      "required": "N",
+      "description": "债券类型"
+    },
+    {
+      "name": "coupon_rate",
+      "type": "float",
+      "required": "N",
+      "description": "票面利率（%）"
+    },
+    {
+      "name": "buy_price",
+      "type": "float",
+      "required": "N",
+      "description": "投资者买入全价"
+    },
+    {
+      "name": "sell_price",
+      "type": "float",
+      "required": "N",
+      "description": "投资者卖出全价"
+    },
+    {
+      "name": "buy_yield",
+      "type": "float",
+      "required": "N",
+      "description": "投资者买入到期收益率（%）"
+    },
+    {
+      "name": "sell_yield",
+      "type": "float",
+      "required": "N",
+      "description": "投资者卖出到期收益率（%）"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "tushare_ccass_hold",
+  "description": "中央结算系统持股统计。获取中央结算系统持股汇总数据，覆盖全部历史数据，根据交易所披露时间，当日数据在下一交易日早上9点前完成入库限量：单次最大5000条数据，可循环或分页提供全部积分：用户120积分可以试用看数据，5000积分每分钟可以请求300次，8000积分以上可以请求500次每分钟，具体请参阅积分获取办法。返回字段包括：trade_date(Y), ts_code(Y), name(Y), shareholding(Y), hold_nums(Y), hold_ratio(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码 (e.g. 605009.SH)"
+      },
+      "hk_code": {
+        "type": "string",
+        "description": "港交所代码 （e.g. 95009）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期(YYYYMMDD格式，下同)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

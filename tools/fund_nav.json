@@ -1,0 +1,33 @@
+{
+  "name": "tushare_fund_nav",
+  "description": "基金净值。获取公募基金净值数据积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), nav_date(Y), unit_nav(Y), accum_nav(Y), accum_div(Y), net_asset(Y), total_netasset(Y), adj_nav(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS基金代码 （二选一）"
+      },
+      "nav_date": {
+        "type": "string",
+        "description": "净值日期 （二选一）",
+        "pattern": "^\\d{8}$"
+      },
+      "market": {
+        "type": "string",
+        "description": "E场内 O场外"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "净值开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "净值结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

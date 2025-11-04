@@ -1,0 +1,105 @@
+{
+  "api_name": "stk_managers",
+  "title": "上市公司管理层",
+  "description": "获取上市公司管理层积分：用户需要2000积分才可以调取，5000积分以上频次相对较高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码，支持单个或多个股票输入"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "姓名"
+    },
+    {
+      "name": "gender",
+      "type": "str",
+      "required": "Y",
+      "description": "性别"
+    },
+    {
+      "name": "lev",
+      "type": "str",
+      "required": "Y",
+      "description": "岗位类别"
+    },
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "岗位"
+    },
+    {
+      "name": "edu",
+      "type": "str",
+      "required": "Y",
+      "description": "学历"
+    },
+    {
+      "name": "national",
+      "type": "str",
+      "required": "Y",
+      "description": "国籍"
+    },
+    {
+      "name": "birthday",
+      "type": "str",
+      "required": "Y",
+      "description": "出生年月"
+    },
+    {
+      "name": "begin_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上任日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "离任日期"
+    },
+    {
+      "name": "resume",
+      "type": "str",
+      "required": "N",
+      "description": "个人简历"
+    }
+  ]
+}

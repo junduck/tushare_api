@@ -1,0 +1,34 @@
+{
+  "name": "tushare_stk_holdernumber",
+  "description": "股东人数。获取上市公司股东户数数据，数据不定期公布限量：单次最大3000,总量不限制积分：600积分可调取，基础积分每分钟调取100次，5000积分以上频次相对较高。具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), end_date(Y), holder_num(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期",
+        "pattern": "^\\d{8}$"
+      },
+      "enddate": {
+        "type": "string",
+        "description": "截止日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

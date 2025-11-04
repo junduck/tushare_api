@@ -1,0 +1,69 @@
+{
+  "api_name": "moneyflow_hsgt",
+  "title": "沪深港通资金流向",
+  "description": "获取沪股通、深股通、港股通每日资金流向数据，每次最多返回300条记录，总量不限制。每天18~20点之间完成当日更新积分要求：2000积分起，5000积分每分钟可提取500次",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 (二选一)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期 (二选一)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "ggt_ss",
+      "type": "float",
+      "required": "港股通（上海）",
+      "description": ""
+    },
+    {
+      "name": "ggt_sz",
+      "type": "float",
+      "required": "港股通（深圳）",
+      "description": ""
+    },
+    {
+      "name": "hgt",
+      "type": "float",
+      "required": "沪股通（百万元）",
+      "description": ""
+    },
+    {
+      "name": "sgt",
+      "type": "float",
+      "required": "深股通（百万元）",
+      "description": ""
+    },
+    {
+      "name": "north_money",
+      "type": "float",
+      "required": "北向资金（百万元）",
+      "description": ""
+    },
+    {
+      "name": "south_money",
+      "type": "float",
+      "required": "南向资金（百万元）",
+      "description": ""
+    }
+  ]
+}

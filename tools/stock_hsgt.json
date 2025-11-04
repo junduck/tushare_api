@@ -1,0 +1,35 @@
+{
+  "name": "tushare_stock_hsgt",
+  "description": "沪深港通股票列表。获取沪深港通股票列表权限：3000积分起提示：每天上午9:20更新，单次请求最大返回2000行数据，可根据类型循环提取,本接口数据从20250812开始。返回字段包括：ts_code(Y), trade_date(Y), type(Y), name(Y), type_name(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "type": {
+        "type": "string",
+        "description": "类型（参考下表）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始时间",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束时间",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "type"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tushare_tdx_member",
+  "description": "通达信板块成分。获取通达信各板块成分股信息限量：单次最大3000条数据，可以根据日期和板块代码循环提取权限：用户积累6000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), con_code(Y), con_name(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "板块代码：xxxxxx.TDX"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期：格式YYYYMMDD",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

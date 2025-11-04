@@ -1,0 +1,141 @@
+{
+  "api_name": "fut_wsr",
+  "title": "仓单日报",
+  "description": "获取仓单日报数据，了解各仓库/厂库的仓单变化限量：单次最大1000，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "N",
+      "description": "产品代码"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "Y",
+      "description": "产品代码"
+    },
+    {
+      "name": "fut_name",
+      "type": "str",
+      "required": "Y",
+      "description": "产品名称"
+    },
+    {
+      "name": "warehouse",
+      "type": "str",
+      "required": "Y",
+      "description": "仓库名称"
+    },
+    {
+      "name": "wh_id",
+      "type": "str",
+      "required": "N",
+      "description": "仓库编号"
+    },
+    {
+      "name": "pre_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "昨日仓单量"
+    },
+    {
+      "name": "vol",
+      "type": "int",
+      "required": "Y",
+      "description": "今日仓单量"
+    },
+    {
+      "name": "vol_chg",
+      "type": "int",
+      "required": "Y",
+      "description": "增减量"
+    },
+    {
+      "name": "area",
+      "type": "str",
+      "required": "N",
+      "description": "地区"
+    },
+    {
+      "name": "year",
+      "type": "str",
+      "required": "N",
+      "description": "年度"
+    },
+    {
+      "name": "grade",
+      "type": "str",
+      "required": "N",
+      "description": "等级"
+    },
+    {
+      "name": "brand",
+      "type": "str",
+      "required": "N",
+      "description": "品牌"
+    },
+    {
+      "name": "place",
+      "type": "str",
+      "required": "N",
+      "description": "产地"
+    },
+    {
+      "name": "pd",
+      "type": "int",
+      "required": "N",
+      "description": "升贴水"
+    },
+    {
+      "name": "is_ct",
+      "type": "str",
+      "required": "N",
+      "description": "是否折算仓单"
+    },
+    {
+      "name": "unit",
+      "type": "str",
+      "required": "Y",
+      "description": "单位"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易所"
+    }
+  ]
+}

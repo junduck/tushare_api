@@ -1,0 +1,22 @@
+{
+  "name": "tushare_sf_month",
+  "description": "社融增量（月度）。获取月度社会融资数据限量：单次最大2000条数据，可循环提取积分：需2000积分。返回字段包括：month(Y), inc_month(Y), inc_cumval(Y), stk_endval(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "m": {
+        "type": "string",
+        "description": "月份（YYYYMM，下同），支持多个月份同时输入，逗号分隔"
+      },
+      "start_m": {
+        "type": "string",
+        "description": "开始月份"
+      },
+      "end_m": {
+        "type": "string",
+        "description": "结束月份"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "api_name": "repurchase",
+  "title": "股票回购",
+  "description": "获取上市公司回购股票数据积分：用户需要至少600积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期（任意填参数，如果都不填，单次默认返回2000条）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "截止日期"
+    },
+    {
+      "name": "proc",
+      "type": "str",
+      "required": "Y",
+      "description": "进度"
+    },
+    {
+      "name": "exp_date",
+      "type": "str",
+      "required": "Y",
+      "description": "过期日期"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "回购数量"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "回购金额"
+    },
+    {
+      "name": "high_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "回购最高价"
+    },
+    {
+      "name": "low_limit",
+      "type": "float",
+      "required": "Y",
+      "description": "回购最低价"
+    }
+  ]
+}

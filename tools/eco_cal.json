@@ -1,0 +1,37 @@
+{
+  "name": "tushare_eco_cal",
+  "description": "全球财经事件。获取全球财经日历、包括经济事件数据更新限量：单次最大获取100行数据积分：2000积分可调取。返回字段包括：date(Y), time(Y), currency(Y), country(Y), event(Y), value(Y), pre_value(Y), fore_value(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期（YYYYMMDD格式）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "currency": {
+        "type": "string",
+        "description": "货币代码"
+      },
+      "country": {
+        "type": "string",
+        "description": "国家（比如：中国、美国）"
+      },
+      "event": {
+        "type": "string",
+        "description": "事件 （支持模糊匹配： *非农*）"
+      }
+    },
+    "required": []
+  }
+}

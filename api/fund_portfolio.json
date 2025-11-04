@@ -1,0 +1,93 @@
+{
+  "api_name": "fund_portfolio",
+  "title": "基金持仓",
+  "description": "获取公募基金持仓数据，季度更新积分：5000积分以上每分钟请求200次，8000积分以上每分钟请求500次，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "基金代码 (ts_code,ann_date,period至少输入一个参数)"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期（YYYYMMDD格式）"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "季度（每个季度最后一天的日期，比如20131231表示2013年年报）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期开始日期（YYYYMMDD格式）"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期结束日期（YYYYMMDD格式）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS基金代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "截止日期"
+    },
+    {
+      "name": "symbol",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "mkv",
+      "type": "float",
+      "required": "Y",
+      "description": "持有股票市值(元)"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "持有股票数量（股）"
+    },
+    {
+      "name": "stk_mkv_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "占股票市值比"
+    },
+    {
+      "name": "stk_float_ratio",
+      "type": "float",
+      "required": "Y",
+      "description": "占流通股本比例"
+    }
+  ]
+}

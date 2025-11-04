@@ -1,0 +1,57 @@
+{
+  "api_name": "realtime_tick",
+  "title": "实时成交（爬虫）",
+  "description": "本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，数据包括该股票当日开盘以来的所有分笔成交数据。权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码，需按tushare股票代码标准输入，比如：000001.SZ表示平安银行，600000.SH表示浦发银行，单次只能输入一个股票"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "required": "N",
+      "description": "数据源 （sina-新浪 dc-东方财富，默认sina）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "time",
+      "type": "str",
+      "required": "交易时间",
+      "description": ""
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": "现价",
+      "description": ""
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "价格变动",
+      "description": ""
+    },
+    {
+      "name": "volume",
+      "type": "int",
+      "required": "成交量（单位：手）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "int",
+      "required": "成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "type",
+      "type": "str",
+      "required": "类型：买入/卖出/中性",
+      "description": ""
+    }
+  ]
+}

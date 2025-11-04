@@ -1,0 +1,99 @@
+{
+  "api_name": "index_daily",
+  "title": "南华期货指数行情",
+  "description": "获取南华指数每日行情，指数行情也可以通过通用行情接口获取数据．权限：用户需要累积2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "指数代码（南华期货指数以 .NH 结尾，具体请参考本文最下方）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期 （日期格式：YYYYMMDD，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "None",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "TS指数代码",
+      "description": ""
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "收盘点位",
+      "description": ""
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "开盘点位",
+      "description": ""
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "最高点位",
+      "description": ""
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "最低点位",
+      "description": ""
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "昨日收盘点",
+      "description": ""
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "涨跌点",
+      "description": ""
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "涨跌幅",
+      "description": ""
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "成交量（手）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "成交额（千元）",
+      "description": ""
+    }
+  ]
+}

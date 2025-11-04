@@ -1,0 +1,25 @@
+{
+  "name": "tushare_moneyflow_hsgt",
+  "description": "沪深港通资金流向。获取沪股通、深股通、港股通每日资金流向数据，每次最多返回300条记录，总量不限制。每天18~20点之间完成当日更新积分要求：2000积分起，5000积分每分钟可提取500次。返回字段包括：trade_date(交易日期), ggt_ss(港股通（上海）), ggt_sz(港股通（深圳）), hgt(沪股通（百万元）), sgt(深股通（百万元）), north_money(北向资金（百万元）), south_money(南向资金（百万元）)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期 (二选一)",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期 (二选一)",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "tushare_fund_share",
+  "description": "基金规模。获取基金规模数据，包含上海和深圳ETF基金限量：单次最大提取2000行数据积分：用户需要至少2000积分可以调取，5000积分以上频次较高，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), fd_share(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "TS基金代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "market": {
+        "type": "string",
+        "description": "市场代码（SH上交所 ，SZ深交所）"
+      }
+    },
+    "required": []
+  }
+}

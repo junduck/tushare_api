@@ -1,0 +1,99 @@
+{
+  "api_name": "fx_obasic",
+  "title": "外汇基础信息（海外）",
+  "description": "获取海外外汇基础信息，目前只有FXCM交易商的数据数量：单次可提取全部数据积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "N",
+      "description": "交易商"
+    },
+    {
+      "name": "classify",
+      "type": "str",
+      "required": "N",
+      "description": "分类"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "外汇代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "名称"
+    },
+    {
+      "name": "classify",
+      "type": "str",
+      "required": "Y",
+      "description": "分类"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易商"
+    },
+    {
+      "name": "min_unit",
+      "type": "float",
+      "required": "Y",
+      "description": "最小交易单位"
+    },
+    {
+      "name": "max_unit",
+      "type": "float",
+      "required": "Y",
+      "description": "最大交易单位"
+    },
+    {
+      "name": "pip",
+      "type": "float",
+      "required": "Y",
+      "description": "点"
+    },
+    {
+      "name": "pip_cost",
+      "type": "float",
+      "required": "Y",
+      "description": "点值"
+    },
+    {
+      "name": "traget_spread",
+      "type": "float",
+      "required": "Y",
+      "description": "目标差价"
+    },
+    {
+      "name": "min_stop_distance",
+      "type": "float",
+      "required": "Y",
+      "description": "最小止损距离（点子）"
+    },
+    {
+      "name": "trading_hours",
+      "type": "str",
+      "required": "Y",
+      "description": "交易时间"
+    },
+    {
+      "name": "break_time",
+      "type": "str",
+      "required": "Y",
+      "description": "休市时间"
+    }
+  ]
+}

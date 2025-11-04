@@ -1,0 +1,81 @@
+{
+  "api_name": "ccass_hold_detail",
+  "title": "中央结算系统持股明细",
+  "description": "获取中央结算系统机构席位持股明细，数据覆盖全历史，根据交易所披露时间，当日数据在下一交易日早上9点前完成限量：单次最大返回6000条数据，可以循环或分页提取积分：用户积8000积分可调取，每分钟可以请求300次",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码 (e.g. 605009.SH)"
+    },
+    {
+      "name": "hk_code",
+      "type": "str",
+      "required": "N",
+      "description": "港交所代码 （e.g. 95009）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代号"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "col_participant_id",
+      "type": "str",
+      "required": "Y",
+      "description": "参与者编号"
+    },
+    {
+      "name": "col_participant_name",
+      "type": "str",
+      "required": "Y",
+      "description": "机构名称"
+    },
+    {
+      "name": "col_shareholding",
+      "type": "str",
+      "required": "Y",
+      "description": "持股量(股)"
+    },
+    {
+      "name": "col_shareholding_percent",
+      "type": "str",
+      "required": "Y",
+      "description": "占已发行股份/权证/单位百分比(%)"
+    }
+  ]
+}

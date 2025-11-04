@@ -1,0 +1,153 @@
+{
+  "api_name": "moneyflow",
+  "title": "个股资金流向",
+  "description": "获取沪深A股票资金流向数据，分析大单小单成交情况，用于判别资金动向，数据开始于2010年。限量：单次最大提取6000行记录，总量不限制积分：用户需要至少2000积分才可以调取，基础积分有流量控制，积分越多权限越大，请自行提高积分，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码 （股票和时间参数至少输入一个）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "buy_sm_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "小单买入量（手）"
+    },
+    {
+      "name": "buy_sm_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "小单买入金额（万元）"
+    },
+    {
+      "name": "sell_sm_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "小单卖出量（手）"
+    },
+    {
+      "name": "sell_sm_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "小单卖出金额（万元）"
+    },
+    {
+      "name": "buy_md_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "中单买入量（手）"
+    },
+    {
+      "name": "buy_md_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "中单买入金额（万元）"
+    },
+    {
+      "name": "sell_md_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "中单卖出量（手）"
+    },
+    {
+      "name": "sell_md_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "中单卖出金额（万元）"
+    },
+    {
+      "name": "buy_lg_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "大单买入量（手）"
+    },
+    {
+      "name": "buy_lg_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "大单买入金额（万元）"
+    },
+    {
+      "name": "sell_lg_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "大单卖出量（手）"
+    },
+    {
+      "name": "sell_lg_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "大单卖出金额（万元）"
+    },
+    {
+      "name": "buy_elg_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "特大单买入量（手）"
+    },
+    {
+      "name": "buy_elg_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "特大单买入金额（万元）"
+    },
+    {
+      "name": "sell_elg_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "特大单卖出量（手）"
+    },
+    {
+      "name": "sell_elg_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "特大单卖出金额（万元）"
+    },
+    {
+      "name": "net_mf_vol",
+      "type": "int",
+      "required": "Y",
+      "description": "净流入量（手）"
+    },
+    {
+      "name": "net_mf_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "净流入额（万元）"
+    }
+  ]
+}

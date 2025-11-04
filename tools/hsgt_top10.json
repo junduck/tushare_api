@@ -1,0 +1,33 @@
+{
+  "name": "tushare_hsgt_top10",
+  "description": "沪深股通十大成交股。获取沪股通、深股通每日前十大成交详细数据，每天18~20点之间完成当日更新。返回字段包括：trade_date(交易日期), ts_code(股票代码), name(股票名称), close(收盘价), change(涨跌额), rank(资金排名), market_type(市场类型（1：沪市 3：深市）), amount(成交金额（元）), net_amount(净成交金额（元）), buy(买入金额（元）)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码（二选一）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（二选一）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "market_type": {
+        "type": "string",
+        "description": "市场类型（1：沪市 3：深市）"
+      }
+    },
+    "required": []
+  }
+}

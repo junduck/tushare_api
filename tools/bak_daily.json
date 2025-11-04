@@ -1,0 +1,37 @@
+{
+  "name": "tushare_bak_daily",
+  "description": "备用行情。获取备用行情，包括特定的行情指标(数据从2017年中左右开始，早期有几天数据缺失，近期正常)限量：单次最大7000行数据，可以根据日期参数循环获取，正式权限需要5000积分。。返回字段包括：ts_code(Y), trade_date(Y), name(Y), pct_change(Y), close(Y), change(Y), open(Y), high(Y), low(Y), pre_close(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "offset": {
+        "type": "string",
+        "description": "开始行数"
+      },
+      "limit": {
+        "type": "string",
+        "description": "最大行数"
+      }
+    },
+    "required": []
+  }
+}

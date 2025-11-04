@@ -1,0 +1,105 @@
+{
+  "api_name": "hsgt_top10",
+  "title": "沪深股通十大成交股",
+  "description": "获取沪股通、深股通每日前十大成交详细数据，每天18~20点之间完成当日更新",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码（二选一）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（二选一）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    },
+    {
+      "name": "market_type",
+      "type": "str",
+      "required": "N",
+      "description": "市场类型（1：沪市 3：深市）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "交易日期",
+      "description": ""
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "股票代码",
+      "description": ""
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "股票名称",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "收盘价",
+      "description": ""
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "涨跌额",
+      "description": ""
+    },
+    {
+      "name": "rank",
+      "type": "int",
+      "required": "资金排名",
+      "description": ""
+    },
+    {
+      "name": "market_type",
+      "type": "str",
+      "required": "市场类型（1：沪市 3：深市）",
+      "description": ""
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "net_amount",
+      "type": "float",
+      "required": "净成交金额（元）",
+      "description": ""
+    },
+    {
+      "name": "buy",
+      "type": "float",
+      "required": "买入金额（元）",
+      "description": ""
+    },
+    {
+      "name": "sell",
+      "type": "float",
+      "required": "卖出金额（元）",
+      "description": ""
+    }
+  ]
+}

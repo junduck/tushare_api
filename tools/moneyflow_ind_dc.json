@@ -1,0 +1,33 @@
+{
+  "name": "tushare_moneyflow_ind_dc",
+  "description": "板块资金流向（DC）。获取东方财富板块资金流向，每天盘后更新限量：单次最大可调取5000条数据，可以根据日期和代码循环提取全部数据积分：5000积分可以调取，具体请参阅积分获取办法。返回字段包括：trade_date(Y), content_type(Y), ts_code(Y), name(Y), pct_change(Y), close(Y), net_amount(Y), net_amount_rate(Y), buy_elg_amount(Y), buy_elg_amount_rate(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "content_type": {
+        "type": "string",
+        "description": "资金类型(行业、概念、地域)"
+      }
+    },
+    "required": []
+  }
+}

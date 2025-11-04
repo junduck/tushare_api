@@ -1,0 +1,34 @@
+{
+  "name": "tushare_fut_weekly_detail",
+  "description": "期货主要品种交易周报。获取期货交易所主要品种每周交易统计信息，数据从2010年3月开始权限：600积分可调取，单次最大获取4000行数据，积分越高频次越高，5000积分以上正常调取不受限制数据来源：中国证监会，本数据由Tushare社区成员CE完成规划和采集。返回字段包括：exchange(Y), prd(Y), name(Y), vol(Y), vol_yoy(Y), amount(Y), amout_yoy(Y), cumvol(Y), cumvol_yoy(Y), cumamt(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "week": {
+        "type": "string",
+        "description": "周期（每年第几周，e.g. 202001 表示2020第1周）"
+      },
+      "prd": {
+        "type": "string",
+        "description": "期货品种（支持多品种输入，逗号分隔）"
+      },
+      "start_week": {
+        "type": "string",
+        "description": "开始周期"
+      },
+      "end_week": {
+        "type": "string",
+        "description": "结束周期"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "交易所（请参考交易所说明）"
+      },
+      "fields": {
+        "type": "string",
+        "description": "提取的字段，e.g. fields='prd,name,vol'"
+      }
+    },
+    "required": []
+  }
+}

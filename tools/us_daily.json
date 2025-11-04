@@ -1,0 +1,29 @@
+{
+  "name": "tushare_us_daily",
+  "description": "美股日线行情。获取美股行情（未复权），包括全部股票全历史行情，以及重要的市场和估值指标限量：单次最大6000行数据，可根据日期参数循环提取，开通正式权限后也可支持分页提取全部历史要求：120积分可以试用查看数据，开通正式权限请参考权限说明文档。。返回字段包括：ts_code(Y), trade_date(Y), close(Y), open(Y), high(Y), low(Y), pre_close(Y), change(N), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码（e.g. AAPL）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期（YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

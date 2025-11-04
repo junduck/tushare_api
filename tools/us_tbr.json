@@ -1,0 +1,29 @@
+{
+  "name": "tushare_us_tbr",
+  "description": "短期国债利率。获取美国短期国债利率数据限量：单次最大可获取2000行数据，可循环获取权限：用户积累120积分可以使用，积分越高频次越高。具体请参阅积分获取办法。返回字段包括：date(Y), w4_bd(Y), w4_ce(Y), w8_bd(Y), w8_ce(Y), w13_bd(Y), w13_ce(Y), w17_bd(Y), w17_ce(Y), w26_bd(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期(YYYYMMDD格式)",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定输出字段(e.g. fields='w4_bd,w52_ce')"
+      }
+    },
+    "required": []
+  }
+}

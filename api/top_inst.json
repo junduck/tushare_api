@@ -1,0 +1,81 @@
+{
+  "api_name": "top_inst",
+  "title": "龙虎榜机构交易单",
+  "description": "龙虎榜机构成交明细限量：单次请求最大返回10000行数据，可根据参数循环获取全部历史积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "exalter",
+      "type": "str",
+      "required": "Y",
+      "description": "营业部名称"
+    },
+    {
+      "name": "side",
+      "type": "str",
+      "required": "Y",
+      "description": "买卖类型0：买入金额最大的前5名， 1：卖出金额最大的前5名"
+    },
+    {
+      "name": "buy",
+      "type": "float",
+      "required": "Y",
+      "description": "买入额（元）"
+    },
+    {
+      "name": "buy_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "买入占总成交比例"
+    },
+    {
+      "name": "sell",
+      "type": "float",
+      "required": "Y",
+      "description": "卖出额（元）"
+    },
+    {
+      "name": "sell_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "卖出占总成交比例"
+    },
+    {
+      "name": "net_buy",
+      "type": "float",
+      "required": "Y",
+      "description": "净成交额（元）"
+    },
+    {
+      "name": "reason",
+      "type": "str",
+      "required": "Y",
+      "description": "上榜理由"
+    }
+  ]
+}

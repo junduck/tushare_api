@@ -1,0 +1,28 @@
+{
+  "name": "tushare_trade_cal",
+  "description": "交易日历。获取各大期货交易所交易日历数据积分：需2000积分才可以提取数据。返回字段包括：exchange(Y), cal_date(Y), is_open(Y), pretrade_date(N)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "exchange": {
+        "type": "string",
+        "description": "交易所 SHFE 上期所 DCE 大商所 CFFEX中金所  CZCE郑商所 INE上海国际能源交易所"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "is_open": {
+        "type": "number",
+        "description": "是否交易 0休市 1交易"
+      }
+    },
+    "required": []
+  }
+}

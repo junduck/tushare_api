@@ -1,0 +1,45 @@
+{
+  "api_name": "shibor_lpr",
+  "title": "LPR贷款基础利率",
+  "description": "LPR贷款基础利率限量：单次最大4000(相当于单次可提取18年历史)，总量不限制，可通过设置开始和结束日期分段获取积分：用户积累120积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期  (日期输入格式：YYYYMMDD，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "p1y",
+      "type": "float",
+      "required": "Y",
+      "description": "1年贷款利率"
+    },
+    {
+      "name": "p5y",
+      "type": "float",
+      "required": "Y",
+      "description": "5年贷款利率"
+    }
+  ]
+}

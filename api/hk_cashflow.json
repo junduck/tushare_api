@@ -1,0 +1,69 @@
+{
+  "api_name": "hk_cashflow",
+  "title": "港股现金流量表",
+  "description": "获取港股上市公司现金流量表数据权限：需单独开权限或有15000积分，具体权限信息请参考权限列表提示：当前接口按单只股票获取其历史数据，单次请求最大返回10000行数据，可循环提取",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "报告期(格式：YYYYMMDD）"
+    },
+    {
+      "name": "ind_name",
+      "type": "str",
+      "required": "N",
+      "description": "指标名（如：新增贷款）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期开始日期（格式：YYYYMMDD）"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告结束始日期（格式：YYYYMMDD）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "报告期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "ind_name",
+      "type": "str",
+      "required": "Y",
+      "description": "财务科目名称"
+    },
+    {
+      "name": "ind_value",
+      "type": "float",
+      "required": "Y",
+      "description": "财务科目值"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "api_name": "major_news",
+  "title": "新闻通讯（长篇）",
+  "description": "获取长篇通讯信息，覆盖主要新闻资讯网站，提供超过8年历史新闻。限量：单次最大400行记录，可循环提取保存到本地。积分：本接口需单独开权限（跟积分没关系），具体请参阅权限说明",
+  "input_params": [
+    {
+      "name": "src",
+      "type": "str",
+      "required": "N",
+      "description": "新闻来源（新华网、凤凰财经、同花顺、新浪财经、华尔街见闻、中证网、财新网、第一财经、财联社）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "新闻发布开始时间，e.g. 2018-11-21 00:00:00"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "新闻发布结束时间，e.g. 2018-11-22 00:00:00"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "标题"
+    },
+    {
+      "name": "content",
+      "type": "str",
+      "required": "N",
+      "description": "内容 (默认不显示，需要在fields里指定)"
+    },
+    {
+      "name": "pub_time",
+      "type": "str",
+      "required": "Y",
+      "description": "发布时间"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "required": "Y",
+      "description": "来源网站"
+    }
+  ]
+}

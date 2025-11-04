@@ -1,0 +1,63 @@
+{
+  "api_name": "stk_holdernumber",
+  "title": "股东人数",
+  "description": "获取上市公司股东户数数据，数据不定期公布限量：单次最大3000,总量不限制积分：600积分可调取，基础积分每分钟调取100次，5000积分以上频次相对较高。具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期"
+    },
+    {
+      "name": "enddate",
+      "type": "str",
+      "required": "N",
+      "description": "截止日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "截止日期"
+    },
+    {
+      "name": "holder_num",
+      "type": "int",
+      "required": "Y",
+      "description": "股东户数"
+    }
+  ]
+}

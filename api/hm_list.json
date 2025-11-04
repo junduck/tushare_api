@@ -1,0 +1,33 @@
+{
+  "api_name": "hm_list",
+  "title": "市场游资最全名录",
+  "description": "获取游资分类名录信息限量：单次最大1000条数据，目前总量未超过500积分：5000积分可以调取，积分获取办法请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "N",
+      "description": "游资名称"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "游资名称"
+    },
+    {
+      "name": "desc",
+      "type": "str",
+      "required": "Y",
+      "description": "说明"
+    },
+    {
+      "name": "orgs",
+      "type": "None",
+      "required": "Y",
+      "description": "关联机构"
+    }
+  ]
+}

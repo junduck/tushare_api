@@ -1,0 +1,29 @@
+{
+  "name": "tushare_margin",
+  "description": "融资融券交易汇总。获取融资融券每日交易汇总数据限量：单次请求最大返回4000行数据，可根据日期循环权限：2000积分可获得本接口权限，积分越高权限越大，具体参考权限说明。返回字段包括：trade_date(交易日期), exchange_id(交易所代码（SSE上交所SZSE深交所BSE北交所）), rzye(融资余额(元)), rzmre(融资买入额(元)), rzche(融资偿还额(元)), rqye(融券余额(元)), rqmcl(融券卖出量(股,份,手)), rzrqye(融资融券余额(元)), rqyl(融券余量(股,份,手))。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "exchange_id": {
+        "type": "string",
+        "description": "交易所代码（SSE上交所SZSE深交所BSE北交所）"
+      }
+    },
+    "required": []
+  }
+}

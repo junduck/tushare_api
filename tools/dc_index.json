@@ -1,0 +1,33 @@
+{
+  "name": "tushare_dc_index",
+  "description": "东方财富概念板块。获取东方财富每个交易日的概念板块数据，支持按日期查询限量：单次最大可获取5000条数据，历史数据可根据日期循环获取权限：用户积累6000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), trade_date(Y), name(Y), leading(Y), leading_code(Y), pct_change(Y), leading_pct(Y), total_mv(Y), turnover_rate(Y), up_num(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码（支持多个代码同时输入，用逗号分隔）"
+      },
+      "name": {
+        "type": "string",
+        "description": "板块名称（例如：人形机器人）"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

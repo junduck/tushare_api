@@ -1,0 +1,34 @@
+{
+  "name": "tushare_hk_fina_indicator",
+  "description": "港股财务指标数据。获取港股上市公司财务指标数据，为避免服务器压力，现阶段每次请求最多返回200条记录，可通过设置日期多次请求获取更多数据。权限：需单独开权限或有15000积分，具体权限信息请参考权限列表提示：当前接口按单只股票获取其历史数据，单次请求最大返回10000行数据，可循环提取。返回字段包括：ts_code(Y), name(Y), end_date(Y), ind_type(Y), report_type(Y), std_report_date(Y), per_netcash_operate(Y), per_oi(Y), bps(Y), basic_eps(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(格式：YYYYMMDD）"
+      },
+      "report_type": {
+        "type": "string",
+        "description": "报告期类型（Q1一季报Q2半年报Q3三季报Q4年报）"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "报告期开始日期(格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "报告结束日期(格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

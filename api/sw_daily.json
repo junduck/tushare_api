@@ -1,0 +1,123 @@
+{
+  "api_name": "sw_daily",
+  "title": "申万行业指数日行情",
+  "description": "获取申万行业日线行情（默认是申万2021版行情）限量：单次最大4000行数据，可通过指数代码和日期参数循环提取，5000积分可调取",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "行业代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "指数代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "指数名称"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘点位"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低点位"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高点位"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘点位"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌点位"
+    },
+    {
+      "name": "pct_change",
+      "type": "float",
+      "required": "Y",
+      "description": "涨跌幅"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量（万股）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额（万元）"
+    },
+    {
+      "name": "pe",
+      "type": "float",
+      "required": "Y",
+      "description": "市盈率"
+    },
+    {
+      "name": "pb",
+      "type": "float",
+      "required": "Y",
+      "description": "市净率"
+    },
+    {
+      "name": "float_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "流通市值（万元）"
+    },
+    {
+      "name": "total_mv",
+      "type": "float",
+      "required": "Y",
+      "description": "总市值（万元）"
+    }
+  ]
+}

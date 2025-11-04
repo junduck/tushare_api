@@ -1,0 +1,50 @@
+[
+  {
+    "api_name": "daily_info",
+    "action": "manual parse"
+  },
+  {
+    "api_name": "fund_sales_ratio",
+    "action": "rename param"
+  },
+  {
+    "api_name": "hibor",
+    "action": "rename param"
+  },
+  {
+    "api_name": "shibor_lpr",
+    "action": "rename param"
+  },
+  {
+    "api_name": "shibor_lpr",
+    "action": "rename param"
+  },
+  {
+    "api_name": "shibor_quote",
+    "action": "rename param"
+  },
+  {
+    "api_name": "irm_qa_sh",
+    "action": "dup param"
+  },
+  {
+    "api_name": "irm_qa_sz",
+    "action": "dup param"
+  },
+  {
+    "api_name": "tdx_daily",
+    "action": "rename param"
+  },
+  {
+    "api_name": "realtime_list",
+    "action": "disable"
+  },
+  {
+    "api_name": "realtime_quote",
+    "action": "disable"
+  },
+  {
+    "api_name": "realtime_tick",
+    "action": "disable"
+  }
+]

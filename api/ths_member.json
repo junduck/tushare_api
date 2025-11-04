@@ -1,0 +1,63 @@
+{
+  "api_name": "ths_member",
+  "title": "同花顺行业概念成分",
+  "description": "获取同花顺概念板块成分列表注：数据版权归属同花顺，如做商业用途，请主动联系同花顺。限量：用户积累5000积分可调取，每分钟可调取200次，可按概念板块代码循环提取所有成分",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "板块指数代码"
+    },
+    {
+      "name": "con_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "指数代码"
+    },
+    {
+      "name": "con_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "con_name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "weight",
+      "type": "float",
+      "required": "N",
+      "description": "权重(暂无)"
+    },
+    {
+      "name": "in_date",
+      "type": "str",
+      "required": "N",
+      "description": "纳入日期(暂无)"
+    },
+    {
+      "name": "out_date",
+      "type": "str",
+      "required": "N",
+      "description": "剔除日期(暂无)"
+    },
+    {
+      "name": "is_new",
+      "type": "str",
+      "required": "N",
+      "description": "是否最新Y是N否"
+    }
+  ]
+}

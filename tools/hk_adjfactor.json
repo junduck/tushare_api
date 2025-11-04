@@ -1,0 +1,29 @@
+{
+  "name": "tushare_hk_adjfactor",
+  "description": "港股复权因子。获取港股每日复权因子数据，每天滚动刷新限量：单次最大6000行数据，可以根据日期循环权限：本接口是在开通港股日线权限后自动获取权限，权限请参考权限说明文档。返回字段包括：ts_code(Y), trade_date(Y), cum_adjfactor(Y), close_price(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

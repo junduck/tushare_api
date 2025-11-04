@@ -1,0 +1,35 @@
+{
+  "name": "tushare_fina_audit",
+  "description": "财务审计意见。获取上市公司定期财务审计意见数据权限：用户需要至少500积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(TS股票代码), ann_date(公告日期), end_date(报告期), audit_result(审计结果), audit_fees(审计总费用（元）), audit_agency(会计事务所), audit_sign(签字会计师)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(每个季度最后一天的日期,比如20171231表示年报)"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

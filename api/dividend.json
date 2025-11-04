@@ -1,0 +1,135 @@
+{
+  "api_name": "dividend",
+  "title": "分红送股数据",
+  "description": "分红送股数据权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "TS代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日"
+    },
+    {
+      "name": "record_date",
+      "type": "str",
+      "required": "N",
+      "description": "股权登记日期"
+    },
+    {
+      "name": "ex_date",
+      "type": "str",
+      "required": "N",
+      "description": "除权除息日"
+    },
+    {
+      "name": "imp_ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "实施公告日"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "分红年度"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "预案公告日"
+    },
+    {
+      "name": "div_proc",
+      "type": "str",
+      "required": "Y",
+      "description": "实施进度"
+    },
+    {
+      "name": "stk_div",
+      "type": "float",
+      "required": "Y",
+      "description": "每股送转"
+    },
+    {
+      "name": "stk_bo_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "每股送股比例"
+    },
+    {
+      "name": "stk_co_rate",
+      "type": "float",
+      "required": "Y",
+      "description": "每股转增比例"
+    },
+    {
+      "name": "cash_div",
+      "type": "float",
+      "required": "Y",
+      "description": "每股分红（税后）"
+    },
+    {
+      "name": "cash_div_tax",
+      "type": "float",
+      "required": "Y",
+      "description": "每股分红（税前）"
+    },
+    {
+      "name": "record_date",
+      "type": "str",
+      "required": "Y",
+      "description": "股权登记日"
+    },
+    {
+      "name": "ex_date",
+      "type": "str",
+      "required": "Y",
+      "description": "除权除息日"
+    },
+    {
+      "name": "pay_date",
+      "type": "str",
+      "required": "Y",
+      "description": "派息日"
+    },
+    {
+      "name": "div_listdate",
+      "type": "str",
+      "required": "Y",
+      "description": "红股上市日"
+    },
+    {
+      "name": "imp_ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "实施公告日"
+    },
+    {
+      "name": "base_date",
+      "type": "str",
+      "required": "N",
+      "description": "基准日"
+    },
+    {
+      "name": "base_share",
+      "type": "float",
+      "required": "N",
+      "description": "基准股本（万）"
+    }
+  ]
+}

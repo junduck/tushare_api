@@ -1,0 +1,63 @@
+{
+  "api_name": "suspend_d",
+  "title": "每日停复牌信息",
+  "description": "按日期方式获取股票每日停复牌信息",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码(可输入多值)"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日日期"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "停复牌查询开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "停复牌查询结束日期"
+    },
+    {
+      "name": "suspend_type",
+      "type": "str",
+      "required": "N",
+      "description": "停复牌类型：S-停牌,R-复牌"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "停复牌日期"
+    },
+    {
+      "name": "suspend_timing",
+      "type": "str",
+      "required": "Y",
+      "description": "日内停牌时间段"
+    },
+    {
+      "name": "suspend_type",
+      "type": "str",
+      "required": "Y",
+      "description": "停复牌类型：S-停牌，R-复牌"
+    }
+  ]
+}

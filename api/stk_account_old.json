@@ -1,0 +1,75 @@
+{
+  "api_name": "stk_account_old",
+  "title": "股票开户数据（旧）",
+  "description": "获取股票账户开户数据旧版格式数据，数据从2008年1月开始，到2015年5月29，新数据请通过股票开户数据获取。积分：600积分可调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "统计周期"
+    },
+    {
+      "name": "new_sh",
+      "type": "int",
+      "required": "Y",
+      "description": "本周新增（上海，户）"
+    },
+    {
+      "name": "new_sz",
+      "type": "int",
+      "required": "Y",
+      "description": "本周新增（深圳，户）"
+    },
+    {
+      "name": "active_sh",
+      "type": "float",
+      "required": "Y",
+      "description": "期末有效账户（上海，万户）"
+    },
+    {
+      "name": "active_sz",
+      "type": "float",
+      "required": "Y",
+      "description": "期末有效账户（深圳，万户）"
+    },
+    {
+      "name": "total_sh",
+      "type": "float",
+      "required": "Y",
+      "description": "期末账户数（上海，万户）"
+    },
+    {
+      "name": "total_sz",
+      "type": "float",
+      "required": "Y",
+      "description": "期末账户数（深圳，万户）"
+    },
+    {
+      "name": "trade_sh",
+      "type": "float",
+      "required": "Y",
+      "description": "参与交易账户数（上海，万户）"
+    },
+    {
+      "name": "trade_sz",
+      "type": "float",
+      "required": "Y",
+      "description": "参与交易账户数（深圳，万户）"
+    }
+  ]
+}

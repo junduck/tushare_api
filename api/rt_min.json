@@ -1,0 +1,69 @@
+{
+  "api_name": "rt_min",
+  "title": "实时分钟",
+  "description": "获取全A股票实时分钟数据，包括1~60min限量：单次最大1000行数据，可以通过股票代码提取数据，支持逗号分隔的多个代码同时提取权限：正式权限请参阅 权限说明",
+  "input_params": [
+    {
+      "name": "freq",
+      "type": "str",
+      "required": "Y",
+      "description": "1MIN,5MIN,15MIN,30MIN,60MIN （大写）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "支持单个和多个：600000.SH 或者 600000.SH,000001.SZ"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "time",
+      "type": "None",
+      "required": "Y",
+      "description": "交易时间"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "开盘价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "最低价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "成交量(股）"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "成交额（元）"
+    }
+  ]
+}

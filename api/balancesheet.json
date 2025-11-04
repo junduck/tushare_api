@@ -1,0 +1,999 @@
+{
+  "api_name": "balancesheet",
+  "title": "资产负债表",
+  "description": "获取上市公司资产负债表积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法提示：当前接口只能按单只股票获取其历史数据，如果需要获取某一季度全部上市公司数据，请使用balancesheet_vip接口（参数一致），需积攒5000积分。",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "公告结束日期"
+    },
+    {
+      "name": "period",
+      "type": "str",
+      "required": "N",
+      "description": "报告期(每个季度最后一天的日期，比如20171231表示年报，20170630半年报，20170930三季报)"
+    },
+    {
+      "name": "report_type",
+      "type": "str",
+      "required": "N",
+      "description": "报告类型：见下方详细说明"
+    },
+    {
+      "name": "comp_type",
+      "type": "str",
+      "required": "N",
+      "description": "公司类型：1一般工商业 2银行 3保险 4证券"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "f_ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "实际公告日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "报告期"
+    },
+    {
+      "name": "report_type",
+      "type": "str",
+      "required": "Y",
+      "description": "报表类型"
+    },
+    {
+      "name": "comp_type",
+      "type": "str",
+      "required": "Y",
+      "description": "公司类型(1一般工商业2银行3保险4证券)"
+    },
+    {
+      "name": "end_type",
+      "type": "str",
+      "required": "Y",
+      "description": "报告期类型"
+    },
+    {
+      "name": "total_share",
+      "type": "float",
+      "required": "Y",
+      "description": "期末总股本"
+    },
+    {
+      "name": "cap_rese",
+      "type": "float",
+      "required": "Y",
+      "description": "资本公积金"
+    },
+    {
+      "name": "undistr_porfit",
+      "type": "float",
+      "required": "Y",
+      "description": "未分配利润"
+    },
+    {
+      "name": "surplus_rese",
+      "type": "float",
+      "required": "Y",
+      "description": "盈余公积金"
+    },
+    {
+      "name": "special_rese",
+      "type": "float",
+      "required": "Y",
+      "description": "专项储备"
+    },
+    {
+      "name": "money_cap",
+      "type": "float",
+      "required": "Y",
+      "description": "货币资金"
+    },
+    {
+      "name": "trad_asset",
+      "type": "float",
+      "required": "Y",
+      "description": "交易性金融资产"
+    },
+    {
+      "name": "notes_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收票据"
+    },
+    {
+      "name": "accounts_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收账款"
+    },
+    {
+      "name": "oth_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "其他应收款"
+    },
+    {
+      "name": "prepayment",
+      "type": "float",
+      "required": "Y",
+      "description": "预付款项"
+    },
+    {
+      "name": "div_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收股利"
+    },
+    {
+      "name": "int_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收利息"
+    },
+    {
+      "name": "inventories",
+      "type": "float",
+      "required": "Y",
+      "description": "存货"
+    },
+    {
+      "name": "amor_exp",
+      "type": "float",
+      "required": "Y",
+      "description": "待摊费用"
+    },
+    {
+      "name": "nca_within_1y",
+      "type": "float",
+      "required": "Y",
+      "description": "一年内到期的非流动资产"
+    },
+    {
+      "name": "sett_rsrv",
+      "type": "float",
+      "required": "Y",
+      "description": "结算备付金"
+    },
+    {
+      "name": "loanto_oth_bank_fi",
+      "type": "float",
+      "required": "Y",
+      "description": "拆出资金"
+    },
+    {
+      "name": "premium_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收保费"
+    },
+    {
+      "name": "reinsur_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保账款"
+    },
+    {
+      "name": "reinsur_res_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保合同准备金"
+    },
+    {
+      "name": "pur_resale_fa",
+      "type": "float",
+      "required": "Y",
+      "description": "买入返售金融资产"
+    },
+    {
+      "name": "oth_cur_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "其他流动资产"
+    },
+    {
+      "name": "total_cur_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "流动资产合计"
+    },
+    {
+      "name": "fa_avail_for_sale",
+      "type": "float",
+      "required": "Y",
+      "description": "可供出售金融资产"
+    },
+    {
+      "name": "htm_invest",
+      "type": "float",
+      "required": "Y",
+      "description": "持有至到期投资"
+    },
+    {
+      "name": "lt_eqt_invest",
+      "type": "float",
+      "required": "Y",
+      "description": "长期股权投资"
+    },
+    {
+      "name": "invest_real_estate",
+      "type": "float",
+      "required": "Y",
+      "description": "投资性房地产"
+    },
+    {
+      "name": "time_deposits",
+      "type": "float",
+      "required": "Y",
+      "description": "定期存款"
+    },
+    {
+      "name": "oth_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "其他资产"
+    },
+    {
+      "name": "lt_rec",
+      "type": "float",
+      "required": "Y",
+      "description": "长期应收款"
+    },
+    {
+      "name": "fix_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "固定资产"
+    },
+    {
+      "name": "cip",
+      "type": "float",
+      "required": "Y",
+      "description": "在建工程"
+    },
+    {
+      "name": "const_materials",
+      "type": "float",
+      "required": "Y",
+      "description": "工程物资"
+    },
+    {
+      "name": "fixed_assets_disp",
+      "type": "float",
+      "required": "Y",
+      "description": "固定资产清理"
+    },
+    {
+      "name": "produc_bio_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "生产性生物资产"
+    },
+    {
+      "name": "oil_and_gas_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "油气资产"
+    },
+    {
+      "name": "intan_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "无形资产"
+    },
+    {
+      "name": "r_and_d",
+      "type": "float",
+      "required": "Y",
+      "description": "研发支出"
+    },
+    {
+      "name": "goodwill",
+      "type": "float",
+      "required": "Y",
+      "description": "商誉"
+    },
+    {
+      "name": "lt_amor_exp",
+      "type": "float",
+      "required": "Y",
+      "description": "长期待摊费用"
+    },
+    {
+      "name": "defer_tax_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "递延所得税资产"
+    },
+    {
+      "name": "decr_in_disbur",
+      "type": "float",
+      "required": "Y",
+      "description": "发放贷款及垫款"
+    },
+    {
+      "name": "oth_nca",
+      "type": "float",
+      "required": "Y",
+      "description": "其他非流动资产"
+    },
+    {
+      "name": "total_nca",
+      "type": "float",
+      "required": "Y",
+      "description": "非流动资产合计"
+    },
+    {
+      "name": "cash_reser_cb",
+      "type": "float",
+      "required": "Y",
+      "description": "现金及存放中央银行款项"
+    },
+    {
+      "name": "depos_in_oth_bfi",
+      "type": "float",
+      "required": "Y",
+      "description": "存放同业和其它金融机构款项"
+    },
+    {
+      "name": "prec_metals",
+      "type": "float",
+      "required": "Y",
+      "description": "贵金属"
+    },
+    {
+      "name": "deriv_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "衍生金融资产"
+    },
+    {
+      "name": "rr_reins_une_prem",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保未到期责任准备金"
+    },
+    {
+      "name": "rr_reins_outstd_cla",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保未决赔款准备金"
+    },
+    {
+      "name": "rr_reins_lins_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保寿险责任准备金"
+    },
+    {
+      "name": "rr_reins_lthins_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "应收分保长期健康险责任准备金"
+    },
+    {
+      "name": "refund_depos",
+      "type": "float",
+      "required": "Y",
+      "description": "存出保证金"
+    },
+    {
+      "name": "ph_pledge_loans",
+      "type": "float",
+      "required": "Y",
+      "description": "保户质押贷款"
+    },
+    {
+      "name": "refund_cap_depos",
+      "type": "float",
+      "required": "Y",
+      "description": "存出资本保证金"
+    },
+    {
+      "name": "indep_acct_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "独立账户资产"
+    },
+    {
+      "name": "client_depos",
+      "type": "float",
+      "required": "Y",
+      "description": "其中：客户资金存款"
+    },
+    {
+      "name": "client_prov",
+      "type": "float",
+      "required": "Y",
+      "description": "其中：客户备付金"
+    },
+    {
+      "name": "transac_seat_fee",
+      "type": "float",
+      "required": "Y",
+      "description": "其中:交易席位费"
+    },
+    {
+      "name": "invest_as_receiv",
+      "type": "float",
+      "required": "Y",
+      "description": "应收款项类投资"
+    },
+    {
+      "name": "total_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "资产总计"
+    },
+    {
+      "name": "lt_borr",
+      "type": "float",
+      "required": "Y",
+      "description": "长期借款"
+    },
+    {
+      "name": "st_borr",
+      "type": "float",
+      "required": "Y",
+      "description": "短期借款"
+    },
+    {
+      "name": "cb_borr",
+      "type": "float",
+      "required": "Y",
+      "description": "向中央银行借款"
+    },
+    {
+      "name": "depos_ib_deposits",
+      "type": "float",
+      "required": "Y",
+      "description": "吸收存款及同业存放"
+    },
+    {
+      "name": "loan_oth_bank",
+      "type": "float",
+      "required": "Y",
+      "description": "拆入资金"
+    },
+    {
+      "name": "trading_fl",
+      "type": "float",
+      "required": "Y",
+      "description": "交易性金融负债"
+    },
+    {
+      "name": "notes_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付票据"
+    },
+    {
+      "name": "acct_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付账款"
+    },
+    {
+      "name": "adv_receipts",
+      "type": "float",
+      "required": "Y",
+      "description": "预收款项"
+    },
+    {
+      "name": "sold_for_repur_fa",
+      "type": "float",
+      "required": "Y",
+      "description": "卖出回购金融资产款"
+    },
+    {
+      "name": "comm_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付手续费及佣金"
+    },
+    {
+      "name": "payroll_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付职工薪酬"
+    },
+    {
+      "name": "taxes_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应交税费"
+    },
+    {
+      "name": "int_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付利息"
+    },
+    {
+      "name": "div_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付股利"
+    },
+    {
+      "name": "oth_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "其他应付款"
+    },
+    {
+      "name": "acc_exp",
+      "type": "float",
+      "required": "Y",
+      "description": "预提费用"
+    },
+    {
+      "name": "deferred_inc",
+      "type": "float",
+      "required": "Y",
+      "description": "递延收益"
+    },
+    {
+      "name": "st_bonds_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付短期债券"
+    },
+    {
+      "name": "payable_to_reinsurer",
+      "type": "float",
+      "required": "Y",
+      "description": "应付分保账款"
+    },
+    {
+      "name": "rsrv_insur_cont",
+      "type": "float",
+      "required": "Y",
+      "description": "保险合同准备金"
+    },
+    {
+      "name": "acting_trading_sec",
+      "type": "float",
+      "required": "Y",
+      "description": "代理买卖证券款"
+    },
+    {
+      "name": "acting_uw_sec",
+      "type": "float",
+      "required": "Y",
+      "description": "代理承销证券款"
+    },
+    {
+      "name": "non_cur_liab_due_1y",
+      "type": "float",
+      "required": "Y",
+      "description": "一年内到期的非流动负债"
+    },
+    {
+      "name": "oth_cur_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "其他流动负债"
+    },
+    {
+      "name": "total_cur_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "流动负债合计"
+    },
+    {
+      "name": "bond_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付债券"
+    },
+    {
+      "name": "lt_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "长期应付款"
+    },
+    {
+      "name": "specific_payables",
+      "type": "float",
+      "required": "Y",
+      "description": "专项应付款"
+    },
+    {
+      "name": "estimated_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "预计负债"
+    },
+    {
+      "name": "defer_tax_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "递延所得税负债"
+    },
+    {
+      "name": "defer_inc_non_cur_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "递延收益-非流动负债"
+    },
+    {
+      "name": "oth_ncl",
+      "type": "float",
+      "required": "Y",
+      "description": "其他非流动负债"
+    },
+    {
+      "name": "total_ncl",
+      "type": "float",
+      "required": "Y",
+      "description": "非流动负债合计"
+    },
+    {
+      "name": "depos_oth_bfi",
+      "type": "float",
+      "required": "Y",
+      "description": "同业和其它金融机构存放款项"
+    },
+    {
+      "name": "deriv_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "衍生金融负债"
+    },
+    {
+      "name": "depos",
+      "type": "float",
+      "required": "Y",
+      "description": "吸收存款"
+    },
+    {
+      "name": "agency_bus_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "代理业务负债"
+    },
+    {
+      "name": "oth_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "其他负债"
+    },
+    {
+      "name": "prem_receiv_adva",
+      "type": "float",
+      "required": "Y",
+      "description": "预收保费"
+    },
+    {
+      "name": "depos_received",
+      "type": "float",
+      "required": "Y",
+      "description": "存入保证金"
+    },
+    {
+      "name": "ph_invest",
+      "type": "float",
+      "required": "Y",
+      "description": "保户储金及投资款"
+    },
+    {
+      "name": "reser_une_prem",
+      "type": "float",
+      "required": "Y",
+      "description": "未到期责任准备金"
+    },
+    {
+      "name": "reser_outstd_claims",
+      "type": "float",
+      "required": "Y",
+      "description": "未决赔款准备金"
+    },
+    {
+      "name": "reser_lins_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "寿险责任准备金"
+    },
+    {
+      "name": "reser_lthins_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "长期健康险责任准备金"
+    },
+    {
+      "name": "indept_acc_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "独立账户负债"
+    },
+    {
+      "name": "pledge_borr",
+      "type": "float",
+      "required": "Y",
+      "description": "其中:质押借款"
+    },
+    {
+      "name": "indem_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付赔付款"
+    },
+    {
+      "name": "policy_div_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付保单红利"
+    },
+    {
+      "name": "total_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "负债合计"
+    },
+    {
+      "name": "treasury_share",
+      "type": "float",
+      "required": "Y",
+      "description": "减:库存股"
+    },
+    {
+      "name": "ordin_risk_reser",
+      "type": "float",
+      "required": "Y",
+      "description": "一般风险准备"
+    },
+    {
+      "name": "forex_differ",
+      "type": "float",
+      "required": "Y",
+      "description": "外币报表折算差额"
+    },
+    {
+      "name": "invest_loss_unconf",
+      "type": "float",
+      "required": "Y",
+      "description": "未确认的投资损失"
+    },
+    {
+      "name": "minority_int",
+      "type": "float",
+      "required": "Y",
+      "description": "少数股东权益"
+    },
+    {
+      "name": "total_hldr_eqy_exc_min_int",
+      "type": "float",
+      "required": "Y",
+      "description": "股东权益合计(不含少数股东权益)"
+    },
+    {
+      "name": "total_hldr_eqy_inc_min_int",
+      "type": "float",
+      "required": "Y",
+      "description": "股东权益合计(含少数股东权益)"
+    },
+    {
+      "name": "total_liab_hldr_eqy",
+      "type": "float",
+      "required": "Y",
+      "description": "负债及股东权益总计"
+    },
+    {
+      "name": "lt_payroll_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "长期应付职工薪酬"
+    },
+    {
+      "name": "oth_comp_income",
+      "type": "float",
+      "required": "Y",
+      "description": "其他综合收益"
+    },
+    {
+      "name": "oth_eqt_tools",
+      "type": "float",
+      "required": "Y",
+      "description": "其他权益工具"
+    },
+    {
+      "name": "oth_eqt_tools_p_shr",
+      "type": "float",
+      "required": "Y",
+      "description": "其他权益工具(优先股)"
+    },
+    {
+      "name": "lending_funds",
+      "type": "float",
+      "required": "Y",
+      "description": "融出资金"
+    },
+    {
+      "name": "acc_receivable",
+      "type": "float",
+      "required": "Y",
+      "description": "应收款项"
+    },
+    {
+      "name": "st_fin_payable",
+      "type": "float",
+      "required": "Y",
+      "description": "应付短期融资款"
+    },
+    {
+      "name": "payables",
+      "type": "float",
+      "required": "Y",
+      "description": "应付款项"
+    },
+    {
+      "name": "hfs_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "持有待售的资产"
+    },
+    {
+      "name": "hfs_sales",
+      "type": "float",
+      "required": "Y",
+      "description": "持有待售的负债"
+    },
+    {
+      "name": "cost_fin_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "以摊余成本计量的金融资产"
+    },
+    {
+      "name": "fair_value_fin_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "以公允价值计量且其变动计入其他综合收益的金融资产"
+    },
+    {
+      "name": "cip_total",
+      "type": "float",
+      "required": "Y",
+      "description": "在建工程(合计)(元)"
+    },
+    {
+      "name": "oth_pay_total",
+      "type": "float",
+      "required": "Y",
+      "description": "其他应付款(合计)(元)"
+    },
+    {
+      "name": "long_pay_total",
+      "type": "float",
+      "required": "Y",
+      "description": "长期应付款(合计)(元)"
+    },
+    {
+      "name": "debt_invest",
+      "type": "float",
+      "required": "Y",
+      "description": "债权投资(元)"
+    },
+    {
+      "name": "oth_debt_invest",
+      "type": "float",
+      "required": "Y",
+      "description": "其他债权投资(元)"
+    },
+    {
+      "name": "oth_eq_invest",
+      "type": "float",
+      "required": "N",
+      "description": "其他权益工具投资(元)"
+    },
+    {
+      "name": "oth_illiq_fin_assets",
+      "type": "float",
+      "required": "N",
+      "description": "其他非流动金融资产(元)"
+    },
+    {
+      "name": "oth_eq_ppbond",
+      "type": "float",
+      "required": "N",
+      "description": "其他权益工具:永续债(元)"
+    },
+    {
+      "name": "receiv_financing",
+      "type": "float",
+      "required": "N",
+      "description": "应收款项融资"
+    },
+    {
+      "name": "use_right_assets",
+      "type": "float",
+      "required": "N",
+      "description": "使用权资产"
+    },
+    {
+      "name": "lease_liab",
+      "type": "float",
+      "required": "N",
+      "description": "租赁负债"
+    },
+    {
+      "name": "contract_assets",
+      "type": "float",
+      "required": "Y",
+      "description": "合同资产"
+    },
+    {
+      "name": "contract_liab",
+      "type": "float",
+      "required": "Y",
+      "description": "合同负债"
+    },
+    {
+      "name": "accounts_receiv_bill",
+      "type": "float",
+      "required": "Y",
+      "description": "应收票据及应收账款"
+    },
+    {
+      "name": "accounts_pay",
+      "type": "float",
+      "required": "Y",
+      "description": "应付票据及应付账款"
+    },
+    {
+      "name": "oth_rcv_total",
+      "type": "float",
+      "required": "Y",
+      "description": "其他应收款(合计)（元）"
+    },
+    {
+      "name": "fix_assets_total",
+      "type": "float",
+      "required": "Y",
+      "description": "固定资产(合计)(元)"
+    },
+    {
+      "name": "update_flag",
+      "type": "str",
+      "required": "Y",
+      "description": "更新标识"
+    }
+  ]
+}

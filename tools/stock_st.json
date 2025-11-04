@@ -1,0 +1,29 @@
+{
+  "name": "tushare_stock_st",
+  "description": "ST股票列表。获取ST股票列表，可根据交易日期获取历史上每天的ST列表权限：3000积分起提示：每天上午9:20更新，单次请求最大返回1000行数据，可循环提取,本接口数据从20160101开始,太早历史无法补齐。返回字段包括：ts_code(Y), name(Y), trade_date(Y), type(Y), type_name(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始时间",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束时间",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

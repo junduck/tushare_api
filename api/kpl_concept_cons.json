@@ -1,0 +1,69 @@
+{
+  "api_name": "kpl_concept_cons",
+  "title": "题材成分（开盘啦）",
+  "description": "获取开盘啦概念题材的成分股限量：单次最大3000条，可根据代码和日期循环获取全部数据积分：5000积分可提取数据，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式）"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "题材代码（xxxxxx.KP格式）"
+    },
+    {
+      "name": "con_code",
+      "type": "str",
+      "required": "N",
+      "description": "成分代码（xxxxxx.SH格式）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "题材ID"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "题材名称"
+    },
+    {
+      "name": "con_name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "con_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "desc",
+      "type": "str",
+      "required": "Y",
+      "description": "描述"
+    },
+    {
+      "name": "hot_num",
+      "type": "None",
+      "required": "Y",
+      "description": "人气值"
+    }
+  ]
+}

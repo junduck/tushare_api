@@ -1,0 +1,87 @@
+{
+  "api_name": "stk_auction_c",
+  "title": "股票收盘集合竞价数据",
+  "description": "股票收盘15:00集合竞价数据，每天盘后更新限量：单次请求最大返回10000行数据，可根据日期循环权限：开通了股票分钟权限后可获得本接口权限，具体参考权限说明",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期(YYYYMMDD)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价收盘价"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价最低价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价成交量"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价成交额"
+    },
+    {
+      "name": "vwap",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘集合竞价均价"
+    }
+  ]
+}

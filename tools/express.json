@@ -1,0 +1,35 @@
+{
+  "name": "tushare_express",
+  "description": "业绩快报。获取上市公司业绩快报权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法提示：当前接口只能按单只股票获取其历史数据，如果需要获取某一季度全部上市公司数据，请使用express_vip接口（参数一致），需积攒5000积分。。返回字段包括：ts_code(TS股票代码), ann_date(公告日期), end_date(报告期), revenue(营业收入(元)), operate_profit(营业利润(元)), total_profit(利润总额(元)), n_income(净利润(元)), total_assets(总资产(元)), total_hldr_eqy_exc_min_int(股东权益合计(不含少数股东权益)(元)), diluted_eps(每股收益(摊薄)(元))。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "period": {
+        "type": "string",
+        "description": "报告期(每个季度最后一天的日期,比如20171231表示年报，20170630半年报，20170930三季报)"
+      }
+    },
+    "required": [
+      "ts_code"
+    ]
+  }
+}

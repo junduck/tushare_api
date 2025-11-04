@@ -1,0 +1,37 @@
+{
+  "name": "tushare_limit_list_ths",
+  "description": "同花顺涨跌停榜单。获取同花顺每日涨跌停榜单数据，历史数据从20231101开始提供，增量每天16点左右更新限量：单次最大4000条，可根据日期或股票代码循环提取积分：8000积分以上每分钟500次，每天总量不限制，具体请参阅积分获取办法注意：本接口只限个人学习和研究使用，如需商业用途，请自行联系同花顺解决数据采购问题。。返回字段包括：trade_date(Y), ts_code(Y), name(Y), price(Y), pct_chg(Y), open_num(Y), lu_desc(Y), limit_type(Y), tag(Y), status(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "limit_type": {
+        "type": "string",
+        "description": "涨停池、连扳池、冲刺涨停、炸板池、跌停池，默认：涨停池"
+      },
+      "market": {
+        "type": "string",
+        "description": "HS-沪深主板 GEM-创业板 STAR-科创板"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

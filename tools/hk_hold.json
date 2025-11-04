@@ -1,0 +1,37 @@
+{
+  "name": "tushare_hk_hold",
+  "description": "沪深股通持股明细。获取沪深港股通持股明细，数据来源港交所。限量：单次最多提取3800条记录，可循环调取，总量不限制积分：用户积120积分可调取试用，2000积分可正常使用，单位分钟有流控，积分越高流量越大，请自行提高积分，具体请参阅积分获取办法。返回字段包括：code(Y), trade_date(Y), ts_code(Y), name(Y), vol(Y), ratio(Y), exchange(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "交易所代码"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "TS股票代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      },
+      "exchange": {
+        "type": "string",
+        "description": "类型：SH沪股通（北向）SZ深股通（北向）HK港股通（南向持股）"
+      }
+    },
+    "required": []
+  }
+}

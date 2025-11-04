@@ -1,0 +1,17 @@
+{
+  "name": "tushare_bo_cinema",
+  "description": "影院日度票房。获取每日各影院的票房数据数据历史： 数据从2018年9月开始，更多历史数据正在补充数据权限：用户需要至少500积分才可以调取，具体请参阅积分获取办法。返回字段包括：date(Y), c_name(Y), aud_count(Y), att_ratio(Y), day_amount(Y), day_showcount(Y), avg_price(Y), p_pc(Y), rank(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "日期(格式:YYYYMMDD)",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": [
+      "date"
+    ]
+  }
+}

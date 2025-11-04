@@ -1,0 +1,29 @@
+{
+  "name": "tushare_sw_daily",
+  "description": "申万行业指数日行情。获取申万行业日线行情（默认是申万2021版行情）限量：单次最大4000行数据，可通过指数代码和日期参数循环提取，5000积分可调取。返回字段包括：ts_code(Y), trade_date(Y), name(Y), open(Y), low(Y), high(Y), close(Y), change(Y), pct_change(Y), vol(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "行业代码"
+      },
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

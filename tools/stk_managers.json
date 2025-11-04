@@ -1,0 +1,29 @@
+{
+  "name": "tushare_stk_managers",
+  "description": "上市公司管理层。获取上市公司管理层积分：用户需要2000积分才可以调取，5000积分以上频次相对较高，具体请参阅积分获取办法。返回字段包括：ts_code(Y), ann_date(Y), name(Y), gender(Y), lev(Y), title(Y), edu(Y), national(Y), birthday(Y), begin_date(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码，支持单个或多个股票输入"
+      },
+      "ann_date": {
+        "type": "string",
+        "description": "公告日期（YYYYMMDD格式，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "公告开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "公告结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

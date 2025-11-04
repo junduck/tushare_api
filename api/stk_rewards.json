@@ -1,0 +1,63 @@
+{
+  "api_name": "stk_rewards",
+  "title": "管理层薪酬和持股",
+  "description": "获取上市公司管理层薪酬和持股积分：用户需要2000积分才可以调取，5000积分以上频次相对较高，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码，支持单个或多个代码输入"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "报告期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "ann_date",
+      "type": "str",
+      "required": "Y",
+      "description": "公告日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "截止日期"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "姓名"
+    },
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "职务"
+    },
+    {
+      "name": "reward",
+      "type": "float",
+      "required": "Y",
+      "description": "报酬"
+    },
+    {
+      "name": "hold_vol",
+      "type": "float",
+      "required": "Y",
+      "description": "持股数"
+    }
+  ]
+}

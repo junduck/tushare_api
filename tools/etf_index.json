@@ -1,0 +1,24 @@
+{
+  "name": "tushare_etf_index",
+  "description": "ETF基准指数。获取ETF基准指数列表信息限量：单次请求最大返回5000行数据（当前未超过2000个）权限：用户积累8000积分可调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), indx_name(Y), indx_csname(Y), pub_party_name(Y), pub_date(Y), base_date(Y), bp(Y), adj_circle(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "指数代码"
+      },
+      "pub_date": {
+        "type": "string",
+        "description": "发布日期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      },
+      "base_date": {
+        "type": "string",
+        "description": "指数基期（格式：YYYYMMDD）",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

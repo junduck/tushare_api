@@ -1,0 +1,19 @@
+{
+  "name": "tushare_pledge_stat",
+  "description": "股权质押统计数据。获取股票质押统计数据限量：单次最大1000积分：用户需要至少500积分才可以调取，具体请参阅积分获取办法。返回字段包括：ts_code(Y), end_date(Y), pledge_count(Y), unrest_pledge(Y), rest_pledge(Y), total_share(Y), pledge_ratio(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ts_code": {
+        "type": "string",
+        "description": "股票代码"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "截止日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

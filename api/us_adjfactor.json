@@ -1,0 +1,63 @@
+{
+  "api_name": "us_adjfactor",
+  "title": "美股复权因子",
+  "description": "获取美股每日复权因子数据，在每天美股收盘后滚动刷新限量：单次最大15000行数据，可以根据日期循环权限：本接口是在开通美股日线权限后自动获取权限，权限请参考权限说明文档",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（格式：YYYYMMDD，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "exchange",
+      "type": "str",
+      "required": "Y",
+      "description": "交易所"
+    },
+    {
+      "name": "cum_adjfactor",
+      "type": "float",
+      "required": "Y",
+      "description": "累计复权因子"
+    },
+    {
+      "name": "close_price",
+      "type": "float",
+      "required": "Y",
+      "description": "收盘价"
+    }
+  ]
+}

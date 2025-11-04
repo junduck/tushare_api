@@ -1,0 +1,93 @@
+{
+  "api_name": "new_share",
+  "title": "IPO新股上市",
+  "description": "获取新股上市列表数据限量：单次最大2000条，总量不限制积分：用户需要至少120积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "上网发行开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "上网发行结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "TS股票代码"
+    },
+    {
+      "name": "sub_code",
+      "type": "str",
+      "required": "Y",
+      "description": "申购代码"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "名称"
+    },
+    {
+      "name": "ipo_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上网发行日期"
+    },
+    {
+      "name": "issue_date",
+      "type": "str",
+      "required": "Y",
+      "description": "上市日期"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "发行总量（万股）"
+    },
+    {
+      "name": "market_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "上网发行总量（万股）"
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": "Y",
+      "description": "发行价格"
+    },
+    {
+      "name": "pe",
+      "type": "float",
+      "required": "Y",
+      "description": "市盈率"
+    },
+    {
+      "name": "limit_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "个人申购上限（万股）"
+    },
+    {
+      "name": "funds",
+      "type": "float",
+      "required": "Y",
+      "description": "募集资金（亿元）"
+    },
+    {
+      "name": "ballot",
+      "type": "float",
+      "required": "Y",
+      "description": "中签率"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "tushare_cn_gdp",
+  "description": "国内生产总值（GDP）。获取国民经济之GDP数据限量：单次最大10000，一次可以提取全部数据权限：用户积累600积分可以使用，具体请参阅积分获取办法。返回字段包括：quarter(Y), gdp(Y), gdp_yoy(Y), pi(Y), pi_yoy(Y), si(Y), si_yoy(Y), ti(Y), ti_yoy(Y)。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string",
+        "description": "季度（2019Q1表示，2019年第一季度）"
+      },
+      "start_q": {
+        "type": "string",
+        "description": "开始季度"
+      },
+      "end_q": {
+        "type": "string",
+        "description": "结束季度"
+      },
+      "fields": {
+        "type": "string",
+        "description": "指定输出字段（e.g. fields='quarter,gdp,gdp_yoy'）"
+      }
+    },
+    "required": []
+  }
+}

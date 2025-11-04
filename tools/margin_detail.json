@@ -1,0 +1,29 @@
+{
+  "name": "tushare_margin_detail",
+  "description": "融资融券交易明细。获取沪深两市每日融资融券明细限量：单次请求最大返回6000行数据，可根据日期循环权限：2000积分可获得本接口权限，积分越高权限越大，具体参考权限说明。返回字段包括：trade_date(交易日期), ts_code(TS股票代码), name(股票名称 （20190910后有数据）), rzye(融资余额(元)), rqye(融券余额(元)), rzmre(融资买入额(元)), rqyl(融券余量（股）), rzche(融资偿还额(元)), rqchl(融券偿还量(股)), rqmcl(融券卖出量(股,份,手))。",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "trade_date": {
+        "type": "string",
+        "description": "交易日期（格式：YYYYMMDD，下同）",
+        "pattern": "^\\d{8}$"
+      },
+      "ts_code": {
+        "type": "string",
+        "description": "TS代码"
+      },
+      "start_date": {
+        "type": "string",
+        "description": "开始日期",
+        "pattern": "^\\d{8}$"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "结束日期",
+        "pattern": "^\\d{8}$"
+      }
+    },
+    "required": []
+  }
+}

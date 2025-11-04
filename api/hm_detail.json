@@ -1,0 +1,93 @@
+{
+  "api_name": "hm_detail",
+  "title": "游资交易每日明细",
+  "description": "获取每日游资交易明细，数据开始于2022年8。游资分类名录，请点击游资名录限量：单次最多提取2000条记录，可循环调取，总量不限制积分：用户积10000积分可调取使用，积分获取办法请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD)"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码"
+    },
+    {
+      "name": "hm_name",
+      "type": "str",
+      "required": "N",
+      "description": "游资名称"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期(YYYYMMDD)"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期(YYYYMMDD)"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "ts_name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "buy_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "买入金额（元）"
+    },
+    {
+      "name": "sell_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "卖出金额（元）"
+    },
+    {
+      "name": "net_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "净买卖（元）"
+    },
+    {
+      "name": "hm_name",
+      "type": "str",
+      "required": "Y",
+      "description": "游资名称"
+    },
+    {
+      "name": "hm_orgs",
+      "type": "str",
+      "required": "Y",
+      "description": "关联机构（一般为营业部或机构专用）"
+    },
+    {
+      "name": "tag",
+      "type": "str",
+      "required": "N",
+      "description": "标签"
+    }
+  ]
+}

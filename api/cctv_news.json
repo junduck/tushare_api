@@ -1,0 +1,33 @@
+{
+  "api_name": "cctv_news",
+  "title": "新闻联播文字稿",
+  "description": "获取新闻联播文字稿数据，数据开始于2006年6月，超过12年历史限量：可根据日期参数循环提取，总量不限制积分：本接口需单独开权限（跟积分没关系），具体请参阅权限说明",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期（输入格式：YYYYMMDD 比如：20181211）"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "title",
+      "type": "str",
+      "required": "Y",
+      "description": "标题"
+    },
+    {
+      "name": "content",
+      "type": "str",
+      "required": "Y",
+      "description": "内容"
+    }
+  ]
+}

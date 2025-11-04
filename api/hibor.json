@@ -1,0 +1,81 @@
+{
+  "api_name": "hibor",
+  "title": "Hibor利率",
+  "description": "Hibor利率限量：单次最大4000行数据，总量不限制，可通过设置开始和结束日期分段获取积分：用户积累120积分可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "N",
+      "description": "日期  (日期输入格式：YYYYMMDD，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "date",
+      "type": "str",
+      "required": "Y",
+      "description": "日期"
+    },
+    {
+      "name": "on",
+      "type": "float",
+      "required": "Y",
+      "description": "隔夜"
+    },
+    {
+      "name": "p1w",
+      "type": "float",
+      "required": "Y",
+      "description": "1周"
+    },
+    {
+      "name": "p2w",
+      "type": "float",
+      "required": "Y",
+      "description": "2周"
+    },
+    {
+      "name": "p1m",
+      "type": "float",
+      "required": "Y",
+      "description": "1个月"
+    },
+    {
+      "name": "p2m",
+      "type": "float",
+      "required": "Y",
+      "description": "2个月"
+    },
+    {
+      "name": "p3m",
+      "type": "float",
+      "required": "Y",
+      "description": "3个月"
+    },
+    {
+      "name": "p6m",
+      "type": "float",
+      "required": "Y",
+      "description": "6个月"
+    },
+    {
+      "name": "p12m",
+      "type": "float",
+      "required": "Y",
+      "description": "12个月"
+    }
+  ]
+}

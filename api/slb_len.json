@@ -1,0 +1,63 @@
+{
+  "api_name": "slb_len",
+  "title": "转融资交易汇总",
+  "description": "转融通融资汇总限量：单次最大可以提取5000行数据，可循环获取所有历史积分：2000积分每分钟请求200次，5000积分500次请求",
+  "input_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期（YYYYMMDD格式，下同）"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ob",
+      "type": "float",
+      "required": "Y",
+      "description": "期初余额(亿元)"
+    },
+    {
+      "name": "auc_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "竞价成交金额(亿元)"
+    },
+    {
+      "name": "repo_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "再借成交金额(亿元)"
+    },
+    {
+      "name": "repay_amount",
+      "type": "float",
+      "required": "Y",
+      "description": "偿还金额(亿元)"
+    },
+    {
+      "name": "cb",
+      "type": "float",
+      "required": "Y",
+      "description": "期末余额(亿元)"
+    }
+  ]
+}

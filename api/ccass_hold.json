@@ -1,0 +1,75 @@
+{
+  "api_name": "ccass_hold",
+  "title": "中央结算系统持股统计",
+  "description": "获取中央结算系统持股汇总数据，覆盖全部历史数据，根据交易所披露时间，当日数据在下一交易日早上9点前完成入库限量：单次最大5000条数据，可循环或分页提供全部积分：用户120积分可以试用看数据，5000积分每分钟可以请求300次，8000积分以上可以请求500次每分钟，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "N",
+      "description": "股票代码 (e.g. 605009.SH)"
+    },
+    {
+      "name": "hk_code",
+      "type": "str",
+      "required": "N",
+      "description": "港交所代码 （e.g. 95009）"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "N",
+      "description": "交易日期(YYYYMMDD格式，下同)"
+    },
+    {
+      "name": "start_date",
+      "type": "str",
+      "required": "N",
+      "description": "开始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "N",
+      "description": "结束日期"
+    }
+  ],
+  "output_params": [
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期"
+    },
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代号"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "required": "Y",
+      "description": "股票名称"
+    },
+    {
+      "name": "shareholding",
+      "type": "str",
+      "required": "Y",
+      "description": "于中央结算系统的持股量(股)Shareholding in CCASS"
+    },
+    {
+      "name": "hold_nums",
+      "type": "str",
+      "required": "Y",
+      "description": "参与者数目（个）"
+    },
+    {
+      "name": "hold_ratio",
+      "type": "str",
+      "required": "Y",
+      "description": "占于上交所上市及交易的A股总数的百分比（%）% of the total number of A shares listed and traded on the SSE"
+    }
+  ]
+}

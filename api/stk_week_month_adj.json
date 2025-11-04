@@ -1,0 +1,134 @@
+{
+  "api_name": "stk_week_month_adj",
+  "title": "周/月线复权行情(每日更新)",
+  "description": "股票周/月线行情(复权--每日更新)限量：单次最大6000,可使用交易日期循环提取，总量不限制积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法",
+  "input_params": [
+    {
+      "name": "ts_code",
+      "type": "str",
+      "required": "Y",
+      "description": "股票代码"
+    },
+    {
+      "name": "trade_date",
+      "type": "str",
+      "required": "Y",
+      "description": "交易日期（每周五或者月末日期）"
+    },
+    {
+      "name": "end_date",
+      "type": "str",
+      "required": "Y",
+      "description": "计算截至日期"
+    },
+    {
+      "name": "freq",
+      "type": "str",
+      "required": "Y",
+      "description": "频率(周week,月month)"
+    },
+    {
+      "name": "open",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)开盘价"
+    },
+    {
+      "name": "high",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)最高价"
+    },
+    {
+      "name": "low",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)最低价"
+    },
+    {
+      "name": "close",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)收盘价"
+    },
+    {
+      "name": "pre_close",
+      "type": "float",
+      "required": "Y",
+      "description": "上一(周/月)收盘价【除权价，前复权】"
+    },
+    {
+      "name": "open_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "前复权(周/月)开盘价"
+    },
+    {
+      "name": "high_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "前复权(周/月)最高价"
+    },
+    {
+      "name": "low_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "前复权(周/月)最低价"
+    },
+    {
+      "name": "close_qfq",
+      "type": "float",
+      "required": "Y",
+      "description": "前复权(周/月)收盘价"
+    },
+    {
+      "name": "open_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "后复权(周/月)开盘价"
+    },
+    {
+      "name": "high_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "后复权(周/月)最高价"
+    },
+    {
+      "name": "low_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "后复权(周/月)最低价"
+    },
+    {
+      "name": "close_hfq",
+      "type": "float",
+      "required": "Y",
+      "description": "后复权(周/月)收盘价"
+    },
+    {
+      "name": "vol",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)成交量"
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)成交额"
+    },
+    {
+      "name": "change",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)涨跌额"
+    },
+    {
+      "name": "pct_chg",
+      "type": "float",
+      "required": "Y",
+      "description": "(周/月)涨跌幅 【基于除权后的昨收计算的涨跌幅：（今收-除权昨收）/除权昨收 】"
+    }
+  ],
+  "output_params": []
+}
